@@ -1,0 +1,50 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+
+function WebDevelopmentHero() {
+  return (
+    <div>
+      {" "}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h1 className="text-5xl font-bold text-gray-900">
+                Web Development
+              </h1>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                EMediaBiz is your partner in driving online growth. From Web
+                Design and Mobile & Web Application Development to Maintenance &
+                Support, and beyond, we craft marketing solutions designed
+                around your business goals. Let us find the right mix to get you
+                noticed and keep you ahead.
+              </p>
+              <Link to="/contact">
+                <Button
+                  className="bg-teal-500 hover:bg-[#B2519A] text-white px-8 py-3"
+                  onClick={(handleClick) => {
+                    window.scrollTo(0, 0);
+                    handleClick();
+                  }}
+                >
+                  Get in touch
+                </Button>
+              </Link>
+            </div>
+
+            <div className="relative">
+              <img
+                src="/media/WebDevSub.png"
+                alt="Web Development Service"
+                className="w-full rounded-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default WebDevelopmentHero;
