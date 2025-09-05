@@ -1,46 +1,75 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card, CardContent } from "@/components/ui/card"
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const services = [
-  { title: "Email Marketing", image: "/media/services/Email.png" },
-  { title: "Website Design", image: "/media/services/WebDesign.png" },
-  { title: "SEO", image: "/media/services/SEO.png" },
-  { title: "Social Media Marketing", image: "/media/services/SMM.png" },
-  { title: "Application Development", image: "/media/services/AppDev.png" },
-  { title: "Maintenance & Security", image: "/media/services/M&S.png" },
-]
+  {
+    title: "Email Marketing",
+    image: "/media/services/Email.png",
+    link: "/digital_marketing",
+  },
+  {
+    title: "Website Design",
+    image: "/media/services/WebDesign.png",
+    link: "/web_development",
+  },
+  {
+    title: "SEO",
+    image: "/media/services/SEO.png",
+    link: "/digital_marketing",
+  },
+  {
+    title: "Social Media Marketing",
+    image: "/media/services/SMM.png",
+    link: "/digital_marketing",
+  },
+  {
+    title: "Application Development",
+    image: "/media/services/AppDev.png",
+    link: "/web_development",
+  },
+  {
+    title: "Maintenance & Security",
+    image: "/media/services/M&S.png",
+    link: "/web_development",
+  },
+];
 
 export default function ServicesSection() {
-  const [currentIndex, setCurrentIndex] = useState(1) // Start with second item as center
+  const [currentIndex, setCurrentIndex] = useState(1); // Start with second item as center
 
   const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : services.length - 1))
-  }
+    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : services.length - 1));
+  };
 
   const goToNext = () => {
-    setCurrentIndex((prev) => (prev < services.length - 1 ? prev + 1 : 0))
-  }
+    setCurrentIndex((prev) => (prev < services.length - 1 ? prev + 1 : 0));
+  };
 
   const getVisibleItems = () => {
-    const leftIndex = currentIndex === 0 ? services.length - 1 : currentIndex - 1
-    const centerIndex = currentIndex
-    const rightIndex = currentIndex === services.length - 1 ? 0 : currentIndex + 1
+    const leftIndex =
+      currentIndex === 0 ? services.length - 1 : currentIndex - 1;
+    const centerIndex = currentIndex;
+    const rightIndex =
+      currentIndex === services.length - 1 ? 0 : currentIndex + 1;
 
     return {
       left: services[leftIndex],
       center: services[centerIndex],
       right: services[rightIndex],
-    }
-  }
+    };
+  };
 
-  const visibleItems = getVisibleItems()
+  const visibleItems = getVisibleItems();
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-extraextrabold text-white text-center mb-16">Our Services</h2>
+        <h2 className="text-4xl font-extraextrabold text-white text-center mb-16">
+          Our Services
+        </h2>
 
         <div className="relative">
           <Card className="bg-white p-12 rounded-2xl shadow-sm">
@@ -50,32 +79,41 @@ export default function ServicesSection() {
                 onClick={goToPrevious}
                 className="pr-10 cursor-pointer text-center space-y-4 opacity-60 w-[310px] hover:opacity-100 transition"
               >
-                <h1 className="text-3xl font-extrabold bg-gradient-to-r from-teal-500 to-pink-500 bg-clip-text text-transparent h-[80px] text-outline ">{visibleItems.left.title}</h1>
+                <h1 className="text-3xl font-extrabold bg-gradient-to-r from-teal-500 to-pink-500 bg-clip-text text-transparent h-[80px] text-outline ">
+                  {visibleItems.left.title}
+                </h1>
               </div>
 
               {/* Center Card */}
-              <div className="text-center space-y-4 w-[392px]">
-                <div className="relative mx-auto w-[392px] h-auto">
-                  <img
-                    src={visibleItems.center.image || "/placeholder.svg"}
-                    alt={`${visibleItems.center.title} illustration`}
-                    className="w-full h-full object-contain rounded-lg"
-                  />
+              <Link to={visibleItems.center.link}>
+                <div className="text-center space-y-4 w-[392px] cursor-pointer">
+                  <div className="relative mx-auto w-[392px] h-auto">
+                    <img
+                      src={visibleItems.center.image || "/placeholder.svg"}
+                      alt={`${visibleItems.center.title} illustration`}
+                      className="w-full h-full object-contain rounded-lg"
+                      onClick={(handleClick) => {
+                        window.scrollTo(0, 0);
+                        handleClick();
+                      }}
+                    />
+                  </div>
                 </div>
-                {/* <h2 className="text-2xl font-extrabold text-teal-600">{visibleItems.center.title}</h2> */}
-              </div>
+              </Link>
 
               {/* Right Card - Clickable */}
               <div
                 onClick={goToNext}
                 className="pl-10 cursor-pointer text-center space-y-4 opacity-60 w-[310px] hover:opacity-100 transition"
               >
-                <h1 className="text-3xl font-extrabold bg-gradient-to-r from-teal-500 to-pink-500 bg-clip-text text-transparent h-[80px]">{visibleItems.right.title}</h1>
+                <h1 className="text-3xl font-extrabold bg-gradient-to-r from-teal-500 to-pink-500 bg-clip-text text-transparent h-[80px]">
+                  {visibleItems.right.title}
+                </h1>
               </div>
             </CardContent>
           </Card>
         </div>
       </div>
     </section>
-  )
+  );
 }

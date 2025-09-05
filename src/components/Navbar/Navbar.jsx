@@ -41,7 +41,7 @@ function Navbar() {
 
                 <Link
                   to="/about"
-                  className="text-gray-700 hover:text-[#009BB1] px-3 py-2 font-medium"
+                  className="text-gray-900 hover:text-[#009BB1] px-3 py-2 font-medium"
                 >
                   ABOUT US
                 </Link>
@@ -51,7 +51,7 @@ function Navbar() {
                   <DropdownMenu>
                     <Link
                       to="/services"
-                      className="hover:text-[#009BB1] w-full block"
+                      className="text-gray-900 hover:text-[#009BB1] px-3 py-2 font-medium"
                     >
                       SERVICES
                     </Link>
