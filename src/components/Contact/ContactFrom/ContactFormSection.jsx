@@ -18,8 +18,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { Separator } from "@/components/ui/separator"
-
+import { Separator } from "@/components/ui/separator";
 
 function ContactFormSection() {
   const initialValues = {
@@ -101,9 +100,15 @@ function ContactFormSection() {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       (async () => {
         try {
+          const payload = {
+            ...formValue, // includes user_name, email, contact_number, address, message
+            captchaToken: captchaToken, // send the token to backend
+            action: "contact_form", // must match what your PHP expects
+          };
+
           const response = await axios.post(
             "http://localhost/xampp/reactcrudphp/api/user.php",
-            formValue
+            payload
           );
           console.log("Response:", response.data);
 
@@ -253,7 +258,7 @@ function ContactFormSection() {
             </CardFooter>
           </form>
 
-          <AlertDialog open={open} onOpenChange={setOpen} >
+          <AlertDialog open={open} onOpenChange={setOpen}>
             <AlertDialogContent className="bg-white text-black">
               <AlertDialogHeader>
                 <AlertDialogTitle>{alertInfo.title}</AlertDialogTitle>
@@ -263,7 +268,10 @@ function ContactFormSection() {
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
-                <AlertDialogAction onClick={() => setOpen(false)} className="bg-black text-white hover:bg-teal-500">
+                <AlertDialogAction
+                  onClick={() => setOpen(false)}
+                  className="bg-black text-white hover:bg-teal-500"
+                >
                   OK
                 </AlertDialogAction>
               </AlertDialogFooter>
