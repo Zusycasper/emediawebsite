@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 const beliefItems = [
   { title: "Transparency", image: "/media/whatwebelive/transparency.png" },
   { title: "Passion", image: "/media/whatwebelive/passion.png" },
-  { title: "Innovation", image: "/stylized-illustration-of-professional-person-with-.png" },
+  { title: "Innovation", image: "/media/whatwebelive/innovation.png" },
   { title: "Integrity", image: "/media/whatwebelive/integrity.png" },
   { title: "Excellence", image: "/media/whatwebelive/collaboration.png" },
 ]
