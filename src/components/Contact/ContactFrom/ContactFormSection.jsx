@@ -1,4 +1,6 @@
-import React, { useState, useRef } from "react";
+"use client"
+
+import React, { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -7,81 +9,96 @@ import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 
 function ContactFormSection() {
-  const [formValue, setFormValue] = useState({
+  const initialValues = {
     user_name: "",
     email: "",
     contact_number: "",
     address: "",
     message: "",
-  });
+  };
+
+  const [formValue, setFormValue] = useState(initialValues);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
   const [captchaToken, setCaptchaToken] = useState("");
+
   const recaptchaRef = useRef();
 
   const handleInputChange = (e) => {
-    setFormValue({ ...formValue, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormValue({ ...formValue, [name]: value });
   };
 
-  const validateForm = () => {
-    const nameRegex = /^[A-Za-z\s]+$/; // letters + spaces only
+  // ✅ Validation function (clean, tutorial-style)
+  const validate = (values) => {
+    const errors = {};
+    const nameRegex = /^[A-Za-z\s]+$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|hotmail\.com)$/;
-    const phoneRegex = /^(\d{10}|\d{12})$/; // 10 or 12 digits
+    const phoneRegex = /^(\d{10}|\d{12})$/;
 
-    if (!nameRegex.test(formValue.user_name)) {
-      alert("Name should only contain letters and spaces (no numbers).");
-      return false;
+    if (!values.user_name) {
+      errors.user_name = "Name is required.";
+    } else if (!nameRegex.test(values.user_name)) {
+      errors.user_name = "Name should only contain letters and spaces.";
     }
-    if (!emailRegex.test(formValue.email)) {
-      alert("Please enter a valid email (gmail.com, yahoo.com, or hotmail.com).");
-      return false;
+
+    if (!values.email) {
+      errors.email = "Email is required.";
+    } else if (!emailRegex.test(values.email)) {
+      errors.email = "Please enter a valid email (gmail.com, yahoo.com, or hotmail.com).";
     }
-    if (!phoneRegex.test(formValue.contact_number)) {
-      alert("Contact number must be 10 digits or 12 digits with country code.");
-      return false;
+
+    if (!values.contact_number) {
+      errors.contact_number = "Contact number is required.";
+    } else if (!phoneRegex.test(values.contact_number)) {
+      errors.contact_number = "Contact number must be 10 or 12 digits.";
     }
-    if (!formValue.address.trim()) {
-      alert("Address cannot be empty.");
-      return false;
+
+    if (!values.address.trim()) {
+      errors.address = "Address is required.";
     }
-    if (!formValue.message.trim()) {
-      alert("Message cannot be empty.");
-      return false;
+
+    if (!values.message.trim()) {
+      errors.message = "Message is required.";
     }
+
     if (!captchaToken) {
-      alert("Please verify the reCAPTCHA.");
-      return false;
+      errors.captcha = "Please verify the reCAPTCHA.";
     }
-    return true;
+
+    return errors;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!validateForm()) return;
-
-    try {
-      const response = await axios.post(
-        "http://localhost/xampp/reactcrudphp/api/user.php",
-        formValue
-      );
-      console.log("Response:", response.data);
-
-      // Reset form + recaptcha
-      setFormValue({
-        user_name: "",
-        email: "",
-        contact_number: "",
-        address: "",
-        message: "",
-      });
-      setCaptchaToken("");
-      recaptchaRef.current.reset();
-
-      alert("✅ Form submitted successfully!");
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("❌ Something went wrong. Try again.");
-    }
+    setFormErrors(validate(formValue));
+    setIsSubmit(true);
   };
+
+  // ✅ Only submit when validation passes
+  useEffect(() => {
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      (async () => {
+        try {
+          const response = await axios.post(
+            "http://localhost/xampp/reactcrudphp/api/user.php",
+            formValue
+          );
+          console.log("Response:", response.data);
+
+          // Reset form
+          setFormValue(initialValues);
+          setCaptchaToken("");
+          recaptchaRef.current.reset();
+
+          alert("Form submitted successfully!");
+        } catch (error) {
+          console.error("Error submitting form:", error);
+          alert("Something went wrong. Try again.");
+        }
+      })();
+    }
+  }, [formErrors]);
 
   return (
     <div className="w-full">
@@ -96,6 +113,7 @@ function ContactFormSection() {
         <CardContent>
           <form onSubmit={handleSubmit}>
             <div className="flex flex-col gap-6">
+              {/* Name */}
               <div className="grid gap-2">
                 <Label htmlFor="name">Name</Label>
                 <Input
@@ -104,9 +122,13 @@ function ContactFormSection() {
                   placeholder="David Smith"
                   value={formValue.user_name}
                   onChange={handleInputChange}
-                  required
                 />
+                {formErrors.user_name && (
+                  <p className="text-red-500 text-sm">{formErrors.user_name}</p>
+                )}
               </div>
+
+              {/* Email */}
               <div className="grid gap-2">
                 <Label htmlFor="email">Email</Label>
                 <Input
@@ -116,9 +138,13 @@ function ContactFormSection() {
                   placeholder="example@gmail.com"
                   value={formValue.email}
                   onChange={handleInputChange}
-                  required
                 />
+                {formErrors.email && (
+                  <p className="text-red-500 text-sm">{formErrors.email}</p>
+                )}
               </div>
+
+              {/* Contact */}
               <div className="grid gap-2">
                 <Label htmlFor="contact_number">Contact Number</Label>
                 <Input
@@ -127,9 +153,13 @@ function ContactFormSection() {
                   placeholder="+94 *********"
                   value={formValue.contact_number}
                   onChange={handleInputChange}
-                  required
                 />
+                {formErrors.contact_number && (
+                  <p className="text-red-500 text-sm">{formErrors.contact_number}</p>
+                )}
               </div>
+
+              {/* Address */}
               <div className="grid gap-2">
                 <Label htmlFor="address">Address</Label>
                 <Input
@@ -137,9 +167,13 @@ function ContactFormSection() {
                   name="address"
                   value={formValue.address}
                   onChange={handleInputChange}
-                  required
                 />
+                {formErrors.address && (
+                  <p className="text-red-500 text-sm">{formErrors.address}</p>
+                )}
               </div>
+
+              {/* Message */}
               <div className="grid gap-2">
                 <Label htmlFor="message">Message</Label>
                 <Input
@@ -148,8 +182,10 @@ function ContactFormSection() {
                   className="h-24"
                   value={formValue.message}
                   onChange={handleInputChange}
-                  required
                 />
+                {formErrors.message && (
+                  <p className="text-red-500 text-sm">{formErrors.message}</p>
+                )}
               </div>
             </div>
 
@@ -160,6 +196,10 @@ function ContactFormSection() {
                 onChange={(token) => setCaptchaToken(token)}
                 className="grid gap-2 px-4 mb-2"
               />
+              {formErrors.captcha && (
+                <p className="text-red-500 text-sm">{formErrors.captcha}</p>
+              )}
+
               <Button
                 type="submit"
                 variant="outline"
