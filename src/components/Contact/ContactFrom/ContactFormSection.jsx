@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -9,6 +9,17 @@ import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
+import { Separator } from "@/components/ui/separator"
+
 
 function ContactFormSection() {
   const initialValues = {
@@ -23,6 +34,11 @@ function ContactFormSection() {
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
   const [captchaToken, setCaptchaToken] = useState("");
+  const [open, setOpen] = useState(false);
+  const [alertInfo, setAlertInfo] = useState({
+    title: "Form submitted successfully",
+    description: " Thank you for reaching out! We’ll get back to you shortly.",
+  });
 
   const recaptchaRef = useRef();
 
@@ -37,7 +53,7 @@ function ContactFormSection() {
     const nameRegex = /^[A-Za-z\s]+$/;
     const emailRegex =
       /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|hotmail\.com)$/;
-    const phoneRegex = /^(\d{10}|\d{12})$/;
+    const phoneRegex = /^(\d{11}|\d{12})$/;
 
     if (!values.user_name) {
       errors.user_name = "Name is required.";
@@ -77,6 +93,7 @@ function ContactFormSection() {
     e.preventDefault();
     setFormErrors(validate(formValue));
     setIsSubmit(true);
+    setOpen(true);
   };
 
   // ✅ Only submit when validation passes
@@ -95,10 +112,21 @@ function ContactFormSection() {
           setCaptchaToken("");
           recaptchaRef.current.reset();
 
-          alert("Form submitted successfully!");
+          // ✅ Use shadcn alert instead of normal alert
+          setAlertInfo({
+            title: "Form Submitted Successfully",
+            description:
+              "Thank you for reaching out! We’ll get back to you shortly.",
+          });
+          setOpen(true);
         } catch (error) {
           console.error("Error submitting form:", error);
-          alert("Something went wrong. Try again.");
+
+          setAlertInfo({
+            title: "Submission Failed",
+            description: "Something went wrong. Please try again later.",
+          });
+          setOpen(true);
         }
       })();
     }
@@ -223,6 +251,23 @@ function ContactFormSection() {
               </Button>
             </CardFooter>
           </form>
+
+          <AlertDialog open={open} onOpenChange={setOpen} >
+            <AlertDialogContent className="bg-white text-black">
+              <AlertDialogHeader>
+                <AlertDialogTitle>{alertInfo.title}</AlertDialogTitle>
+                <Separator className=" border-[0.1px]" />
+                <AlertDialogDescription>
+                  {alertInfo.description}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogAction onClick={() => setOpen(false)} className="bg-black text-white hover:bg-teal-500">
+                  OK
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </CardContent>
       </Card>
     </div>
