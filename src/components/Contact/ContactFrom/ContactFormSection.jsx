@@ -162,7 +162,7 @@ function ContactFormSection() {
                   inputStyle={{
                     width: "100%",
                     background: "transparent",
-                    border: "1px solid #00000",
+                    border: "1px solid black",
                   }}
                   placeholder="+94 *********"
                 />
