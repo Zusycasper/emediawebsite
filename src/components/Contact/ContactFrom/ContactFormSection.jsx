@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 function ContactFormSection() {
   const initialValues = {
@@ -33,7 +35,8 @@ function ContactFormSection() {
   const validate = (values) => {
     const errors = {};
     const nameRegex = /^[A-Za-z\s]+$/;
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|hotmail\.com)$/;
+    const emailRegex =
+      /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|hotmail\.com)$/;
     const phoneRegex = /^(\d{10}|\d{12})$/;
 
     if (!values.user_name) {
@@ -45,7 +48,8 @@ function ContactFormSection() {
     if (!values.email) {
       errors.email = "Email is required.";
     } else if (!emailRegex.test(values.email)) {
-      errors.email = "Please enter a valid email (gmail.com, yahoo.com, or hotmail.com).";
+      errors.email =
+        "Please enter a valid email (gmail.com, yahoo.com, or hotmail.com).";
     }
 
     if (!values.contact_number) {
@@ -147,15 +151,25 @@ function ContactFormSection() {
               {/* Contact */}
               <div className="grid gap-2">
                 <Label htmlFor="contact_number">Contact Number</Label>
-                <Input
+                <PhoneInput
+                  country={"lk"} // default Sri Lanka (+94), you can change
                   id="contact_number"
                   name="contact_number"
-                  placeholder="+94 *********"
                   value={formValue.contact_number}
-                  onChange={handleInputChange}
+                  onChange={(value) =>
+                    setFormValue({ ...formValue, contact_number: value })
+                  }
+                  inputStyle={{
+                    width: "100%",
+                    background: "transparent",
+                    border: "1px solid #00000",
+                  }}
+                  placeholder="+94 *********"
                 />
                 {formErrors.contact_number && (
-                  <p className="text-red-500 text-sm">{formErrors.contact_number}</p>
+                  <p className="text-red-500 text-sm">
+                    {formErrors.contact_number}
+                  </p>
                 )}
               </div>
 
