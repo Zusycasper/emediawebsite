@@ -246,6 +246,7 @@ function ContactFormSection() {
                 type="submit"
                 variant="outline"
                 className="w-full bg-black text-white hover:bg-teal-500"
+                disabled={!captchaToken}
               >
                 SEND
               </Button>
@@ -256,7 +257,7 @@ function ContactFormSection() {
             <AlertDialogContent className="bg-white text-black">
               <AlertDialogHeader>
                 <AlertDialogTitle>{alertInfo.title}</AlertDialogTitle>
-                <Separator className=" border-[0.1px]" />
+                <Separator className=" border-1 text-gray-400" />
                 <AlertDialogDescription>
                   {alertInfo.description}
                 </AlertDialogDescription>
