@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -31,22 +31,20 @@ function ContactFormSection() {
 
   const [formValue, setFormValue] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
   const [captchaToken, setCaptchaToken] = useState("");
   const [open, setOpen] = useState(false);
   const [alertInfo, setAlertInfo] = useState({
     title: "Form submitted successfully",
-    description: " Thank you for reaching out! We’ll get back to you shortly.",
+    description: "Thank you for reaching out! We’ll get back to you shortly.",
   });
 
-  const recaptchaRef = useRef();
+  const recaptchaRef = useRef(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormValue({ ...formValue, [name]: value });
   };
 
-  // ✅ Validation function (clean, tutorial-style)
   const validate = (values) => {
     const errors = {};
     const nameRegex = /^[A-Za-z\s]+$/;
@@ -81,8 +79,9 @@ function ContactFormSection() {
       errors.message = "Message is required.";
     }
 
+    // For v2 checkbox, user must tick captcha which sets captchaToken
     if (!captchaToken) {
-      errors.captcha = "Please verify the reCAPTCHA.";
+      errors.captcha = "Please check the reCAPTCHA box.";
     }
 
     return errors;
@@ -90,52 +89,59 @@ function ContactFormSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormErrors(validate(formValue));
-    setIsSubmit(true);
-    setOpen(true);
-  };
 
-  // ✅ Only submit when validation passes
-  useEffect(() => {
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      (async () => {
-        try {
-          const payload = {
-            ...formValue, // includes user_name, email, contact_number, address, message
-            captchaToken: captchaToken, // send the token to backend
-            action: "contact_form", // must match what your PHP expects
-          };
-
-          const response = await axios.post(
-            "http://localhost/xampp/reactcrudphp/api/user.php",
-            payload
-          );
-          console.log("Response:", response.data);
-
-          // Reset form
-          setFormValue(initialValues);
-          setCaptchaToken("");
-          recaptchaRef.current.reset();
-
-          // ✅ Use shadcn alert instead of normal alert
-          setAlertInfo({
-            title: "Form Submitted Successfully",
-            description:
-              "Thank you for reaching out! We’ll get back to you shortly.",
-          });
-          setOpen(true);
-        } catch (error) {
-          console.error("Error submitting form:", error);
-
-          setAlertInfo({
-            title: "Submission Failed",
-            description: "Something went wrong. Please try again later.",
-          });
-          setOpen(true);
-        }
-      })();
+    // client-side validation
+    const errors = validate(formValue);
+    setFormErrors(errors);
+    if (Object.keys(errors).length > 0) {
+      return;
     }
-  }, [formErrors]);
+
+    // Build payload (include captchaToken)
+    const payload = {
+      ...formValue,
+      captchaToken: captchaToken,
+      action: "contact_form", // optional, kept for compatibility
+    };
+
+    console.log("Sending payload to backend:", payload);
+
+    try {
+      const response = await axios.post(
+        "http://localhost/xampp/reactcrudphp/api/user.php",
+        payload,
+        { headers: { "Content-Type": "application/json" } }
+      );
+      console.log("Response:", response.data);
+
+      if (response.data?.status) {
+        // success
+        setFormValue(initialValues);
+        setCaptchaToken("");
+        // reset checkbox
+        recaptchaRef.current && recaptchaRef.current.reset();
+
+        setAlertInfo({
+          title: "Form Submitted Successfully",
+          description: "Thank you for reaching out! We’ll get back to you shortly.",
+        });
+        setOpen(true);
+      } else {
+        setAlertInfo({
+          title: "Submission Failed",
+          description: response.data?.message || "Something went wrong.",
+        });
+        setOpen(true);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setAlertInfo({
+        title: "Submission Error",
+        description: "Network or server error. Check console and server logs.",
+      });
+      setOpen(true);
+    }
+  };
 
   return (
     <div className="w-full">
@@ -237,11 +243,13 @@ function ContactFormSection() {
             </div>
 
             <CardFooter className="flex-col gap-2 px-7 mt-4">
-              <ReCAPTCHA
+               <ReCAPTCHA
                 ref={recaptchaRef}
                 sitekey="6Ldzqb0rAAAAALFR9ye1HagIdtJw-M_KX1eDfRyN"
-                onChange={(token) => setCaptchaToken(token)}
-                className="grid gap-2 px-4 mb-2"
+                onChange={(token) => {
+                  console.log("captcha token set:", token);
+                  setCaptchaToken(token);
+                }}
               />
               {formErrors.captcha && (
                 <p className="text-red-500 text-sm">{formErrors.captcha}</p>
