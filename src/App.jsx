@@ -6,20 +6,23 @@ import DigiMarketing from './pages/DigiMarketing/DigiMarketing';
 import WebDevelopment from './pages/WebDevelopment/WebDevelopment';
 import ContactUs from './pages/ContactUs/ContactUs';
 import Footer from './components/Footer/Footer';
+import Preloader from "./pages/Preloder/Preloader";
 
 function App() {
   return (
     <Router>
   {/* <Navbar /> */}
-  <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/about" element={<AboutUs />} />
-    <Route path="/contact" element={<ContactUs />} />
-    <Route path="/services" element={<Services />} />
-    <Route path="/digital_marketing" element={<DigiMarketing />} />
-    <Route path="/web_development" element={<WebDevelopment />} />
-  </Routes>
-  <Footer />
+<Routes>
+  <Route path="/" element={<Preloader />} />
+  <Route path="/home" element={<Home />} />
+  <Route path="/about" element={<AboutUs />} />
+  <Route path="/contact" element={<ContactUs />} />
+  <Route path="/services" element={<Services />} />
+  <Route path="/digital_marketing" element={<DigiMarketing />} />
+  <Route path="/web_development" element={<WebDevelopment />} />
+</Routes>
+
+  {/* <Footer /> */}
 </Router>
 
          
