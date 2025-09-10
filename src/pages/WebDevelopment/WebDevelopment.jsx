@@ -4,15 +4,17 @@ import WebDevelopmentHero from '../../components/WebDevelopment/WebDevelopmentHe
 import InfiniteScrollingBanner from '../../components/WebDevelopment/InfiniteScrollingBanner/InfiniteScrollingBanner'
 import PortfolioSection from '../../components/WebDevelopment/PortfolioSection/PortfolioSection'
 import LetsTalk from '../../components/Home/LetsTalk/LetsTalk'
+import Footer from '../../components/Footer/Footer'
 
 function WebDevelopment() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <Navbar />
       <WebDevelopmentHero />
       <InfiniteScrollingBanner />
       <PortfolioSection />
       <LetsTalk />
+      <Footer/>
     </div>
   )
 }
