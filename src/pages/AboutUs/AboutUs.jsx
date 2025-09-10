@@ -5,16 +5,18 @@ import WeAreSection from '../../components/About/WeAreSection/WeAreSection'
 import DrivenbyResultsSection from '../../components/About/DrivenbyResultsSection/DrivenbyResultsSection'
 import WeBelieveSection from '../../components/About/WeBelieveSection/WeBelieveSection'
 import LetsTalk from '../../components/Home/LetsTalk/LetsTalk'
+import Footer from '../../components/Footer/Footer'
 
 function AboutUs() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <Navbar />
       <CreateConnectSection />
       <WeAreSection />
       <DrivenbyResultsSection />
       <WeBelieveSection />
       <LetsTalk />
+      <Footer/>
     </div>
   )
 }
