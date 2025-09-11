@@ -29,13 +29,21 @@ function HeroSection() {
               </div>
             </div>
             <div className="flex justify-center items-center p-4 h-auto md:h-[665px] relative mt-4 md:mt-0">
-              <img src="/media/hero_pc.png" alt="Hero_pc" className="w-[300px] md:w-auto max-w-full h-auto" />
-              <img
-                src="/media/gif-ovelay.gif"
-                alt="Overlay GIF"
-                className="absolute top-[24px] md:top-[145px] left-1/2 transform -translate-x-1/2 md:left-[363px] md:transform-none w-[222px] md:w-[512px] h-[140px] md:h-[330px]"
-              />
-            </div>
+  {/* GIF behind */}
+  <img
+    src="/media/gif-ovelay.gif"
+    alt="Overlay GIF"
+    className="absolute top-[24px] md:top-[145px] left-1/2 transform -translate-x-1/2 md:left-[363px] md:transform-none w-[222px] md:w-[512px] h-[140px] md:h-[330px] z-0"
+  />
+
+  {/* Hero image on top */}
+  <img
+    src="/media/hero_pc.png"
+    alt="Hero_pc"
+    className="w-[300px] md:w-auto max-w-full h-auto relative z-10"
+  />
+</div>
+
           </div>
         </div>
       </section>
