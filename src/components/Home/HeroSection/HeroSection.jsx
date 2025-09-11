@@ -22,7 +22,7 @@ function HeroSection() {
                   </button>
                 </Link>
                 <Link to="/contact">
-                  <button className="border-2 border-[#009BB1] text-[#009BB1] hover:border-[#B2519A] hover:text-[#B2519A] px-4 py-2 md:px-6 md:py-3 rounded-md text-sm md:text-lg font-medium transition-colors duration-200">
+                  <button className="h-[52px] border-2 border-[#009BB1] text-[#009BB1] hover:border-[#B2519A] hover:text-[#B2519A] px-4 py-2 md:px-6 md:py-3 rounded-md text-sm md:text-lg font-medium transition-colors duration-200">
                     Get in Touch
                   </button>
                 </Link>
