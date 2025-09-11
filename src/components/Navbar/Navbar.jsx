@@ -19,7 +19,7 @@ function Navbar() {
             {/* Logo */}
             <div className="flex items-center">
               <div className="flex-shrink-0 flex items-center">
-                <Link to="/">
+                <Link to="/home">
                 <img
                   src="/media/logo_final.png"
                   alt="Mediabiz Logo"
@@ -33,7 +33,7 @@ function Navbar() {
             <div className="hidden justify-end md:block">
               <div className="ml-10 flex items-baseline space-x-8">
                 <Link
-                  to="/"
+                  to="/home"
                   className="text-gray-900 hover:text-[#009BB1] px-3 py-2 font-medium"
                 >
                   HOME

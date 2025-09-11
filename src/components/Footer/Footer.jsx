@@ -16,7 +16,7 @@ function Footer() {
             </p>
 
             <div className="h-24">
-              <Link to="/">
+              <Link to="/home">
                 <img
                   src="/media/mediabiz_logo_transparent.png"
                   alt="E-Media Biz Logo"
