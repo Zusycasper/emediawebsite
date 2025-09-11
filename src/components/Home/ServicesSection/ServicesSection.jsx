@@ -77,12 +77,17 @@ export default function ServicesSection() {
             <CardContent className="relative px-8">
               {/* Mobile Layout */}
               <div className="block md:hidden">
+                <Link to={visibleItems.center.link}>
                 <div className="text-center space-y-4">
                   <div className="relative mx-auto w-full max-w-sm">
                     <img
                       src={visibleItems.center.image || "/placeholder.svg"}
                       alt={`${visibleItems.center.title} illustration`}
                       className="w-full h-auto object-contain rounded-lg"
+                      onClick={(handleClick) => {
+                          window.scrollTo(0, 0);
+                          handleClick();
+                        }}
                     />
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mt-4">
@@ -94,19 +99,24 @@ export default function ServicesSection() {
                     <button
                       variant="ghost"
                       size="icon"
-                      className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-teal-500 shadow-lg hover:bg-[#B2519A]"
+                      onClick={goToPrevious}
+                      aria-label="Previous service"
+                      className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-teal-500 hover:bg-[#B2519A] text-white"
                     >
                       <ChevronLeft className="h-6 w-6" />
                     </button>
                     <button
+                    variant="ghost"
+                      size="icon"
                       onClick={goToNext}
-                      className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-teal-500 shadow-lg hover:bg-[#B2519A]"
+                      className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-teal-500 hover:bg-[#B2519A] text-white"
                       aria-label="Next service"
                     >
-                      <ChevronRight cclassName="h-6 w-6" />
+                      <ChevronRight className="h-6 w-6" />
                     </button>
                   </div>
                 </div>
+                </Link>
               </div>
 
               {/* Desktop Layout */}

@@ -21,6 +21,10 @@ function Footer() {
                   src="/media/mediabiz_logo_transparent.png"
                   alt="E-Media Biz Logo"
                   className="h-24"
+                  onClick={(handleClick) => {
+                          window.scrollTo(0, 0);
+                          handleClick();
+                        }}
                 />
               </Link>
             </div>

@@ -96,15 +96,19 @@ export default function WeBelieveSection() {
                 {/* Mobile Navigation Buttons */}
                 <div className="flex items-center justify-center gap-4">
                   <button
+                      variant="ghost"
+                      size="icon"
                     onClick={goToPrevious}
-                    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-teal-500 shadow-lg hover:bg-[#B2519A]"
+                    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-teal-500 hover:bg-[#B2519A] text-white"
                     aria-label="Previous belief"
                   >
                     <ChevronLeft className="w-6 h-6" />
                   </button>
                   <button
+                      variant="ghost"
+                      size="icon"
                     onClick={goToNext}
-                    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-teal-500 shadow-lg hover:bg-[#B2519A]"
+                    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-teal-500 hover:bg-[#B2519A] text-white"
                     aria-label="Next belief"
                   >
                     <ChevronRight className="w-6 h-6" />

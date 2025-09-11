@@ -17,7 +17,10 @@ function LetsTalk() {
           <div className="space-y-8 flex flex-col items-center lg:items-start justify-center py-8 lg:py-0">
             <h2 className="text-4xl font-bold text-gray-900 text-center lg:text-left">Let's Talk</h2>
             <Link to="/contact">
-              <Button className="bg-teal-500 hover:bg-[#B2519A] text-white px-8 py-3 flex items-center gap-2 w-[115px]">
+              <Button 
+              variant="ghost"
+                      size="icon"
+              className="bg-teal-500 hover:bg-[#B2519A] text-white px-8 py-3 flex items-center gap-2 w-[115px]">
                 <ChevronRight className="w-4 h-4" />
               </Button>
             </Link>
