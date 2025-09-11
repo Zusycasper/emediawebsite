@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
@@ -13,8 +13,12 @@ function HeroSection() {
         <div className="relative w-full z-10 max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-4 justify-center items-center h-[680px]">
           <div className="flex flex-col md:grid md:grid-cols-2 gap-4 items-center h-[680px]">
             <div className="flex flex-col justify-center p-4 md:pl-27 h-full md:h-full">
-              <h1 className="text-4xl md:text-5xl font-extrabold text-[#111111] mb-4 text-left">Leading Digital</h1>
-              <h1 className="text-4xl md:text-5xl font-extrabold text-[#009BB1] mb-4 text-left">Agency</h1>
+              <h1 className="text-4xl md:text-5xl font-extrabold text-[#111111] mb-4 text-left">
+                Leading Digital
+              </h1>
+              <h1 className="text-4xl md:text-5xl font-extrabold text-[#009BB1] mb-4 text-left">
+                Agency
+              </h1>
               <div className="flex flex-row gap-2 mt-6 items-center">
                 <Link to="/services">
                   <button className="bg-[#009BB1] hover:bg-[#B2519A] text-white px-4 py-2 md:px-6 md:py-3 rounded-md text-sm md:text-lg font-medium">
@@ -29,26 +33,25 @@ function HeroSection() {
               </div>
             </div>
             <div className="flex justify-center items-center p-4 h-auto md:h-[665px] relative mt-4 md:mt-0">
-  {/* GIF behind */}
-  <img
-    src="/media/gif-ovelay.gif"
-    alt="Overlay GIF"
-    className="absolute top-[24px] md:top-[145px] left-1/2 transform -translate-x-1/2 md:left-[363px] md:transform-none w-[222px] md:w-[512px] h-[140px] md:h-[330px] z-0"
-  />
+              <div className="relative">
+                <img
+                  src="/media/gif-ovelay.gif"
+                  alt="Overlay GIF"
+                  className="absolute top-[4%] left-[13%] w-[73.5%] h-[82%] object-cover z-0"
+                />
 
-  {/* Hero image on top */}
-  <img
-    src="/media/hero_pc.png"
-    alt="Hero_pc"
-    className="w-[300px] md:w-auto max-w-full h-auto relative z-10"
-  />
-</div>
-
+                <img
+                  src="/media/hero_pc.png"
+                  alt="Hero_pc"
+                  className="relative z-10 w-[1000px] max-w-full h-auto"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </>
-  )
+  );
 }
 
-export default HeroSection
+export default HeroSection;
