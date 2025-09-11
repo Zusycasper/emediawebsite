@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const services = [
   {
@@ -65,50 +66,87 @@ export default function ServicesSection() {
   const visibleItems = getVisibleItems();
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+    <section className="py-12 md:py-20 bg-gradient-to-br from-gray-900 to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-extraextrabold text-white text-center mb-16">
+        <h2 className="text-2xl md:text-4xl font-extrabold text-white text-center mb-8 md:mb-16">
           Our Services
         </h2>
 
         <div className="relative">
-          <Card className="bg-white p-12 rounded-2xl shadow-sm">
-            <CardContent className="relative flex items-center justify-center gap-8">
-              {/* Left Card - Clickable */}
-              <div
-                onClick={goToPrevious}
-                className="pr-10 cursor-pointer text-center space-y-4 opacity-60 w-[310px] hover:opacity-100 transition"
-              >
-                <h1 className="text-3xl font-extrabold bg-gradient-to-r from-teal-500 to-pink-500 bg-clip-text text-transparent h-[80px] text-outline ">
-                  {visibleItems.left.title}
-                </h1>
-              </div>
-
-              {/* Center Card */}
-              <Link to={visibleItems.center.link}>
-                <div className="text-center space-y-4 w-[392px] cursor-pointer">
-                  <div className="relative mx-auto w-[392px] h-auto">
+          <Card className="bg-white p-4 md:p-12 rounded-2xl shadow-sm">
+            <CardContent className="relative px-8">
+              {/* Mobile Layout */}
+              <div className="block md:hidden">
+                <div className="text-center space-y-4">
+                  <div className="relative mx-auto w-full max-w-sm">
                     <img
                       src={visibleItems.center.image || "/placeholder.svg"}
                       alt={`${visibleItems.center.title} illustration`}
-                      className="w-full h-full object-contain rounded-lg"
-                      onClick={(handleClick) => {
-                        window.scrollTo(0, 0);
-                        handleClick();
-                      }}
+                      className="w-full h-auto object-contain rounded-lg"
                     />
                   </div>
-                </div>
-              </Link>
+                  <h3 className="text-xl font-bold text-gray-800 mt-4">
+                    {visibleItems.center.title}
+                  </h3>
 
-              {/* Right Card - Clickable */}
-              <div
-                onClick={goToNext}
-                className="pl-10 cursor-pointer text-center space-y-4 opacity-60 w-[310px] hover:opacity-100 transition"
-              >
-                <h1 className="text-3xl font-extrabold bg-gradient-to-r from-teal-500 to-pink-500 bg-clip-text text-transparent h-[80px]">
-                  {visibleItems.right.title}
-                </h1>
+                  {/* Mobile Navigation Buttons */}
+                  <div className="flex justify-center gap-4 mt-6">
+                    <button
+                      variant="ghost"
+                      size="icon"
+                      className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-teal-500 shadow-lg hover:bg-[#B2519A]"
+                    >
+                      <ChevronLeft className="h-6 w-6" />
+                    </button>
+                    <button
+                      onClick={goToNext}
+                      className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-teal-500 shadow-lg hover:bg-[#B2519A]"
+                      aria-label="Next service"
+                    >
+                      <ChevronRight cclassName="h-6 w-6" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Desktop Layout */}
+              <div className="hidden md:flex items-center justify-center gap-8">
+                {/* Left Card - Clickable */}
+                <div
+                  onClick={goToPrevious}
+                  className="pr-10 cursor-pointer text-center space-y-4 opacity-60 w-[310px] hover:opacity-100 transition"
+                >
+                  <h1 className="text-3xl font-extrabold bg-gradient-to-r from-teal-500 to-pink-500 bg-clip-text text-transparent h-[80px]">
+                    {visibleItems.left.title}
+                  </h1>
+                </div>
+
+                {/* Center Card */}
+                <Link to={visibleItems.center.link}>
+                  <div className="text-center space-y-4 w-[392px] cursor-pointer">
+                    <div className="relative mx-auto w-[392px] h-auto">
+                      <img
+                        src={visibleItems.center.image || "/placeholder.svg"}
+                        alt={`${visibleItems.center.title} illustration`}
+                        className="w-full h-full object-contain rounded-lg"
+                        onClick={(handleClick) => {
+                          window.scrollTo(0, 0);
+                          handleClick();
+                        }}
+                      />
+                    </div>
+                  </div>
+                </Link>
+
+                {/* Right Card - Clickable */}
+                <div
+                  onClick={goToNext}
+                  className="pl-10 cursor-pointer text-center space-y-4 opacity-60 w-[310px] hover:opacity-100 transition"
+                >
+                  <h1 className="text-3xl font-extrabold bg-gradient-to-r from-teal-500 to-pink-500 bg-clip-text text-transparent h-[80px]">
+                    {visibleItems.right.title}
+                  </h1>
+                </div>
               </div>
             </CardContent>
           </Card>

@@ -1,18 +1,7 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
-const images = [
-  "/media/about/creativity.png",
-  "/media/about/stratergy.png",
-  "/media/about/consistancy.png",
-];
+const images = ["/media/about/creativity.png", "/media/about/stratergy.png", "/media/about/consistancy.png"]
 
 function WhyMediaBiz() {
   return (
@@ -23,20 +12,17 @@ function WhyMediaBiz() {
           <div className="space-y-6">
             <h2 className="text-4xl font-bold text-gray-900">Why E-mediabiz</h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              In today's crowded digital space, visibility alone isn't enough —
-              you need strategy, creativity, and consistency to stand out.
-              E-Media Biz brings all three. We help you attract the right
-              audience, engage them with compelling content, and convert them
-              into loyal customers. With our expertise in digital marketing,
-              social media, and development, we take the guesswork out of online
-              growth so you can focus on running your business.
+              In today's crowded digital space, visibility alone isn't enough — you need strategy, creativity, and
+              consistency to stand out. E-Media Biz brings all three. We help you attract the right audience, engage
+              them with compelling content, and convert them into loyal customers. With our expertise in digital
+              marketing, social media, and development, we take the guesswork out of online growth so you can focus on
+              running your business.
             </p>
           </div>
 
           {/* Carousel Section */}
           <div className="relative">
             <div className="flex justify-center">
-              {/* Add opts={{ loop: true }} here */}
               <Carousel opts={{ loop: true }} className="w-full max-w-xs">
                 <CarouselContent>
                   {images.map((src, index) => (
@@ -45,7 +31,7 @@ function WhyMediaBiz() {
                         <Card className="shadow-sm">
                           <CardContent className="flex aspect-square items-center justify-center">
                             <img
-                              src={src}
+                              src={src || "/placeholder.svg"}
                               alt={`Why E-Mediabiz ${index + 1}`}
                               className="object-contain w-full h-full rounded-lg"
                             />
@@ -55,15 +41,15 @@ function WhyMediaBiz() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
+                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-teal-500 hover:bg-[#B2519A] text-white border-none shadow-lg transition-colors duration-200 sm:-left-2 md:-left-4" />
+                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-teal-500 hover:bg-[#B2519A] text-white border-none shadow-lg transition-colors duration-200 sm:-right-2 md:-right-4" />
               </Carousel>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default WhyMediaBiz;
+export default WhyMediaBiz
