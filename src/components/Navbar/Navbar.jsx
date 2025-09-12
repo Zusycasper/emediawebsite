@@ -12,6 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Separator } from "@/components/ui/separator";
+import LogoHoverEffect from "../LogoHoverEffect/LogoHoverEffect"
 
 
 function Navbar() {
@@ -23,17 +24,30 @@ function Navbar() {
 
   return (
     <div>
-      <nav className="bg-[linear-gradient(to_right,_rgba(255,255,255,0.25)_5%,_rgba(255,255,255,0.25)_25%,_rgba(0,155,177,0.25)_60%,_rgba(178,81,154,0.25)_80%)] shadow-sm font-sans text-base">
+      <nav className="h-[87px] bg-[linear-gradient(to_right,_rgba(255,255,255,0.25)_5%,_rgba(255,255,255,0.25)_25%,_rgba(0,155,177,0.25)_60%,_rgba(178,81,154,0.25)_80%)] shadow-sm font-sans text-base">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="flex-shrink-0 flex items-center">
-                <Link to="/home">
-                  <img src="/media/logo_final.png" alt="Mediabiz Logo" className="w-50 h-20 mr-2" />
-                </Link>
-              </div>
-            </div>
+  <div className="flex-shrink-0 flex items-center p-1 mt-2">
+    <Link to="/home">
+      {/* Large screens - LogoHoverEffect */}
+      <div className="hidden lg:block w-100 h-20 mr-2">
+        <LogoHoverEffect />
+      </div>
+
+      {/* Small screens - static image */}
+      <div className="block lg:hidden w-50 h-20 mr-2">
+        <img
+          src="/media/logo_final.png"
+          alt="Mediabiz Logo"
+          className="w-full h-full"
+        />
+      </div>
+    </Link>
+  </div>
+</div>
+
 
             {/* Desktop Nav Links */}
             <div className="hidden justify-end md:block">

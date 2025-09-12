@@ -35,7 +35,7 @@ function HeroSection() {
             <div className="flex justify-center items-center p-4 h-auto md:h-[665px] relative mt-4 md:mt-0">
               <div className="relative">
                 <img
-                  src="/media/gif-ovelay.gif"
+                  src="/media/gifLaptop-overlay.webp"
                   alt="Overlay GIF"
                   className="absolute top-[4%] left-[13%] w-[73.5%] h-[82%] object-cover z-0"
                 />
