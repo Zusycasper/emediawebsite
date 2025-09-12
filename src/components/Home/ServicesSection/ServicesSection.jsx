@@ -66,14 +66,15 @@ export default function ServicesSection() {
   const visibleItems = getVisibleItems();
 
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+    <section className="py-12 md:py-7 bg-gradient-to-br from-gray-900 to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-4xl font-extrabold text-white text-center mb-8 md:mb-16">
+        <h2 className="text-2xl md:text-4xl font-extrabold text-white text-center mb-8 md:mb-8
+        ">
           Our Services
         </h2>
 
         <div className="relative">
-          <Card className="bg-white p-4 md:p-12 rounded-2xl shadow-sm">
+          <Card className="bg-white p-4 md:p-2 rounded-2xl shadow-sm">
             <CardContent className="relative px-8">
               {/* Mobile Layout */}
               <div className="block md:hidden">

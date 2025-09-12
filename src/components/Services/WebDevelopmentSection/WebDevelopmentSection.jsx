@@ -28,7 +28,7 @@ function WebDevelopmentSection() {
               <div className="flex flex-wrap gap-4 items-center">
                 <img src="/media/services/subweb.png" alt="Digital Marketing Services" className="w-full h-full pr-4"/>
               </div>
-              <Link to="/web_development">
+              {/* <Link to="/web_development">
               <Button className="bg-teal-500 hover:bg-[#B2519A] text-white px-8 py-3" 
               onClick={(handleClick) => {
                 window.scrollTo(0, 0);
@@ -36,7 +36,7 @@ function WebDevelopmentSection() {
                 }}  >
                 More Details
               </Button>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

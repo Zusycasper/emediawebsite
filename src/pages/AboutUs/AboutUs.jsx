@@ -14,7 +14,7 @@ function AboutUs() {
       <CreateConnectSection />
       <WeAreSection />
       <DrivenbyResultsSection />
-      <WeBelieveSection />
+      {/* <WeBelieveSection /> */}
       <LetsTalk />
       <Footer/>
     </div>

@@ -1,11 +1,20 @@
-import React from "react";
+"use client"
+
+import React from "react"
 import { Button } from "@/components/ui/button"
-import { Search, Users, Mail,} from "lucide-react"
-import { Link } from "react-router-dom";
+import {
+  Drawer,
+  DrawerTrigger,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerDescription,
+} from "@/components/ui/drawer"
+
 function DigitalMarketingSection() {
   return (
-    <div>
-      <section className="py-20 bg-white">
+    <div className="relative DigitalMerketingSection">
+      <section className="py-20 bg-white ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -16,25 +25,78 @@ function DigitalMarketingSection() {
                 We build websites that not only look stunning but also perform
                 flawlessly. Whether you need a sleek portfolio, a dynamic
                 e-commerce store, or a robust web application, our team crafts
-                solutions tailored to your goals
+                solutions tailored to your goals.
               </p>
-              <div className="flex flex-wrap gap-4 items-center">
-                <img src="/media/services/subdigi.png" alt="Digital Marketing Services" className="w-full h-full pr-6"/>
-              </div> 
-              <Link to="/digital_marketing">
-              <Button className="bg-teal-500 hover:bg-[#B2519A] text-white px-8 py-3"
-              onClick={(handleClick) => {
-                window.scrollTo(0, 0);
-                handleClick();
-                }}  >
-                More Details
-              </Button>
-              </Link>
+
+              <div className="flex flex-wrap gap-4 items-center relative">
+                <img
+                  src="/media/services/subdigi.png"
+                  alt="Digital Marketing Services"
+                  className="w-full h-full pr-6"
+                />
+
+                {/* SEO Drawer */}
+                <Drawer direction="right">
+                  <DrawerTrigger asChild>
+                    <Button className="absolute top-[15%] left-[7%] shadow-none w-30 h-30">
+                      
+                    </Button>
+                  </DrawerTrigger>
+                  <DrawerContent>
+                    <div className="p-6">
+                      <DrawerHeader>
+                        <DrawerTitle>SEO</DrawerTitle>
+                        <DrawerDescription>
+                          Optimize your website for search engines and improve visibility.
+                        </DrawerDescription>
+                      </DrawerHeader>
+                    </div>
+                  </DrawerContent>
+                </Drawer>
+
+                {/* SM Drawer */}
+                <Drawer direction="right">
+                  <DrawerTrigger asChild>
+                    <Button className="absolute top-[17%] left-[35%] shadow-none w-30 h-30">
+                      
+                    </Button>
+                  </DrawerTrigger>
+                  <DrawerContent>
+                    <div className="p-6">
+                      <DrawerHeader>
+                        <DrawerTitle>Social Media Marketing</DrawerTitle>
+                        <DrawerDescription>
+                          Grow your brand presence across social media platforms.
+                        </DrawerDescription>
+                      </DrawerHeader>
+                    </div>
+                  </DrawerContent>
+                </Drawer>
+
+                {/* Email Drawer */}
+                <Drawer direction="right">
+                  <DrawerTrigger asChild>
+                    <Button className="absolute top-[20%] left-[67%] bg-transparent w-30 h-30 shadow-none">
+                      
+                    </Button>
+                  </DrawerTrigger>
+                  <DrawerContent>
+                    <div className="p-6">
+                      <DrawerHeader>
+                        <DrawerTitle>Email Marketing</DrawerTitle>
+                        <DrawerDescription>
+                          Engage your audience with personalized email campaigns.
+                        </DrawerDescription>
+                      </DrawerHeader>
+                    </div>
+                  </DrawerContent>
+                </Drawer>
+              </div>
             </div>
 
             <div className="relative">
               <img
-                src="/media/DigiMarkSub.png "
+                src="/media/DigiMarkSub.png"
                 alt="Digital marketing service"
                 className="w-full rounded-2xl"
               />
@@ -43,7 +105,7 @@ function DigitalMarketingSection() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 
-export default DigitalMarketingSection;
+export default DigitalMarketingSection
