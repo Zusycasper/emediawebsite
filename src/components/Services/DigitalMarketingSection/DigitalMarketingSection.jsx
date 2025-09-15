@@ -38,7 +38,7 @@ function DigitalMarketingSection() {
                 {/* SEO Drawer */}
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[15%] left-[7%] shadow-none w-30 h-30">
+                    <Button className="absolute top-[15%] left-[7%] shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-700">
                     </Button>
                   </DrawerTrigger>
                   <DrawerContent>
@@ -56,7 +56,7 @@ function DigitalMarketingSection() {
                 {/* SM Drawer */}
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[17%] left-[35%] shadow-none w-30 h-30">
+                    <Button className="absolute top-[17%] left-[35%] shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-700">
                       
                     </Button>
                   </DrawerTrigger>
@@ -75,7 +75,7 @@ function DigitalMarketingSection() {
                 {/* Email Drawer */}
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[20%] left-[67%] bg-transparent w-30 h-30 shadow-none">
+                    <Button className="absolute top-[20%] left-[67%] bg-transparent w-23 h-23 sm:w-30 sm:h-30 shadow-none bg-amber-700">
                       
                     </Button>
                   </DrawerTrigger>
