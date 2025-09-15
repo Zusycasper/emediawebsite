@@ -25,7 +25,7 @@ function WebDevelopmentSection() {
                {/* Web Developmen Drawer */}
                               <Drawer direction="right">
                                 <DrawerTrigger asChild>
-                                  <Button className="absolute top-[300%] left-[5%] sm:top-[57%] sm:left-[114%] shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-700">
+                                  <Button className="absolute top-[300%] left-[5%] sm:top-[57%] sm:left-[114%] shadow-none w-23 h-23 sm:w-30 sm:h-30 ">
                                   </Button>
                                 </DrawerTrigger>
                                 <DrawerContent>
@@ -43,7 +43,7 @@ function WebDevelopmentSection() {
                               {/* Appdev Drawer */}
                               <Drawer direction="right">
                                 <DrawerTrigger asChild>
-                                  <Button className="absolute top-[305%] left-[35%] sm:top-[61%] sm:left-[145%] shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-700">
+                                  <Button className="absolute top-[305%] left-[35%] sm:top-[61%] sm:left-[145%] shadow-none w-23 h-23 sm:w-30 sm:h-30 ">
                                     
                                   </Button>
                                 </DrawerTrigger>
@@ -62,7 +62,7 @@ function WebDevelopmentSection() {
                               {/* M&S Drawer */}
                               <Drawer direction="right">
                                 <DrawerTrigger asChild>
-                                  <Button className="absolute top-[305%] left-[65%] sm:top-[57%] sm:left-[177%] bg-transparent w-23 h-23 sm:w-30 sm:h-30 shadow-none bg-amber-700">
+                                  <Button className="absolute top-[305%] left-[65%] sm:top-[57%] sm:left-[177%] bg-transparent w-23 h-23 sm:w-30 sm:h-30 shadow-none ">
                                     
                                   </Button>
                                 </DrawerTrigger>
