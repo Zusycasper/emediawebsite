@@ -4,12 +4,16 @@ import React from "react"
 import { Button } from "@/components/ui/button"
 import {
   Drawer,
+  DrawerClose,
   DrawerTrigger,
   DrawerContent,
   DrawerHeader,
   DrawerTitle,
   DrawerDescription,
 } from "@/components/ui/drawer"
+import { X } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Separator } from "@/components/ui/separator";
 
 function DigitalMarketingSection() {
   return (
@@ -44,6 +48,17 @@ function DigitalMarketingSection() {
                   <DrawerContent>
                     <div className="p-6">
                       <DrawerHeader>
+                        <DrawerClose asChild>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="absolute top-4 left-4 h-8 w-8 rounded-full hover:bg-muted"
+                        >
+                          <X className="h-4 w-4" />
+                          <span className="sr-only"></span>
+                        </Button>
+                      </DrawerClose>
+                      <Separator className="my-4 bg-gray-100 shadow-neutral-50" />
                         <DrawerTitle>SEO</DrawerTitle>
                         <DrawerDescription>
                           Optimize your website for search engines and improve visibility.
@@ -63,6 +78,17 @@ function DigitalMarketingSection() {
                   <DrawerContent>
                     <div className="p-6">
                       <DrawerHeader>
+                        <DrawerClose asChild>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="absolute top-4 left-4 h-8 w-8 rounded-full hover:bg-muted"
+                        >
+                          <X className="h-4 w-4" />
+                          <span className="sr-only"></span>
+                        </Button>
+                      </DrawerClose>
+                      <Separator className="my-4 bg-gray-100 shadow-neutral-50" />
                         <DrawerTitle>Social Media Marketing</DrawerTitle>
                         <DrawerDescription>
                           Grow your brand presence across social media platforms.
@@ -82,6 +108,17 @@ function DigitalMarketingSection() {
                   <DrawerContent>
                     <div className="p-6">
                       <DrawerHeader>
+                        <DrawerClose asChild>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="absolute top-4 left-4 h-8 w-8 rounded-full hover:bg-muted"
+                        >
+                          <X className="h-4 w-4" />
+                          <span className="sr-only"></span>
+                        </Button>
+                      </DrawerClose>
+                      <Separator className="my-4 bg-gray-100 shadow-neutral-50" />
                         <DrawerTitle>Email Marketing</DrawerTitle>
                         <DrawerDescription>
                           Engage your audience with personalized email campaigns.
