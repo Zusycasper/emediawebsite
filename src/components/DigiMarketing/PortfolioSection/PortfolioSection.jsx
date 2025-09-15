@@ -77,7 +77,7 @@ function PortfolioSection() {
             </div>
 
             {/* Carousel Dots */}
-            <div className="hidden md:flex justify-center space-x-2 mt-8">
+            {/* <div className="hidden md:flex justify-center space-x-2 mt-8">
               {portfolioItems.map((_, index) => (
                 <button
                   key={index}
@@ -87,12 +87,12 @@ function PortfolioSection() {
                   }`}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
-       <style jsx>{`
+       {/* <style jsx>{`
         @keyframes marquee {
           0% {
             transform: translateX(0%);
@@ -105,7 +105,7 @@ function PortfolioSection() {
         .animate-marquee {
           animation: marquee 20s linear infinite;
         }
-      `}</style>
+      `}</style> */}
     </div>
   )
 }
