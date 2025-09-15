@@ -1,5 +1,13 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
+import {
+  Drawer,
+  DrawerTrigger,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerDescription,
+} from "@/components/ui/drawer"
 import { Link } from "react-router-dom";
 
 function WebDevelopmentSection() {
@@ -14,6 +22,61 @@ function WebDevelopmentSection() {
                 alt="Web development"
                 className="w-full rounded-2xl"
               />
+               {/* Web Developmen Drawer */}
+                              <Drawer direction="right">
+                                <DrawerTrigger asChild>
+                                  <Button className="absolute top-[300%] left-[5%] sm:top-[57%] sm:left-[114%] shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-700">
+                                  </Button>
+                                </DrawerTrigger>
+                                <DrawerContent>
+                                  <div className="p-6">
+                                    <DrawerHeader>
+                                      <DrawerTitle>Web Developmen</DrawerTitle>
+                                      <DrawerDescription>
+                                        Optimize your website for search engines and improve visibility.
+                                      </DrawerDescription>
+                                    </DrawerHeader>
+                                  </div>
+                                </DrawerContent>
+                              </Drawer>
+              
+                              {/* Appdev Drawer */}
+                              <Drawer direction="right">
+                                <DrawerTrigger asChild>
+                                  <Button className="absolute top-[305%] left-[35%] sm:top-[61%] sm:left-[145%] shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-700">
+                                    
+                                  </Button>
+                                </DrawerTrigger>
+                                <DrawerContent>
+                                  <div className="p-6">
+                                    <DrawerHeader>
+                                      <DrawerTitle>Application Development</DrawerTitle>
+                                      <DrawerDescription>
+                                        Grow your brand presence across social media platforms.
+                                      </DrawerDescription>
+                                    </DrawerHeader>
+                                  </div>
+                                </DrawerContent>
+                              </Drawer>
+              
+                              {/* M&S Drawer */}
+                              <Drawer direction="right">
+                                <DrawerTrigger asChild>
+                                  <Button className="absolute top-[305%] left-[65%] sm:top-[57%] sm:left-[177%] bg-transparent w-23 h-23 sm:w-30 sm:h-30 shadow-none bg-amber-700">
+                                    
+                                  </Button>
+                                </DrawerTrigger>
+                                <DrawerContent>
+                                  <div className="p-6">
+                                    <DrawerHeader>
+                                      <DrawerTitle>Maintanance & Security</DrawerTitle>
+                                      <DrawerDescription>
+                                        Engage your audience with personalized email campaigns.
+                                      </DrawerDescription>
+                                    </DrawerHeader>
+                                  </div>
+                                </DrawerContent>
+                              </Drawer>
             </div>
             <div className="space-y-6">
               <h1 className="text-5xl font-bold text-gray-900">
