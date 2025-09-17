@@ -22,7 +22,7 @@ function WebDevelopmentSection() {
             <div className="relative">
               <img
                 src="/media/WebDevSub.png "
-                alt="Web development"
+                alt="Web Development"
                 className="w-full rounded-2xl"
               />
               {/* Web Developmen Drawer */}

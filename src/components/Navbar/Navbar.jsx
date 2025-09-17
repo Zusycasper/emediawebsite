@@ -39,7 +39,7 @@ function Navbar() {
                   <div className="block lg:hidden w-50 h-20 mr-2">
                     <img
                       src="/media/logo_final.png"
-                      alt="Mediabiz Logo"
+                      alt="EMediabiz Logo"
                       className="w-full h-full"
                     />
                   </div>

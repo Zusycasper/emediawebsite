@@ -133,7 +133,7 @@ function DigitalMarketingSection() {
             <div className="relative">
               <img
                 src="/media/DigiMarkSub.png"
-                alt="Digital marketing service"
+                alt="Digital Marketing Service"
                 className="w-full rounded-2xl"
               />
             </div>

@@ -16,7 +16,7 @@ function DrivenbyResultsSection() {
             </div>
 
             <div className="relative">
-              <img src="/media/about/drivenBy.jpg" alt="Data analysis" className="w-full rounded-2xl" />
+              <img src="/media/about/drivenBy.jpg" alt="Data Analysis" className="w-full rounded-2xl" />
             </div>
           </div>
         </div>

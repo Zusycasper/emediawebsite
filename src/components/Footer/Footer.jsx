@@ -19,7 +19,7 @@ function Footer() {
               <Link to="/home">
                 <img
                   src="/media/mediabiz_logo_transparent.png"
-                  alt="E-Media Biz Logo"
+                  alt="EMedia Biz Logo"
                   className="h-24"
                   onClick={(handleClick) => {
                           window.scrollTo(0, 0);
@@ -78,7 +78,7 @@ function Footer() {
               </div>
               <div className="w-8 h-8 bg-gray-700 rounded-full justify-center items-center flex">
                <Link to="https://www.tiktok.com/@emediabiz?lang=en" target="_blank" rel="noopener noreferrer">
-                <img className="h-[24px]" src="/media/footer/tiktok.png"  alt="tiktok-logo"/>
+                <img className="h-[24px]" src="/media/footer/tiktok.png"  alt="Tiktok Logo"/>
                 </Link>
               </div>
               <div className="w-8 h-8 bg-gray-700 rounded-full justify-center items-center flex">

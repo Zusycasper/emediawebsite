@@ -42,7 +42,7 @@ function HeroSection() {
 
                 <img
                   src="/media/hero_pc.png"
-                  alt="Hero_pc"
+                  alt="Hero PC"
                   className="relative z-10 w-[1000px] max-w-full h-auto"
                 />
               </div>
