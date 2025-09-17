@@ -2,3 +2,17 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
+/* index.css (add below your @tailwind rules) */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); } /* move by one copy width */
+}
+
+/* fallback animation class (won't be purged) */
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+  will-change: transform;
+  /* use GPU acceleration */
+  transform-origin: 0 0;
+}
