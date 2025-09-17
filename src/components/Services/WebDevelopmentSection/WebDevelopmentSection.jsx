@@ -28,7 +28,14 @@ function WebDevelopmentSection() {
               {/* Web Developmen Drawer */}
               <Drawer direction="left">
                 <DrawerTrigger asChild>
-                  <Button className="absolute top-[300%] left-[5%] sm:top-[57%] sm:left-[114%] shadow-none w-23 h-23 sm:w-30 sm:h-30 "></Button>
+                  <Button
+                    className="absolute 
+  top-[300%] left-[5%]   // default (mobile)
+  sm:top-[187%] sm:left-[10%]   // small screens
+  md:top-[163%] md:left-[10%]   // medium screens (new)
+  lg:top-[55%] lg:left-[115%]   // large screens
+  shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-700 "
+                  ></Button>
                 </DrawerTrigger>
                 <DrawerContent>
                   <div className="p-6">
@@ -58,7 +65,12 @@ function WebDevelopmentSection() {
               {/* Appdev Drawer */}
               <Drawer direction="left">
                 <DrawerTrigger asChild>
-                  <Button className="absolute top-[305%] left-[35%] sm:top-[61%] sm:left-[145%] shadow-none w-23 h-23 sm:w-30 sm:h-30 "></Button>
+                  <Button className="absolute 
+  top-[300%] left-[35%]   // default (mobile)
+  sm:top-[193%] sm:left-[36%]   // small screens
+  md:top-[173%] md:left-[40%]   // medium screens (new)
+  lg:top-[55%] lg:left-[145%]   // large screens
+  shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-700 "></Button>
                 </DrawerTrigger>
                 <DrawerContent>
                   <div className="p-6">
@@ -87,7 +99,12 @@ function WebDevelopmentSection() {
               {/* M&S Drawer */}
               <Drawer direction="left">
                 <DrawerTrigger asChild>
-                  <Button className="absolute top-[305%] left-[65%] sm:top-[57%] sm:left-[177%] bg-transparent w-23 h-23 sm:w-30 sm:h-30 shadow-none "></Button>
+                  <Button className="absolute 
+  top-[300%] left-[65%]   // default (mobile)
+  sm:top-[197%] sm:left-[68%]   // small screens
+  md:top-[169%] md:left-[70%]   // medium screens (new)
+  lg:top-[55%] lg:left-[175%]   // large screens
+  shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-700 "></Button>
                 </DrawerTrigger>
                 <DrawerContent>
                   <div className="p-6">
