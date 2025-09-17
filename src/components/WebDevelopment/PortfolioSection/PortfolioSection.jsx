@@ -1,49 +1,53 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { ChevronDown, Play, ChevronLeft, ChevronRight } from "lucide-react"
-import { useState } from "react"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ChevronDown, Play, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
+
+const portfolioItems = [
+  {
+    image: "/media/portfolio/web/a.jpg",
+    title: "Analytics Dashboard Project",
+  },
+  {
+    image: "/media/portfolio/web/b.jpg",
+    title: "Social Media Campaign",
+  },
+  {
+    image: "/media/portfolio/web/c.jpg",
+    title: "SEO Optimization",
+  },
+  {
+    image: "/media/portfolio/web/d.jpg",
+    title: "Email Marketing Design",
+  },
+  {
+    image: "/media/portfolio/web/e.jpg",
+    title: "Website Redesign",
+  },
+];
 
 function PortfolioSection() {
-    const [currentSlide, setCurrentSlide] = useState(0)
-
-  const portfolioItems = [
-    {
-      image: "/media/portfolio/web/a.jpg",
-      title: "Analytics Dashboard Project",
-    },
-    {
-      image: "/media/portfolio/web/b.jpg",
-      title: "Social Media Campaign",
-    },
-    {
-      image: "/media/portfolio/web/c.jpg",
-      title: "SEO Optimization",
-    },
-    {
-      image: "/media/portfolio/web/d.jpg",
-      title: "Email Marketing Design",
-    },
-    {
-      image: "/media/portfolio/web/e.jpg",
-      title: "Website Redesign",
-    }, 
-  ]
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % portfolioItems.length)
-  }
+    setCurrentSlide((prev) => (prev + 1) % portfolioItems.length);
+  };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + portfolioItems.length) % portfolioItems.length)
-  }
+    setCurrentSlide(
+      (prev) => (prev - 1 + portfolioItems.length) % portfolioItems.length
+    );
+  };
 
   return (
     <div>
-        <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Portfolio</h2>
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">
+            Portfolio
+          </h2>
 
           <div className="relative">
             <div className="flex justify-center">
@@ -59,7 +63,10 @@ function PortfolioSection() {
               <div className="max-w-4xl mx-auto">
                 <div className="relative overflow-hidden rounded-2xl">
                   <img
-                    src={portfolioItems[currentSlide].image || "/placeholder.svg"}
+                    key={currentSlide}
+                    src={
+                      portfolioItems[currentSlide].image || "/placeholder.svg"
+                    }
                     alt={portfolioItems[currentSlide].title}
                     className="w-full h-96 object-cover"
                   />
@@ -92,7 +99,7 @@ function PortfolioSection() {
         </div>
       </section>
 
-       {/* <style jsx>{`
+      {/* <style jsx>{`
         @keyframes marquee {
           0% {
             transform: translateX(0%);
@@ -107,7 +114,7 @@ function PortfolioSection() {
         // }
       `}</style> */}
     </div>
-  )
+  );
 }
 
-export default PortfolioSection
+export default PortfolioSection;

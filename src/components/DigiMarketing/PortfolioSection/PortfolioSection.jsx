@@ -3,33 +3,18 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ChevronDown, Play, ChevronLeft, ChevronRight } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+
+const portfolioItems = [
+  { image: "/media/portfolio/digi/g.jpg", title: "Analytics Dashboard Project" },
+  { image: "/media/portfolio/digi/h.jpg", title: "Social Media Campaign" },
+  { image: "/media/portfolio/digi/i.jpg", title: "SEO Optimization" },
+  { image: "/media/portfolio/digi/j.jpg", title: "Email Marketing Design" },
+  { image: "/media/portfolio/digi/k.jpg", title: "Website Redesign" },
+];
 
 function PortfolioSection() {
     const [currentSlide, setCurrentSlide] = useState(0)
-
-  const portfolioItems = [
-    {
-      image: "/media/portfolio/digi/g.jpg",
-      title: "Analytics Dashboard Project",
-    },
-    {
-      image: "/media/portfolio/digi/h.jpg",
-      title: "Social Media Campaign",
-    },
-    {
-      image: "/media/portfolio/digi/i.jpg",
-      title: "SEO Optimization",
-    },
-    {
-      image: "/media/portfolio/digi/j.jpg",
-      title: "Email Marketing Design",
-    },
-    {
-      image: "/media/portfolio/digi/k.jpg",
-      title: "Website Redesign",
-    },
-  ]
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % portfolioItems.length)
@@ -38,6 +23,13 @@ function PortfolioSection() {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + portfolioItems.length) % portfolioItems.length)
   }
+  useEffect(() => {
+  portfolioItems.forEach(item => {
+    const img = new Image()
+    img.src = item.image
+  })
+}, [])
+
 
   return (
     <div>
@@ -59,6 +51,7 @@ function PortfolioSection() {
               <div className="max-w-4xl mx-auto">
                 <div className="relative overflow-hidden rounded-2xl">
                   <img
+                   key={currentSlide}
                     src={portfolioItems[currentSlide].image || "/placeholder.svg"}
                     alt={portfolioItems[currentSlide].title}
                     className="w-full h-96 object-cover"
