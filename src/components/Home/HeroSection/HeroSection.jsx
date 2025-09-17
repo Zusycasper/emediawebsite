@@ -10,7 +10,7 @@ function HeroSection() {
           aria-hidden="true"
           className="absolute inset-0 w-full h-[680px] object-cover"
         />
-        <div className="relative w-full z-10 max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-4 justify-center items-center h-[680px]">
+        <div className="relative w-full z-10 max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-4 justify-center items-center h-[643px]">
           <div className="flex flex-col md:grid md:grid-cols-2 gap-4 items-center h-[680px]">
             <div className="flex flex-col justify-center p-4 md:pl-27 h-full md:h-full">
               <h1 className="text-4xl md:text-5xl font-extrabold text-[#111111] mb-4 text-left">
