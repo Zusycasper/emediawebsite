@@ -21,14 +21,14 @@ function HeroSection() {
               </h1>
               <div className="flex flex-row gap-2 mt-6 items-center">
                 <Link to="/services">
-                  <button className="bg-[#009BB1] hover:bg-[#B2519A] text-white px-4 py-2 md:px-6 md:py-3 rounded-md text-sm md:text-lg font-medium">
+                  <button className="bg-[#009BB1] hover:bg-[#B2519A] text-white rounded-md text-sm md:text-lg font-medium h-12 md:h-14 px-6 align-items-vertical-center justify-evenly">
                     Services
                   </button>
                 </Link>
-                <Link to="/contact">
-                  <button className="h-[52px] border-2 border-[#009BB1] text-[#009BB1] hover:border-[#B2519A] hover:text-[#B2519A] px-4 py-2 md:px-6 md:py-3 rounded-md text-sm md:text-lg font-medium transition-colors duration-200">
+                <Link to="/contact"><button className="border-2 border-[#009BB1] text-[#009BB1] hover:border-[#B2519A] hover:text-[#B2519A] rounded-md text-sm md:text-lg font-medium h-12 md:h-14 px-6 transition-colors duration-200 align-items-vertical-center justify-evenly">
                     Get in Touch
                   </button>
+                  
                 </Link>
               </div>
             </div>
