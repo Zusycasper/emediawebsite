@@ -34,7 +34,7 @@ function WebDevelopmentSection() {
   sm:top-[187%] sm:left-[10%]   // small screens
   md:top-[163%] md:left-[10%]   // medium screens (new)
   lg:top-[55%] lg:left-[115%]   // large screens
-  shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-700 "
+  shadow-none w-23 h-23 sm:w-30 sm:h-30  "
                   ></Button>
                 </DrawerTrigger>
                 <DrawerContent>
@@ -70,7 +70,7 @@ function WebDevelopmentSection() {
   sm:top-[193%] sm:left-[36%]   // small screens
   md:top-[173%] md:left-[40%]   // medium screens (new)
   lg:top-[55%] lg:left-[145%]   // large screens
-  shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-700 "></Button>
+  shadow-none w-23 h-23 sm:w-30 sm:h-30  "></Button>
                 </DrawerTrigger>
                 <DrawerContent>
                   <div className="p-6">
@@ -104,7 +104,7 @@ function WebDevelopmentSection() {
   sm:top-[197%] sm:left-[68%]   // small screens
   md:top-[169%] md:left-[70%]   // medium screens (new)
   lg:top-[55%] lg:left-[175%]   // large screens
-  shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-700 "></Button>
+  shadow-none w-23 h-23 sm:w-30 sm:h-30  "></Button>
                 </DrawerTrigger>
                 <DrawerContent>
                   <div className="p-6">
