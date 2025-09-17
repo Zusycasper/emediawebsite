@@ -19,9 +19,14 @@ function LetsTalk() {
             <Link to="/contact">
               <Button 
               variant="ghost"
+              onClick={(handleClick) => {
+                          window.scrollTo(0, 0);
+                          handleClick();
+                        }}
                       size="icon"
               className="bg-teal-500 hover:bg-[#B2519A] text-white px-8 py-3 flex items-center gap-2 w-[115px]">
                 <ChevronRight className="w-4 h-4" />
+                
               </Button>
             </Link>
           </div>
