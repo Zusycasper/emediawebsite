@@ -133,7 +133,7 @@ function Footer() {
                 <h4 className="font-semibold mb-2">Others</h4>
                 <ul className="space-y-1 text-gray-400">
                   <li>Privacy Policy</li>
-                  <li><a href="/sitemap.html" className="text-blue-600 hover:underline">Sitemap</a>
+                  <li><a href="/sitemap.xml" className="text-blue-600 hover:underline">Sitemap</a>
 </li>
                 </ul>
               </div>
