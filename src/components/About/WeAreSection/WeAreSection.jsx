@@ -21,7 +21,9 @@ function WeAreSection() {
               <p className="text-gray-600 text-lg leading-relaxed">
                 We’re not just another agency, we’re a collective of designers,
                 developers, strategists, and tech innovators who live and
-                breathe digital and tech experiences. Based in UK and Sri Lanka,
+                breathe digital and tech experiences. 
+                <br/>
+                Based in <b>UK </b> and <b>Sri Lanka </b>,
                 we bring brands to life with bold ideas, striking visuals,
                 intelligent solutions, and seamless technology. We push
                 boundaries, fight for great concepts, and craft work that looks
