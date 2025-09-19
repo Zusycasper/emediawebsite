@@ -2,6 +2,7 @@ import React from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import NewsletterForm from "../NewsletterForm/NewsletterForm";
 
 function Footer() {
   return (
@@ -108,16 +109,7 @@ function Footer() {
               <h3 className="text-lg font-semibold mb-4">
                 Insert your email address here
               </h3>
-              <div className="flex gap-2">
-                <Input
-                  type="email"
-                  placeholder="Enter email address"
-                  className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
-                />
-                <Button className="bg-gray-700 hover:bg-gray-600 text-white px-6">
-                  Subscribe now
-                </Button>
-              </div>
+              <NewsletterForm />
             </div>
 
             <div className="grid grid-cols-2 gap-8 text-sm">
