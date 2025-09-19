@@ -24,7 +24,8 @@ export default function WhyMediaBiz() {
   const getVisibleItems = () => {
     const leftIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
     const centerIndex = currentIndex;
-    const rightIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+    const rightIndex =
+      currentIndex === images.length - 1 ? 0 : currentIndex + 1;
 
     return {
       left: images[leftIndex],
@@ -43,11 +44,19 @@ export default function WhyMediaBiz() {
           <div className="space-y-6">
             <h2 className="text-4xl font-bold text-gray-900">Why E-mediabiz</h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              In today's crowded digital space, visibility alone isn't enough — you need strategy, creativity, and
-              consistency to stand out. E-Media Biz brings all three. We help you attract the right audience, engage
-              them with compelling content, and convert them into loyal customers. With our expertise in digital
-              marketing, social media, and development, we take the guesswork out of online growth so you can focus on
-              running your business.
+              You don’t just need visibility you need strategy that cuts through
+              the noise, creativity that sparks attention, and technology that
+              drives results. <br/>
+              In today's crowded digital space, visibility alone
+              isn't enough you need strategy, creativity, and consistency to
+              stand out. E-Media Biz brings all three.
+              We help you attract the
+              right audience, engage them with compelling content, and convert
+              them into loyal customers. 
+               <br/>
+              With our expertise in digital
+              marketing, social media, and development, we take the guesswork
+              out of online growth so you can focus on running your business.
             </p>
           </div>
 
@@ -90,7 +99,9 @@ export default function WhyMediaBiz() {
               >
                 <img
                   src={visibleItems.left}
-                  alt={`Why E-Mediabiz ${currentIndex === 0 ? images.length : currentIndex}`}
+                  alt={`Why E-Mediabiz ${
+                    currentIndex === 0 ? images.length : currentIndex
+                  }`}
                   className="w-full h-auto object-contain rounded-lg"
                 />
               </div>
