@@ -16,12 +16,11 @@ function WhatAreWeSection() {
           </div>
 
           <div className="space-y-6">
-            <h2 className="text-4xl font-bold text-gray-900">What Are We</h2>
+            <h2 className="text-4xl font-bold text-gray-900">Who We Are</h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              a creative digital solutions agency helping brands grow in the online world. We specialize in digital
-              marketing, social media management, and web/app development, blending strategy with design to deliver
-              results that matter.
-            </p>
+              We are an AI-powered creative agency built for the digital age. <br/>
+              From marketing and social media to web, app, and cloud solutions, <br/> 
+              we fuse human creativity with artificial intelligence to help brands  <br/> scale smarter, faster, and stronger.</p>
           </div>
         </div>
       </div>
