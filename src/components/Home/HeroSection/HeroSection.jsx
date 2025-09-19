@@ -26,7 +26,7 @@ function HeroSection() {
                   </button>
                 </Link>
                 <Link to="/contact"><button className="border-2 border-[#009BB1] text-[#009BB1] hover:border-[#B2519A] hover:text-[#B2519A] rounded-md text-sm md:text-lg font-medium h-12 md:h-14 px-6 transition-colors duration-200 align-items-vertical-center justify-evenly">
-                    Get in Touch
+                    Let's Build
                   </button>
                   
                 </Link>
