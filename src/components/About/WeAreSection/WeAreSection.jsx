@@ -1,27 +1,38 @@
-import React from 'react'
+import React from "react";
 
 function WeAreSection() {
   return (
     <div>
-         <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <img src="/media/about/weAre.jpg" alt="Business Meeting" className="w-full rounded-2xl" />
+              <img
+                src="/media/about/weAre.jpg"
+                alt="Business Meeting"
+                className="w-full rounded-2xl"
+              />
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-4xl font-bold text-gray-900">We're specialists, not "do-it-all" generalists</h2>
+              <h2 className="text-4xl font-bold text-gray-900">
+                We're specialists, not "do-it-all" generalists
+              </h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Some agencies try to offer everything under the sun, but that often means sacrificing the depth and
-                quality your brand deserves. We knew from day one that wouldn't be us.
+                We’re not just another agency, we’re a collective of designers,
+                developers, strategists, and tech innovators who live and
+                breathe digital and tech experiences. Based in UK and Sri Lanka,
+                we bring brands to life with bold ideas, striking visuals,
+                intelligent solutions, and seamless technology. We push
+                boundaries, fight for great concepts, and craft work that looks
+                amazing, performs flawlessly, and drives results.
               </p>
             </div>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
 
-export default WeAreSection
+export default WeAreSection;
