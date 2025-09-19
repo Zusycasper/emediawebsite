@@ -12,8 +12,7 @@ function Footer() {
           {/* Left Column */}
           <div className="space-y-6">
             <p className="text-gray-300 leading-relaxed">
-              Follow us on our social media channels for updates, tips, and
-              exclusive offers you won't want to miss.
+              Stay in the loop, follow us for the latest updates, tips, and exclusive offers
             </p>
 
             <div className="h-24">
