@@ -56,7 +56,7 @@ export default function WhyMediaBiz() {
                <br/>
               With our expertise in digital
               marketing, social media, and development, we take the guesswork
-              out of online growth so you can focus on running your business.
+              out of online growth so you can focus on running your business.
             </p>
           </div>
 
