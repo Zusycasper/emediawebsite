@@ -19,9 +19,8 @@ function DigitalMarketingSection() {
             <div className="space-y-6">
               <h1 className="text-5xl font-bold text-gray-900">Digital Marketing</h1>
               <p className="text-gray-600 text-lg leading-relaxed">
-                We build websites that not only look stunning but also perform flawlessly. Whether you need a sleek
-                portfolio, a dynamic e-commerce store, or a robust web application, our team crafts solutions tailored
-                to your goals.
+                We use AI-powered insights to optimize campaigns, target the right audience, and deliver measurable growth. <br/>
+                AI helps us track trends, analyze engagement, and create strategies that keep your brand relevant.<br/>
               </p>
 
               <div className="flex flex-wrap gap-4 items-center relative">

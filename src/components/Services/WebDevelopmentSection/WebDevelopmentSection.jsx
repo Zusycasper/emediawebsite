@@ -375,10 +375,9 @@ function WebDevelopmentSection() {
                 Web Development
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed">
-                We help your brand cut through the noise with targeted,
-                data-driven digital marketing strategies. From boosting your
-                online presence to driving real conversions, our team crafts
-                campaigns.
+                Branding, UI/UX, and visuals crafted with human creativity and AI-assisted tools for impact and efficiency. <br/>
+                Reliable cloud solutions, IT infrastructure, and AI-powered monitoring that ensure performance, security, and scalability. <br/>
+                Custom websites and mobile apps with AI-driven features, personalization, and automation.
               </p>
               <div className="flex flex-wrap gap-4 items-center">
                 <img

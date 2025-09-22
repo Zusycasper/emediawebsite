@@ -14,10 +14,10 @@ function HeroSection() {
           <div className="flex flex-col md:grid md:grid-cols-2 gap-4 items-center h-[680px]">
             <div className="flex flex-col justify-center p-4 md:pl-27 h-full md:h-full">
               <h1 className="text-4xl md:text-5xl font-extrabold text-[#111111] mb-4 text-left">
-                Leading Digital
+                Igniting Ideas into Iconic Brands with
               </h1>
               <h1 className="text-4xl md:text-5xl font-extrabold text-[#009BB1] mb-4 text-left">
-                Agency
+                 E-MediaBiz
               </h1>
               <div className="flex flex-row gap-2 mt-6 items-center">
                 <Link to="/services">
@@ -32,7 +32,7 @@ function HeroSection() {
                 </Link>
               </div>
             </div>
-            <div className="flex justify-center items-center p-4 h-auto md:h-[665px] relative mt-4 md:mt-0">
+            <div className="flex justify-center items-center p-4 h-auto md:h-[695px] relative mt-4 md:mt-0">
               <div className="relative">
                 <img
                   src="/media/gifLaptop-overlay.webp"
