@@ -15,7 +15,7 @@ function ContactForm() {
               <h1 className="text-5xl font-bold text-teal-500">Let's Talk</h1>
 
               <p className="text-gray-600 text-lg font-bold leading-relaxed mb-1">
-                Need help with your Website or Digital Marketing?
+                Need help with your Project?
               </p>
               <p className="text-gray-600 text-lg font-light leading-relaxed">
                 Got a question? Fill out the form below, and one of our team

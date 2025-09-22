@@ -25,7 +25,7 @@ function ContactFormSection() {
     user_name: "",
     email: "",
     contact_number: "",
-    address: "",
+    services: "", // changed from address → services
     message: "",
   };
 
@@ -68,18 +68,17 @@ function ContactFormSection() {
     if (!values.contact_number) {
       errors.contact_number = "Contact number is required.";
     } else if (!phoneRegex.test(values.contact_number)) {
-      errors.contact_number = "Contact number must be 10 or 12 digits.";
+      errors.contact_number = "Contact number must be 11 or 12 digits.";
     }
 
-    if (!values.address.trim()) {
-      errors.address = "Address is required.";
+    if (!values.services) {
+      errors.services = "Please select a service.";
     }
 
     if (!values.message.trim()) {
       errors.message = "Message is required.";
     }
 
-    // For v2 checkbox, user must tick captcha which sets captchaToken
     if (!captchaToken) {
       errors.captcha = "Please check the reCAPTCHA box.";
     }
@@ -90,18 +89,16 @@ function ContactFormSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // client-side validation
     const errors = validate(formValue);
     setFormErrors(errors);
     if (Object.keys(errors).length > 0) {
       return;
     }
 
-    // Build payload (include captchaToken)
     const payload = {
       ...formValue,
       captchaToken: captchaToken,
-      action: "contact_form", // optional, kept for compatibility
+      action: "contact_form",
     };
 
     console.log("Sending payload to backend:", payload);
@@ -115,10 +112,8 @@ function ContactFormSection() {
       console.log("Response:", response.data);
 
       if (response.data?.status) {
-        // success
         setFormValue(initialValues);
         setCaptchaToken("");
-        // reset checkbox
         recaptchaRef.current && recaptchaRef.current.reset();
 
         setAlertInfo({
@@ -191,7 +186,7 @@ function ContactFormSection() {
               <div className="grid gap-2">
                 <Label htmlFor="contact_number">Contact Number</Label>
                 <PhoneInput
-                  country={"lk"} // default Sri Lanka (+94), you can change
+                  country={"gb"}
                   id="contact_number"
                   name="contact_number"
                   value={formValue.contact_number}
@@ -203,7 +198,7 @@ function ContactFormSection() {
                     background: "transparent",
                     border: "1px solid black",
                   }}
-                  placeholder="+94 *********"
+                  placeholder="+44 *********"
                 />
                 {formErrors.contact_number && (
                   <p className="text-red-500 text-sm">
@@ -212,17 +207,35 @@ function ContactFormSection() {
                 )}
               </div>
 
-              {/* Address */}
+              {/* Services Dropdown */}
               <div className="grid gap-2">
-                <Label htmlFor="address">Address</Label>
-                <Input
-                  id="address"
-                  name="address"
-                  value={formValue.address}
+                <Label htmlFor="services">Services</Label>
+                <select
+                  id="services"
+                  name="services"
+                  value={formValue.services}
                   onChange={handleInputChange}
-                />
-                {formErrors.address && (
-                  <p className="text-red-500 text-sm">{formErrors.address}</p>
+                  className="w-full border border-black rounded-md p-2 bg-transparent"
+                >
+                  <option value="">-- Select a Service --</option>
+                  <option value="Digital Marketing (AI-Enhanced)">
+                    Digital Marketing (AI-Enhanced)
+                  </option>
+                  <option value="Social Media Management (Smart & Automated)">
+                    Social Media Management (Smart & Automated)
+                  </option>
+                  <option value="Web & App Development (Future-Ready)">
+                    Web & App Development (Future-Ready)
+                  </option>
+                  <option value="Cloud & IT Infrastructure Support (Intelligent & Secure)">
+                    Cloud & IT Infrastructure Support (Intelligent & Secure)
+                  </option>
+                  <option value="Creative Design (Human + AI)">
+                    Creative Design (Human + AI)
+                  </option>
+                </select>
+                {formErrors.services && (
+                  <p className="text-red-500 text-sm">{formErrors.services}</p>
                 )}
               </div>
 
@@ -243,7 +256,7 @@ function ContactFormSection() {
             </div>
 
             <CardFooter className="flex-col gap-2 px-7 mt-4">
-               <ReCAPTCHA
+              <ReCAPTCHA
                 ref={recaptchaRef}
                 sitekey="6Ldzqb0rAAAAALFR9ye1HagIdtJw-M_KX1eDfRyN"
                 onChange={(token) => {
