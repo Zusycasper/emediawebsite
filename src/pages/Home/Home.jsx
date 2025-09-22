@@ -12,7 +12,7 @@ function Home() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <HeroSection />
-      <WhatAreWeSection />
+      {/* <WhatAreWeSection /> */}
       <ServicesSection />
       <WhyMediaBiz />
       <LetsTalk />

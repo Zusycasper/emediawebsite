@@ -11,11 +11,12 @@ function DrivenbyResultsSection() {
             {/* Left text section */}
             <div className="space-y-6">
               <h2 className="text-4xl font-bold text-gray-900">
-                Design That Means Business
+                The E-MediaBiz Way
+
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                We don’t just decorate; we craft meaning and impact, using
-                design and AI-driven insights to guide every decision.
+                We believe the best work happens when creativity meets precision and intelligence drives results. Here’s our approach:
+
               </p>
             </div>
 
@@ -28,10 +29,12 @@ function DrivenbyResultsSection() {
                     <h3>1</h3>
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900">
-                    Design with conviction
+                    Design That Means Business
+
                   </h3>
                   <p className="text-sm text-gray-600">
-                    We don't just decorate; we create meaning.
+                    We don’t just decorate; we craft meaning and impact, using design and AI-driven insights to guide every decision.
+
                   </p>
                 </CardContent>
               </Card>
