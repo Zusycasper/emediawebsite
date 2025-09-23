@@ -43,14 +43,14 @@ function SocialMediaSection() {
 
               <div className="flex flex-wrap gap-4 items-center relative">
                 <img
-                  src="/media/services/subdigi.png"
+                  src="/media/services/social.png"
                   alt="Social Media Management Services"
                   className="w-full h-full pr-6"
                 />
 
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[15%] left-[7%] shadow-none w-23 h-23 sm:w-30 sm:h-30 "></Button>
+                    <Button className="absolute top-[15%] left-[7%] shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-200"></Button>
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">
@@ -180,7 +180,7 @@ function SocialMediaSection() {
 
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[17%] left-[35%] shadow-none w-23 h-23 sm:w-30 sm:h-30 "></Button>
+                    <Button className="absolute top-[17%] left-[35%] shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-teal-300 "></Button>
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">
@@ -313,7 +313,7 @@ function SocialMediaSection() {
 
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[20%] left-[67%] bg-transparent w-23 h-23 sm:w-30 sm:h-30 shadow-none "></Button>
+                    <Button className="absolute top-[20%] left-[67%] bg-amber-100 w-23 h-23 sm:w-30 sm:h-30 shadow-none "></Button>
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">
@@ -445,7 +445,7 @@ function SocialMediaSection() {
 
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[45%] left-[25%] bg-transparent w-23 h-23 sm:w-30 sm:h-30 shadow-none "></Button>
+                    <Button className="absolute top-[45%] left-[25%] bg-red-500 w-23 h-23 sm:w-30 sm:h-30 shadow-none "></Button>
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">

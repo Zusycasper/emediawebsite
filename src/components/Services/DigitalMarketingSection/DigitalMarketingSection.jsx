@@ -42,7 +42,7 @@ function DigitalMarketingSection() {
 
               <div className="flex flex-wrap gap-4 items-center relative">
                 <img
-                  src="/media/services/subdigi.png"
+                  src="/media/services/digital.png"
                   alt="Digital Marketing Services"
                   className="w-full h-full pr-6"
                 />
@@ -50,7 +50,7 @@ function DigitalMarketingSection() {
                 {/* SEO Drawer */}
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[15%] left-[7%] shadow-none w-23 h-23 sm:w-30 sm:h-30 "></Button>
+                    <Button className="absolute top-[15%] left-[7%] shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-[#009BB1]"></Button>
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">
@@ -180,7 +180,7 @@ function DigitalMarketingSection() {
                 {/* SM Drawer */}
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[17%] left-[35%] shadow-none w-23 h-23 sm:w-30 sm:h-30 "></Button>
+                    <Button className="absolute top-[17%] left-[35%] shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-50"></Button>
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">
@@ -312,7 +312,7 @@ function DigitalMarketingSection() {
                 {/* Email Drawer */}
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[20%] left-[67%] bg-transparent w-23 h-23 sm:w-30 sm:h-30 shadow-none "></Button>
+                    <Button className="absolute top-[20%] left-[67%] bg-orange-500 w-23 h-23 sm:w-30 sm:h-30 shadow-none "></Button>
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">
