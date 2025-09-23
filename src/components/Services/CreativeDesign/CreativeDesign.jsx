@@ -29,7 +29,7 @@ function CreativeDesign() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-5xl font-bold text-gray-900">
-                Creative Design{" "}
+                Creative Design
               </h1>
               <h2 className="text-2xl font-semibold text-gray-700">
                 (Human + AI)
@@ -583,9 +583,9 @@ function CreativeDesign() {
 
             <div className="relative">
               <img
-                src="/media/DigiMarkSub.png"
+                src="/media/creativeDesignSub.png"
                 alt="Social Media Management Service"
-                className="w-full rounded-2xl"
+                className="rounded-2xl h-[396px] w-full object-cover"
               />
             </div>
           </div>

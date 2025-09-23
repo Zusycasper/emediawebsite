@@ -1,5 +1,5 @@
-"use client"
-import { Button } from "@/components/ui/button"
+"use client";
+import { Button } from "@/components/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -7,8 +7,18 @@ import {
   DrawerContent,
   DrawerTitle,
   DrawerDescription,
-} from "@/components/ui/drawerWeb"
-import { X, Cloud, Server, Shield, Clock, Users, Zap, Database, Monitor } from "lucide-react"
+} from "@/components/ui/drawerWeb";
+import {
+  X,
+  Cloud,
+  Server,
+  Shield,
+  Clock,
+  Users,
+  Zap,
+  Database,
+  Monitor,
+} from "lucide-react";
 
 function CloudInfrastructureSection() {
   return (
@@ -17,7 +27,11 @@ function CloudInfrastructureSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <img src="/media/CloudInfrastructure.png" alt="Cloud Infrastructure" className="w-full rounded-2xl" />
+              <img
+                src="/media/CloudInfrastructureSub.png"
+                alt="Cloud Infrastructure"
+                className="rounded-2xl h-[396px] w-full object-cover"
+              />
               <Drawer direction="left">
                 <DrawerTrigger asChild>
                   <Button
@@ -50,23 +64,30 @@ function CloudInfrastructureSection() {
                         </DrawerTitle>
                       </div>
                       <DrawerDescription className="text-white/90 text-lg">
-                        Seamless cloud migration and management across AWS, Azure, and GCP
+                        Seamless cloud migration and management across AWS,
+                        Azure, and GCP
                       </DrawerDescription>
                     </div>
 
                     {/* Content */}
                     <div className="flex-1 p-6 space-y-6 overflow-y-auto rounded-br-2xl scrollbar-left">
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Overview</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Overview
+                        </h3>
                         <p className="text-gray-600 leading-relaxed">
-                          Transform your business with expert cloud migration and management services. We help you
-                          leverage the power of AWS, Azure, and Google Cloud Platform to achieve scalability,
-                          cost-efficiency, and enhanced performance.
+                          Transform your business with expert cloud migration
+                          and management services. We help you leverage the
+                          power of AWS, Azure, and Google Cloud Platform to
+                          achieve scalability, cost-efficiency, and enhanced
+                          performance.
                         </p>
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Key Features
+                        </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div className="flex items-center gap-2 text-gray-600">
                             <Zap className="h-4 w-4 text-[#009BB1]" />
@@ -88,9 +109,17 @@ function CloudInfrastructureSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Cloud Platforms</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Cloud Platforms
+                        </h3>
                         <div className="flex flex-wrap gap-2">
-                          {["AWS", "Microsoft Azure", "Google Cloud", "Multi-Cloud", "Hybrid Cloud"].map((platform) => (
+                          {[
+                            "AWS",
+                            "Microsoft Azure",
+                            "Google Cloud",
+                            "Multi-Cloud",
+                            "Hybrid Cloud",
+                          ].map((platform) => (
                             <span
                               key={platform}
                               className="px-3 py-1 bg-gradient-to-r from-[#009BB1]/10 to-[#B2519A]/10 text-gray-700 rounded-full text-sm font-medium"
@@ -102,7 +131,9 @@ function CloudInfrastructureSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Timeline</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Timeline
+                        </h3>
                         <div className="flex items-center gap-2 text-gray-600">
                           <Clock className="h-4 w-4 text-[#009BB1]" />
                           <span>2-6 weeks migration</span>
@@ -149,23 +180,30 @@ function CloudInfrastructureSection() {
                         </DrawerTitle>
                       </div>
                       <DrawerDescription className="text-white/90 text-lg">
-                        Robust IT infrastructure designed for performance and scalability
+                        Robust IT infrastructure designed for performance and
+                        scalability
                       </DrawerDescription>
                     </div>
 
                     {/* Content */}
                     <div className="flex-1 p-6 space-y-6 overflow-y-auto rounded-br-2xl">
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Overview</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Overview
+                        </h3>
                         <p className="text-gray-600 leading-relaxed">
-                          Build a solid foundation for your business with optimized IT infrastructure. From server setup
-                          to network configuration, we ensure your systems are reliable, secure, and ready to scale with
-                          your business needs.
+                          Build a solid foundation for your business with
+                          optimized IT infrastructure. From server setup to
+                          network configuration, we ensure your systems are
+                          reliable, secure, and ready to scale with your
+                          business needs.
                         </p>
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Key Features
+                        </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div className="flex items-center gap-2 text-gray-600">
                             <Server className="h-4 w-4 text-[#B2519A]" />
@@ -187,7 +225,9 @@ function CloudInfrastructureSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Services</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Services
+                        </h3>
                         <div className="flex flex-wrap gap-2">
                           {[
                             "Server Setup",
@@ -207,7 +247,9 @@ function CloudInfrastructureSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Timeline</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Timeline
+                        </h3>
                         <div className="flex items-center gap-2 text-gray-600">
                           <Clock className="h-4 w-4 text-[#B2519A]" />
                           <span>1-3 weeks setup</span>
@@ -254,23 +296,30 @@ function CloudInfrastructureSection() {
                         </DrawerTitle>
                       </div>
                       <DrawerDescription className="text-white/90 text-lg">
-                        Advanced AI-driven security solutions that protect and monitor your network
+                        Advanced AI-driven security solutions that protect and
+                        monitor your network
                       </DrawerDescription>
                     </div>
 
                     {/* Content */}
                     <div className="flex-1 p-6 space-y-6 overflow-y-auto rounded-br-2xl">
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Overview</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Overview
+                        </h3>
                         <p className="text-gray-600 leading-relaxed">
-                          Protect your digital assets with cutting-edge AI-powered security solutions. Our intelligent
-                          monitoring systems detect threats in real-time and provide proactive protection against cyber
-                          attacks and security breaches.
+                          Protect your digital assets with cutting-edge
+                          AI-powered security solutions. Our intelligent
+                          monitoring systems detect threats in real-time and
+                          provide proactive protection against cyber attacks and
+                          security breaches.
                         </p>
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Key Features
+                        </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div className="flex items-center gap-2 text-gray-600">
                             <Shield className="h-4 w-4 text-[#009BB1]" />
@@ -292,7 +341,9 @@ function CloudInfrastructureSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Security Solutions</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Security Solutions
+                        </h3>
                         <div className="flex flex-wrap gap-2">
                           {[
                             "Firewall Management",
@@ -312,7 +363,9 @@ function CloudInfrastructureSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Response Time</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Response Time
+                        </h3>
                         <div className="flex items-center gap-2 text-gray-600">
                           <Clock className="h-4 w-4 text-[#009BB1]" />
                           <span>Instant threat response</span>
@@ -328,10 +381,15 @@ function CloudInfrastructureSection() {
               </Drawer>
             </div>
             <div className="space-y-6">
-              <h1 className="text-5xl font-bold text-gray-900">Cloud & IT Infrastructure Support</h1>
-              <h2 className="text-2xl font-semibold text-gray-700">(Intelligent & Secure)</h2>
+              <h1 className="text-5xl font-bold text-gray-900">
+                Cloud & IT Infrastructure Support
+              </h1>
+              <h2 className="text-2xl font-semibold text-gray-700">
+                (Intelligent & Secure)
+              </h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Reliable cloud solutions, IT infrastructure, and AI-powered monitoring that ensure performance, security, and scalability.
+                Reliable cloud solutions, IT infrastructure, and AI-powered
+                monitoring that ensure performance, security, and scalability.
               </p>
               <div className="flex flex-wrap gap-4 items-center">
                 <img
@@ -345,7 +403,7 @@ function CloudInfrastructureSection() {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
-export default CloudInfrastructureSection
+export default CloudInfrastructureSection;

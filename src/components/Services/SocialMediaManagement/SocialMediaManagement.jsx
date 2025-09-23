@@ -584,9 +584,9 @@ function SocialMediaSection() {
 
             <div className="relative">
               <img
-                src="/media/DigiMarkSub.png"
+                src="/media/SocialMediaMarketingSub.png"
                 alt="Social Media Management Service"
-                className="w-full rounded-2xl"
+                className="rounded-2xl h-[396px] w-full object-cover"
               />
             </div>
           </div>
