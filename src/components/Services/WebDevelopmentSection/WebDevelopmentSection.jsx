@@ -372,10 +372,15 @@ function WebDevelopmentSection() {
             </div>
             <div className="space-y-6">
               <h1 className="text-5xl font-bold text-gray-900">
-                Web & App Development (Future-Ready)
+                Web & App Development
               </h1>
+              <h2 className="text-2xl font-semibold text-gray-700">
+                (Future-Ready)
+              </h2>
+
               <p className="text-gray-600 text-lg leading-relaxed">
-                Custom websites and mobile apps with AI-driven features, personalization, and automation.
+                Custom websites and mobile apps with AI-driven features,
+                personalization, and automation.
               </p>
               <div className="flex flex-wrap gap-4 items-center">
                 <img

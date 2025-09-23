@@ -219,19 +219,19 @@ function ContactFormSection() {
                 >
                   <option value="">-- Select a Service --</option>
                   <option value="Digital Marketing (AI-Enhanced)">
-                    Digital Marketing (AI-Enhanced)
+                    Digital Marketing 
                   </option>
                   <option value="Social Media Management (Smart & Automated)">
-                    Social Media Management (Smart & Automated)
+                    Social Media Management 
                   </option>
                   <option value="Web & App Development (Future-Ready)">
-                    Web & App Development (Future-Ready)
+                    Web & App Development 
                   </option>
                   <option value="Cloud & IT Infrastructure Support (Intelligent & Secure)">
-                    Cloud & IT Infrastructure Support (Intelligent & Secure)
+                    Cloud & IT Infrastructure Support 
                   </option>
                   <option value="Creative Design (Human + AI)">
-                    Creative Design (Human + AI)
+                    Creative Design 
                   </option>
                 </select>
                 {formErrors.services && (

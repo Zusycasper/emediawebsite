@@ -1,5 +1,5 @@
-"use client"
-import { Button } from "@/components/ui/button"
+"use client";
+import { Button } from "@/components/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -7,8 +7,19 @@ import {
   DrawerContent,
   DrawerTitle,
   DrawerDescription,
-} from "@/components/ui/drawer"
-import { X, Calendar, TrendingUp, Target, BarChart3, MessageSquare, Zap, Brain, PenTool, Eye } from "lucide-react"
+} from "@/components/ui/drawer";
+import {
+  X,
+  Calendar,
+  TrendingUp,
+  Target,
+  BarChart3,
+  MessageSquare,
+  Zap,
+  Brain,
+  PenTool,
+  Eye,
+} from "lucide-react";
 
 function CreativeDesign() {
   return (
@@ -17,9 +28,16 @@ function CreativeDesign() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h1 className="text-5xl font-bold text-gray-900">Creative Design (Human + AI)</h1>
+              <h1 className="text-5xl font-bold text-gray-900">
+                Creative Design{" "}
+              </h1>
+              <h2 className="text-2xl font-semibold text-gray-700">
+                (Human + AI)
+              </h2>
+
               <p className="text-gray-600 text-lg leading-relaxed">
-                Branding, UI/UX, and visuals crafted with human creativity and AI-assisted tools for impact and efficiency.
+                Branding, UI/UX, and visuals crafted with human creativity and
+                AI-assisted tools for impact and efficiency.
               </p>
 
               <div className="flex flex-wrap gap-4 items-center relative">
@@ -56,7 +74,8 @@ function CreativeDesign() {
                               Social Media Strategy & Planning
                             </DrawerTitle>
                             <DrawerDescription className="text-white/90 text-base">
-                              Comprehensive social media strategies tailored to your brand goals
+                              Comprehensive social media strategies tailored to
+                              your brand goals
                             </DrawerDescription>
                           </div>
                         </div>
@@ -66,27 +85,47 @@ function CreativeDesign() {
                       <div className="flex-1 overflow-y-auto p-6 space-y-6">
                         {/* Overview */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">Service Overview</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Service Overview
+                          </h3>
                           <p className="text-gray-600 leading-relaxed">
-                            Our strategic approach to social media planning ensures your brand message resonates with
-                            your target audience across all platforms. We develop comprehensive strategies that align
-                            with your business objectives and drive meaningful engagement.
+                            Our strategic approach to social media planning
+                            ensures your brand message resonates with your
+                            target audience across all platforms. We develop
+                            comprehensive strategies that align with your
+                            business objectives and drive meaningful engagement.
                           </p>
                         </div>
 
                         {/* Key Features */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Key Features
+                          </h3>
                           <div className="grid gap-3">
                             {[
-                              { icon: Target, text: "Audience Research & Targeting" },
-                              { icon: Calendar, text: "Content Calendar Development" },
+                              {
+                                icon: Target,
+                                text: "Audience Research & Targeting",
+                              },
+                              {
+                                icon: Calendar,
+                                text: "Content Calendar Development",
+                              },
                               { icon: BarChart3, text: "Competitive Analysis" },
-                              { icon: TrendingUp, text: "Growth Strategy Planning" },
+                              {
+                                icon: TrendingUp,
+                                text: "Growth Strategy Planning",
+                              },
                             ].map((feature, index) => (
-                              <div key={index} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                              <div
+                                key={index}
+                                className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg"
+                              >
                                 <feature.icon className="h-5 w-5 text-[#009BB1]" />
-                                <span className="text-gray-700">{feature.text}</span>
+                                <span className="text-gray-700">
+                                  {feature.text}
+                                </span>
                               </div>
                             ))}
                           </div>
@@ -94,9 +133,17 @@ function CreativeDesign() {
 
                         {/* Technologies */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">Tools & Platforms</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Tools & Platforms
+                          </h3>
                           <div className="flex flex-wrap gap-2">
-                            {["Hootsuite", "Buffer", "Sprout Social", "Later", "Facebook Business"].map((tech) => (
+                            {[
+                              "Hootsuite",
+                              "Buffer",
+                              "Sprout Social",
+                              "Later",
+                              "Facebook Business",
+                            ].map((tech) => (
                               <span
                                 key={tech}
                                 className="px-3 py-1 bg-gradient-to-r from-[#009BB1]/10 to-[#B2519A]/10 text-gray-700 rounded-full text-sm border border-gray-200"
@@ -109,7 +156,9 @@ function CreativeDesign() {
 
                         {/* Timeline */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">Timeline</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Timeline
+                          </h3>
                           <div className="flex items-center gap-2 text-gray-600">
                             <Calendar className="h-4 w-4" />
                             <span>Strategy development within 1-2 weeks</span>
@@ -155,7 +204,8 @@ function CreativeDesign() {
                               Content Creation & Scheduling
                             </DrawerTitle>
                             <DrawerDescription className="text-white/90 text-base">
-                              Engaging content creation and automated scheduling across platforms
+                              Engaging content creation and automated scheduling
+                              across platforms
                             </DrawerDescription>
                           </div>
                         </div>
@@ -165,27 +215,47 @@ function CreativeDesign() {
                       <div className="flex-1 overflow-y-auto p-6 space-y-6">
                         {/* Overview */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">Service Overview</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Service Overview
+                          </h3>
                           <p className="text-gray-600 leading-relaxed">
-                            Our content creation and scheduling services ensure your social media presence is
-                            consistent, engaging, and optimized for each platform. We create compelling visuals, copy,
-                            and videos while managing your posting schedule for maximum impact.
+                            Our content creation and scheduling services ensure
+                            your social media presence is consistent, engaging,
+                            and optimized for each platform. We create
+                            compelling visuals, copy, and videos while managing
+                            your posting schedule for maximum impact.
                           </p>
                         </div>
 
                         {/* Key Features */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Key Features
+                          </h3>
                           <div className="grid gap-3">
                             {[
-                              { icon: PenTool, text: "Visual & Video Content Creation" },
+                              {
+                                icon: PenTool,
+                                text: "Visual & Video Content Creation",
+                              },
                               { icon: Calendar, text: "Automated Scheduling" },
-                              { icon: MessageSquare, text: "Copywriting & Captions" },
-                              { icon: Eye, text: "Brand Consistency Management" },
+                              {
+                                icon: MessageSquare,
+                                text: "Copywriting & Captions",
+                              },
+                              {
+                                icon: Eye,
+                                text: "Brand Consistency Management",
+                              },
                             ].map((feature, index) => (
-                              <div key={index} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                              <div
+                                key={index}
+                                className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg"
+                              >
                                 <feature.icon className="h-5 w-5 text-[#009BB1]" />
-                                <span className="text-gray-700">{feature.text}</span>
+                                <span className="text-gray-700">
+                                  {feature.text}
+                                </span>
                               </div>
                             ))}
                           </div>
@@ -193,9 +263,18 @@ function CreativeDesign() {
 
                         {/* Technologies */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">Creation Tools</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Creation Tools
+                          </h3>
                           <div className="flex flex-wrap gap-2">
-                            {["Canva", "Adobe Creative Suite", "Figma", "Buffer", "Later", "Hootsuite"].map((tech) => (
+                            {[
+                              "Canva",
+                              "Adobe Creative Suite",
+                              "Figma",
+                              "Buffer",
+                              "Later",
+                              "Hootsuite",
+                            ].map((tech) => (
                               <span
                                 key={tech}
                                 className="px-3 py-1 bg-gradient-to-r from-[#009BB1]/10 to-[#B2519A]/10 text-gray-700 rounded-full text-sm border border-gray-200"
@@ -208,10 +287,14 @@ function CreativeDesign() {
 
                         {/* Timeline */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">Timeline</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Timeline
+                          </h3>
                           <div className="flex items-center gap-2 text-gray-600">
                             <Calendar className="h-4 w-4" />
-                            <span>Content ready within 3-5 days, ongoing scheduling</span>
+                            <span>
+                              Content ready within 3-5 days, ongoing scheduling
+                            </span>
                           </div>
                         </div>
 
@@ -254,7 +337,8 @@ function CreativeDesign() {
                               Trend & Sentiment Analysis with AI
                             </DrawerTitle>
                             <DrawerDescription className="text-white/90 text-base">
-                              AI-powered insights to track trends and analyze audience sentiment
+                              AI-powered insights to track trends and analyze
+                              audience sentiment
                             </DrawerDescription>
                           </div>
                         </div>
@@ -264,27 +348,47 @@ function CreativeDesign() {
                       <div className="flex-1 overflow-y-auto p-6 space-y-6">
                         {/* Overview */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">Service Overview</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Service Overview
+                          </h3>
                           <p className="text-gray-600 leading-relaxed">
-                            Our AI-powered trend and sentiment analysis helps you stay ahead of the curve by identifying
-                            emerging trends, monitoring brand sentiment, and providing actionable insights to optimize
-                            your social media strategy in real-time.
+                            Our AI-powered trend and sentiment analysis helps
+                            you stay ahead of the curve by identifying emerging
+                            trends, monitoring brand sentiment, and providing
+                            actionable insights to optimize your social media
+                            strategy in real-time.
                           </p>
                         </div>
 
                         {/* Key Features */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Key Features
+                          </h3>
                           <div className="grid gap-3">
                             {[
-                              { icon: TrendingUp, text: "Real-time Trend Detection" },
+                              {
+                                icon: TrendingUp,
+                                text: "Real-time Trend Detection",
+                              },
                               { icon: Brain, text: "AI Sentiment Analysis" },
-                              { icon: BarChart3, text: "Competitor Monitoring" },
-                              { icon: Target, text: "Audience Behavior Insights" },
+                              {
+                                icon: BarChart3,
+                                text: "Competitor Monitoring",
+                              },
+                              {
+                                icon: Target,
+                                text: "Audience Behavior Insights",
+                              },
                             ].map((feature, index) => (
-                              <div key={index} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                              <div
+                                key={index}
+                                className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg"
+                              >
                                 <feature.icon className="h-5 w-5 text-[#009BB1]" />
-                                <span className="text-gray-700">{feature.text}</span>
+                                <span className="text-gray-700">
+                                  {feature.text}
+                                </span>
                               </div>
                             ))}
                           </div>
@@ -292,9 +396,17 @@ function CreativeDesign() {
 
                         {/* Technologies */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">AI Tools & Analytics</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            AI Tools & Analytics
+                          </h3>
                           <div className="flex flex-wrap gap-2">
-                            {["Brandwatch", "Mention", "Sprout Social", "Google Trends", "Sentiment AI"].map((tech) => (
+                            {[
+                              "Brandwatch",
+                              "Mention",
+                              "Sprout Social",
+                              "Google Trends",
+                              "Sentiment AI",
+                            ].map((tech) => (
                               <span
                                 key={tech}
                                 className="px-3 py-1 bg-gradient-to-r from-[#009BB1]/10 to-[#B2519A]/10 text-gray-700 rounded-full text-sm border border-gray-200"
@@ -307,10 +419,14 @@ function CreativeDesign() {
 
                         {/* Timeline */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">Timeline</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Timeline
+                          </h3>
                           <div className="flex items-center gap-2 text-gray-600">
                             <Calendar className="h-4 w-4" />
-                            <span>Real-time monitoring with weekly insights reports</span>
+                            <span>
+                              Real-time monitoring with weekly insights reports
+                            </span>
                           </div>
                         </div>
 
@@ -349,9 +465,12 @@ function CreativeDesign() {
                             <Target className="h-6 w-6" />
                           </div>
                           <div>
-                            <DrawerTitle className="text-2xl font-bold text-white">Social Ads Management</DrawerTitle>
+                            <DrawerTitle className="text-2xl font-bold text-white">
+                              Social Ads Management
+                            </DrawerTitle>
                             <DrawerDescription className="text-white/90 text-base">
-                              Strategic paid social campaigns that drive conversions and ROI
+                              Strategic paid social campaigns that drive
+                              conversions and ROI
                             </DrawerDescription>
                           </div>
                         </div>
@@ -361,27 +480,50 @@ function CreativeDesign() {
                       <div className="flex-1 overflow-y-auto p-6 space-y-6">
                         {/* Overview */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">Service Overview</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Service Overview
+                          </h3>
                           <p className="text-gray-600 leading-relaxed">
-                            Our social ads management service maximizes your advertising ROI through strategic campaign
-                            planning, precise targeting, creative optimization, and continuous performance monitoring
-                            across all major social platforms.
+                            Our social ads management service maximizes your
+                            advertising ROI through strategic campaign planning,
+                            precise targeting, creative optimization, and
+                            continuous performance monitoring across all major
+                            social platforms.
                           </p>
                         </div>
 
                         {/* Key Features */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Key Features
+                          </h3>
                           <div className="grid gap-3">
                             {[
-                              { icon: Target, text: "Advanced Audience Targeting" },
-                              { icon: PenTool, text: "Ad Creative Development" },
-                              { icon: BarChart3, text: "Performance Optimization" },
-                              { icon: TrendingUp, text: "ROI Tracking & Reporting" },
+                              {
+                                icon: Target,
+                                text: "Advanced Audience Targeting",
+                              },
+                              {
+                                icon: PenTool,
+                                text: "Ad Creative Development",
+                              },
+                              {
+                                icon: BarChart3,
+                                text: "Performance Optimization",
+                              },
+                              {
+                                icon: TrendingUp,
+                                text: "ROI Tracking & Reporting",
+                              },
                             ].map((feature, index) => (
-                              <div key={index} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                              <div
+                                key={index}
+                                className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg"
+                              >
                                 <feature.icon className="h-5 w-5 text-[#009BB1]" />
-                                <span className="text-gray-700">{feature.text}</span>
+                                <span className="text-gray-700">
+                                  {feature.text}
+                                </span>
                               </div>
                             ))}
                           </div>
@@ -389,7 +531,9 @@ function CreativeDesign() {
 
                         {/* Technologies */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">Ad Platforms</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Ad Platforms
+                          </h3>
                           <div className="flex flex-wrap gap-2">
                             {[
                               "Facebook Ads",
@@ -411,10 +555,15 @@ function CreativeDesign() {
 
                         {/* Timeline */}
                         <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">Timeline</h3>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Timeline
+                          </h3>
                           <div className="flex items-center gap-2 text-gray-600">
                             <Calendar className="h-4 w-4" />
-                            <span>Campaign launch within 1 week, ongoing optimization</span>
+                            <span>
+                              Campaign launch within 1 week, ongoing
+                              optimization
+                            </span>
                           </div>
                         </div>
 
@@ -433,7 +582,11 @@ function CreativeDesign() {
             </div>
 
             <div className="relative">
-              <img src="/media/DigiMarkSub.png" alt="Social Media Management Service" className="w-full rounded-2xl" />
+              <img
+                src="/media/DigiMarkSub.png"
+                alt="Social Media Management Service"
+                className="w-full rounded-2xl"
+              />
             </div>
           </div>
         </div>
