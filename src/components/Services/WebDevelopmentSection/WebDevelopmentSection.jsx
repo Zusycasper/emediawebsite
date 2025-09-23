@@ -22,11 +22,11 @@ function WebDevelopmentSection() {
                 <DrawerTrigger asChild>
                   <Button
                     className="absolute 
-  top-[280%] left-[5%]   // default (mobile)
+  top-[347%] left-[0%]   // default (mobile)
   sm:top-[170%] sm:left-[8%]   // small screens
-  md:top-[150%] md:left-[8%]   // medium screens
-  lg:top-[45%] lg:left-[110%]   // large screens
-  shadow-none w-20 h-20 sm:w-24 sm:h-24 bg-blue-100 "
+  md:top-[173%] md:left-[8%]   // medium screens
+  lg:top-[79%] lg:left-[113%]   // large screens
+  shadow-none w-20 h-20 sm:w-24 sm:h-24 "
                   ></Button>
                 </DrawerTrigger>
                 <DrawerContent>
@@ -120,11 +120,11 @@ function WebDevelopmentSection() {
                 <DrawerTrigger asChild>
                   <Button
                     className="absolute 
-  top-[320%] left-[25%]   // default (mobile)
+  top-[350%] left-[23%]   // default (mobile)
   sm:top-[185%] sm:left-[28%]   // small screens
-  md:top-[165%] md:left-[30%]   // medium screens
-  lg:top-[65%] lg:left-[130%]   // large screens
-  shadow-none w-20 h-20 sm:w-24 sm:h-24 bg-green-100 "
+  md:top-[175%] md:left-[30%]   // medium screens
+  lg:top-[79%] lg:left-[134%]   // large screens
+  shadow-none w-20 h-20 sm:w-24 sm:h-24"
                   ></Button>
                 </DrawerTrigger>
                 <DrawerContent>
@@ -216,11 +216,11 @@ function WebDevelopmentSection() {
                 <DrawerTrigger asChild>
                   <Button
                     className="absolute 
-  top-[360%] left-[45%]   // default (mobile)
+  top-[360%] left-[46%]   // default (mobile)
   sm:top-[200%] sm:left-[48%]   // small screens
-  md:top-[180%] md:left-[52%]   // medium screens
-  lg:top-[85%] lg:left-[150%]   // large screens
-  shadow-none w-20 h-20 sm:w-24 sm:h-24 bg-purple-100 "
+  md:top-[175%] md:left-[52%]   // medium screens
+  lg:top-[85%] lg:left-[158%]   // large screens
+  shadow-none w-20 h-20 sm:w-24 sm:h-24 "
                   ></Button>
                 </DrawerTrigger>
                 <DrawerContent>
@@ -320,11 +320,11 @@ function WebDevelopmentSection() {
                 <DrawerTrigger asChild>
                   <Button
                     className="absolute 
-  top-[400%] left-[65%]   // default (mobile)
-  sm:top-[215%] sm:left-[68%]   // small screens
-  md:top-[195%] md:left-[74%]   // medium screens
-  lg:top-[105%] lg:left-[170%]   // large screens
-  shadow-none w-20 h-20 sm:w-24 sm:h-24 bg-orange-100 "
+  top-[350%] left-[70%]   // default (mobile)
+  sm:top-[175%] sm:left-[68%]   // small screens
+  md:top-[170%] md:left-[80%]   // medium screens
+  lg:top-[87%] lg:left-[183%]   // large screens
+  shadow-none w-20 h-20 sm:w-24 sm:h-24 "
                   ></Button>
                 </DrawerTrigger>
                 <DrawerContent>
