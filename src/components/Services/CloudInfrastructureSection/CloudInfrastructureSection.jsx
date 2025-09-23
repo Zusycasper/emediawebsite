@@ -36,12 +36,12 @@ function CloudInfrastructureSection() {
                 <DrawerTrigger asChild>
                   <Button
                     className="absolute 
-  top-[300%] left-[5%]   // default (mobile)
+  top-[215%] left-[9%]   // default (mobile)
   sm:top-[187%] sm:left-[10%]   // small screens
-  md:top-[163%] md:left-[10%]   // medium screens (new)
-  lg:top-[55%] lg:left-[115%]   // large screens
+  md:top-[227%] md:left-[17%]   // medium screens (new)
+  lg:top-[67%] lg:left-[120%]   // large screens
   shadow-none w-23 h-23 sm:w-30 sm:h-30  
-  bg-amber-100"
+  "
                   ></Button>
                 </DrawerTrigger>
                 <DrawerContent>
@@ -153,11 +153,11 @@ function CloudInfrastructureSection() {
                 <DrawerTrigger asChild>
                   <Button
                     className="absolute 
-  top-[300%] left-[35%]   // default (mobile)
+  top-[215%] left-[35%]   // default (mobile)
   sm:top-[193%] sm:left-[36%]   // small screens
-  md:top-[173%] md:left-[40%]   // medium screens (new)
-  lg:top-[55%] lg:left-[145%]   // large screens
-  shadow-none w-23 h-23 sm:w-30 sm:h-30  bg-teal-300 "
+  md:top-[229%] md:left-[43%]   // medium screens (new)
+  lg:top-[65%] lg:left-[146%]   // large screens
+  shadow-none w-23 h-23 sm:w-30 sm:h-30  "
                   ></Button>
                 </DrawerTrigger>
                 <DrawerContent>
@@ -269,11 +269,11 @@ function CloudInfrastructureSection() {
                 <DrawerTrigger asChild>
                   <Button
                     className="absolute 
-  top-[300%] left-[65%]   // default (mobile)
+  top-[215%] left-[65%]   // default (mobile)
   sm:top-[197%] sm:left-[68%]   // small screens
-  md:top-[169%] md:left-[70%]   // medium screens (new)
-  lg:top-[55%] lg:left-[175%]   // large screens
-  shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-100 "
+  md:top-[229%] md:left-[75%]   // medium screens (new)
+  lg:top-[65%] lg:left-[175%]   // large screens
+  shadow-none w-23 h-23 sm:w-30 sm:h-30 "
                   ></Button>
                 </DrawerTrigger>
                 <DrawerContent>

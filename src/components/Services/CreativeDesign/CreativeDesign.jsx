@@ -49,7 +49,7 @@ function CreativeDesign() {
 
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[15%] left-[7%] shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-300"></Button>
+                    {/* <Button className="absolute top-[15%] left-[7%] shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-300"></Button> */}
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">
@@ -179,7 +179,7 @@ function CreativeDesign() {
 
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[17%] left-[35%] shadow-none w-23 h-23 sm:w-30 sm:h-30  bg-teal-200"></Button>
+                    {/* <Button className="absolute top-[17%] left-[35%] shadow-none w-23 h-23 sm:w-30 sm:h-30  bg-teal-200"></Button> */}
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">
@@ -312,7 +312,7 @@ function CreativeDesign() {
 
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[20%] left-[67%] bg-red-500 w-23 h-23 sm:w-30 sm:h-30 shadow-none "></Button>
+                    {/* <Button className="absolute top-[20%] left-[67%] bg-red-500 w-23 h-23 sm:w-30 sm:h-30 shadow-none "></Button> */}
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">
@@ -444,7 +444,7 @@ function CreativeDesign() {
 
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[45%] left-[25%] bg-amber-600 w-23 h-23 sm:w-30 sm:h-30 shadow-none "></Button>
+                    {/* <Button className="absolute top-[45%] left-[25%] bg-amber-600 w-23 h-23 sm:w-30 sm:h-30 shadow-none "></Button> */}
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">

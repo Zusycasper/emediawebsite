@@ -50,7 +50,7 @@ function SocialMediaSection() {
 
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[15%] left-[7%] shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-amber-200"></Button>
+                    <Button className="absolute top-[15%] left-[4%] shadow-none w-20 h-20 sm:w-30 sm:h-30 "></Button>
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">
@@ -180,7 +180,7 @@ function SocialMediaSection() {
 
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[17%] left-[35%] shadow-none w-23 h-23 sm:w-30 sm:h-30 bg-teal-300 "></Button>
+                    <Button className="absolute top-[17%] left-[45%] shadow-none w-20 h-20 sm:w-30 sm:h-30 "></Button>
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">
@@ -313,7 +313,7 @@ function SocialMediaSection() {
 
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[20%] left-[67%] bg-amber-100 w-23 h-23 sm:w-30 sm:h-30 shadow-none "></Button>
+                    <Button className="absolute top-[20%] left-[70%]  w-20 h-20 sm:w-30 sm:h-30 shadow-none "></Button>
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">
@@ -445,7 +445,7 @@ function SocialMediaSection() {
 
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[45%] left-[25%] bg-red-500 w-23 h-23 sm:w-30 sm:h-30 shadow-none "></Button>
+                    <Button className="absolute top-[20%] left-[27%] z-20  w-20 h-20 sm:w-30 sm:h-30 shadow-none "></Button>
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">
