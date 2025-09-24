@@ -11,7 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 import LogoHoverEffect from "../LogoHoverEffect/LogoHoverEffect";
 
 function Navbar() {
@@ -80,35 +80,54 @@ function Navbar() {
 
                     <DropdownMenuContent className="mt-0.5 w-49 bg-white/60 shadow-lg rounded-md font-sans text-base">
                       <DropdownMenuItem className="hover:bg-teal-50 hover:shadow-lg mb-0.5">
-  <HashLink smooth to="/services#digital_marketing" className="w-full block">
-    Digital Marketing
-  </HashLink>
-</DropdownMenuItem>
+                        <HashLink
+                          smooth
+                          to="/services#digital_marketing"
+                          className="w-full block"
+                        >
+                          Digital Marketing
+                        </HashLink>
+                      </DropdownMenuItem>
 
-<DropdownMenuItem className="hover:bg-teal-50 hover:shadow-lg mb-0.5">
-  <HashLink smooth to="/services#web_development" className="w-full block">
-    Web & App Development
-  </HashLink>
-</DropdownMenuItem>
+                      <DropdownMenuItem className="hover:bg-teal-50 hover:shadow-lg mb-0.5">
+                        <HashLink
+                          smooth
+                          to="/services#web_development"
+                          className="w-full block"
+                        >
+                          Web & App Development
+                        </HashLink>
+                      </DropdownMenuItem>
 
-<DropdownMenuItem className="hover:bg-teal-50 hover:shadow-lg mb-0.5">
-  <HashLink smooth to="/services#social_media" className="w-full block">
-    Social Media Management
-  </HashLink>
-</DropdownMenuItem>
+                      <DropdownMenuItem className="hover:bg-teal-50 hover:shadow-lg mb-0.5">
+                        <HashLink
+                          smooth
+                          to="/services#social_media"
+                          className="w-full block"
+                        >
+                          Social Media Management
+                        </HashLink>
+                      </DropdownMenuItem>
 
-<DropdownMenuItem className="hover:bg-teal-50 hover:shadow-lg mb-0.5">
-  <HashLink smooth to="/services#cloud_infrastructure" className="w-full block">
-    Cloud & IT Infrastructure
-  </HashLink>
-</DropdownMenuItem>
+                      <DropdownMenuItem className="hover:bg-teal-50 hover:shadow-lg mb-0.5">
+                        <HashLink
+                          smooth
+                          to="/services#cloud_infrastructure"
+                          className="w-full block"
+                        >
+                          Cloud & IT Infrastructure
+                        </HashLink>
+                      </DropdownMenuItem>
 
-<DropdownMenuItem className="hover:bg-teal-50 hover:shadow-lg mb-0.5">
-  <HashLink smooth to="/services#creative_design" className="w-full block">
-    Creative Design
-  </HashLink>
-</DropdownMenuItem>
-
+                      <DropdownMenuItem className="hover:bg-teal-50 hover:shadow-lg mb-0.5">
+                        <HashLink
+                          smooth
+                          to="/services#creative_design"
+                          className="w-full block"
+                        >
+                          Creative Design
+                        </HashLink>
+                      </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
