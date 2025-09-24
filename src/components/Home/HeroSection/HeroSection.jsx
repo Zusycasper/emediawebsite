@@ -18,7 +18,7 @@ function HeroSection() {
               <h1 className="text-4xl md:text-5xl font-extrabold text-[#111111] mb-4 text-left">
                 Igniting Ideas into Iconic Brands with
               </h1>
-              <h1 className="text-4xl md:text-5xl font-extrabold text-[#009BB1] mb-4 text-left">E-MediaBiz</h1>
+              <h1 className="text-4xl md:text-5xl font-extrabold text-[#009BB1] mb-4 text-left">e-MediaBiz</h1>
               <div className="flex flex-row gap-2 mt-6 items-center">
                 <Link to="/services">
                   <button className="bg-[#009BB1] hover:bg-[#B2519A] text-white rounded-md text-sm md:text-lg font-medium h-12 md:h-14 px-6 align-items-vertical-center justify-evenly">
