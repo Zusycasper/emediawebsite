@@ -93,9 +93,36 @@ function Navbar() {
                           to="/web_development"
                           className="hover:text-[#009BB1] w-full block"
                         >
-                          Web Development
+                          Web & App Development 
                         </Link>
                       </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <Link
+                          to="/social_media_management "
+                          className="hover:text-[#009BB1] w-full block"
+                        >
+                          Social Media Management 
+                        </Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-[144px]  align-center" />
+                      <DropdownMenuItem>
+                        <Link
+                          to="/cloud_infrastructure_support"
+                          className="hover:text-[#009BB1] w-full block"
+                        >
+                          Cloud & IT Infrastructure
+                        </Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-[144px]  align-center" />
+                      <DropdownMenuItem>
+                        <Link
+                          to="/creative_design"
+                          className="hover:text-[#009BB1] w-full block"
+                        >
+                          Creative Design
+                        </Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-[144px]  align-center" />
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
