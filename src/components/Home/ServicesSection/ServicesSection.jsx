@@ -73,7 +73,7 @@ export default function ServicesSection() {
           <Card className="bg-white p-4 md:p-2 rounded-2xl shadow-sm h-[320px] md:h-[420px]">
             <CardContent className="relative px-8 h-full flex flex-col justify-center">
               {/* Mobile Layout */}
-              <div className="block md:hidden h-full flex flex-col justify-center">
+              <div className="block md:hidden h-full flex-col justify-center">
                 <div className="relative h-full flex items-center">
                   {/* Navigation Buttons - Outside of Link */}
                   <Button
