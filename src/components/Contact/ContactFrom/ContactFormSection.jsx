@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -20,12 +21,16 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Separator } from "@/components/ui/separator";
 
-function ContactFormSection() {
+export default function ContactFormSection() {
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const preselectedService = params.get("service") || "";
+
   const initialValues = {
     user_name: "",
     email: "",
     contact_number: "",
-    services: "", // changed from address → services
+    services: preselectedService,
     message: "",
   };
 
@@ -40,6 +45,14 @@ function ContactFormSection() {
 
   const recaptchaRef = useRef(null);
 
+  // Keep formValue.services in sync if user arrives later with param or changes URL
+  useEffect(() => {
+    const s = new URLSearchParams(location.search).get("service") || "";
+    if (s) {
+      setFormValue((prev) => ({ ...prev, services: s }));
+    }
+  }, [location.search]);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormValue({ ...formValue, [name]: value });
@@ -48,9 +61,9 @@ function ContactFormSection() {
   const validate = (values) => {
     const errors = {};
     const nameRegex = /^[A-Za-z\s]+$/;
+    // keep your original limited-email validation (gmail/yahoo/hotmail)
     const emailRegex =
       /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|hotmail\.com)$/;
-    const phoneRegex = /^(\d{11}|\d{12})$/;
 
     if (!values.user_name) {
       errors.user_name = "Name is required.";
@@ -67,15 +80,19 @@ function ContactFormSection() {
 
     if (!values.contact_number) {
       errors.contact_number = "Contact number is required.";
-    } else if (!phoneRegex.test(values.contact_number)) {
-      errors.contact_number = "Contact number must be 11 or 12 digits.";
+    } else {
+      // strip non-digits (phone input may include + or spaces)
+      const phoneDigits = values.contact_number.replace(/\D/g, "");
+      if (!/^(\d{11}|\d{12})$/.test(phoneDigits)) {
+        errors.contact_number = "Contact number must be 11 or 12 digits.";
+      }
     }
 
     if (!values.services) {
       errors.services = "Please select a service.";
     }
 
-    if (!values.message.trim()) {
+    if (!values.message || !values.message.trim()) {
       errors.message = "Message is required.";
     }
 
@@ -112,9 +129,17 @@ function ContactFormSection() {
       console.log("Response:", response.data);
 
       if (response.data?.status) {
-        setFormValue(initialValues);
+        setFormValue({
+          user_name: "",
+          email: "",
+          contact_number: "",
+          services: preselectedService ? preselectedService : "",
+          message: "",
+        });
         setCaptchaToken("");
-        recaptchaRef.current && recaptchaRef.current.reset();
+        if (recaptchaRef.current && typeof recaptchaRef.current.reset === "function") {
+          recaptchaRef.current.reset();
+        }
 
         setAlertInfo({
           title: "Form Submitted Successfully",
@@ -214,24 +239,26 @@ function ContactFormSection() {
                   id="services"
                   name="services"
                   value={formValue.services}
-                  onChange={handleInputChange}
+                  onChange={(e) =>
+                    setFormValue({ ...formValue, services: e.target.value })
+                  }
                   className="w-full border border-black rounded-md p-2 bg-transparent"
                 >
                   <option value="">-- Select a Service --</option>
                   <option value="Digital Marketing (AI-Enhanced)">
-                    Digital Marketing 
+                    Digital Marketing
                   </option>
                   <option value="Social Media Management (Smart & Automated)">
-                    Social Media Management 
+                    Social Media Management
                   </option>
                   <option value="Web & App Development (Future-Ready)">
-                    Web & App Development 
+                    Web & App Development
                   </option>
                   <option value="Cloud & IT Infrastructure Support (Intelligent & Secure)">
-                    Cloud & IT Infrastructure Support 
+                    Cloud & IT Infrastructure Support
                   </option>
                   <option value="Creative Design (Human + AI)">
-                    Creative Design 
+                    Creative Design
                   </option>
                 </select>
                 {formErrors.services && (
@@ -303,5 +330,3 @@ function ContactFormSection() {
     </div>
   );
 }
-
-export default ContactFormSection;
