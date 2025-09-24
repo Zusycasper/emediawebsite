@@ -78,7 +78,7 @@ function Navbar() {
                       <ChevronDown className="ml-1 w-4 h-4 hover:text-[#009BB1]" />
                     </DropdownMenuTrigger>
 
-                    <DropdownMenuContent className="mt-2 w-36 bg-white/50 shadow-lg rounded-md font-sans text-base">
+                    <DropdownMenuContent className="mt-0.5 w-49 bg-white/50 shadow-lg rounded-md font-sans text-base">
                       <DropdownMenuItem>
                         <Link
                           to="/digital_marketing"
@@ -87,24 +87,26 @@ function Navbar() {
                           Digital Marketing
                         </Link>
                       </DropdownMenuItem>
-                      <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-[144px]  align-center" />
+                      <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-55  align-center" />
                       <DropdownMenuItem>
                         <Link
                           to="/web_development"
                           className="hover:text-[#009BB1] w-full block"
                         >
-                          Web & App Development 
+                          Web & App Development
                         </Link>
                       </DropdownMenuItem>
+                      <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-55  align-center" />
+
                       <DropdownMenuItem>
                         <Link
                           to="/social_media_management "
                           className="hover:text-[#009BB1] w-full block"
                         >
-                          Social Media Management 
+                          Social Media Management
                         </Link>
                       </DropdownMenuItem>
-                      <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-[144px]  align-center" />
+                      <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-55  align-center" />
                       <DropdownMenuItem>
                         <Link
                           to="/cloud_infrastructure_support"
@@ -113,7 +115,7 @@ function Navbar() {
                           Cloud & IT Infrastructure
                         </Link>
                       </DropdownMenuItem>
-                      <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-[144px]  align-center" />
+                      <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-55  align-center" />
                       <DropdownMenuItem>
                         <Link
                           to="/creative_design"
@@ -122,7 +124,6 @@ function Navbar() {
                           Creative Design
                         </Link>
                       </DropdownMenuItem>
-                      <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-[144px]  align-center" />
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
