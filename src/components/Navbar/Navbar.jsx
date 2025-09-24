@@ -78,7 +78,7 @@ function Navbar() {
                       <ChevronDown className="ml-1 w-4 h-4 hover:text-[#009BB1]" />
                     </DropdownMenuTrigger>
 
-                    <DropdownMenuContent className="mt-0.5 w-49 bg-white/60 shadow-lg rounded-md font-sans text-base">
+                    <DropdownMenuContent className="mt-0.5 w-49 bg-white/95 shadow-lg rounded-md font-sans text-base">
                       <DropdownMenuItem className="hover:bg-teal-50 hover:shadow-lg mb-0.5">
                         <HashLink
                           smooth
