@@ -12,11 +12,16 @@ function Services() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <DigitalMarketingSection />
-      <WebDevelopmentSection />
-      <SocialMediaSection/>
-      <CloudInfrastructureSection/>
-      <CreativeDesign/>
+      <div id="digital_marketing">
+      <DigitalMarketingSection /></div>
+      <div id="web_development">
+      <WebDevelopmentSection /></div>
+      <div id="social_media">
+      <SocialMediaSection/></div>
+      <div id="cloud_infrastructure">
+      <CloudInfrastructureSection/></div>
+      <div id="creative_design">
+      <CreativeDesign/></div>
       <LetsTalk />
       <Footer/>
     </div>
