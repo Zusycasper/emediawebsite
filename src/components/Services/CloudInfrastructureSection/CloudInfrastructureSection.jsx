@@ -1,5 +1,5 @@
-"use client";
-import { Button } from "@/components/ui/button";
+"use client"
+import { Button } from "@/components/ui/button"
 import {
   Drawer,
   DrawerClose,
@@ -7,18 +7,8 @@ import {
   DrawerContent,
   DrawerTitle,
   DrawerDescription,
-} from "@/components/ui/drawerWeb";
-import {
-  X,
-  Cloud,
-  Server,
-  Shield,
-  Clock,
-  Users,
-  Zap,
-  Database,
-  Monitor,
-} from "lucide-react";
+} from "@/components/ui/drawerWeb"
+import { X, Cloud, Server, Shield, Clock, Users, Zap, Database, Monitor, HardDrive } from "lucide-react"
 
 function CloudInfrastructureSection() {
   return (
@@ -27,21 +17,16 @@ function CloudInfrastructureSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <img
-                src="/media/CloudInfrastructureSub.png"
-                alt="Cloud Infrastructure"
-                className="rounded-2xl h-[396px] w-full object-cover"
-              />
+              <img src="/media/CloudInfrastructureSub.png" alt="Cloud Infrastructure" className="rounded-2xl h-[396px] w-full object-cover" />
               <Drawer direction="left">
                 <DrawerTrigger asChild>
                   <Button
                     className="absolute 
-  top-[215%] left-[9%]   // default (mobile)
+  top-[258%] left-[5%]   // default (mobile)
   sm:top-[187%] sm:left-[10%]   // small screens
-  md:top-[227%] md:left-[17%]   // medium screens (new)
-  lg:top-[67%] lg:left-[120%]   // large screens
-  shadow-none w-23 h-23 sm:w-30 sm:h-30  
-  "
+  md:top-[206%] md:left-[7%]   // medium screens (new)
+  lg:top-[85%] lg:left-[111%]   // large screens
+  shadow-none w-15 h-15 sm:w-30 sm:h-30 "
                   ></Button>
                 </DrawerTrigger>
                 <DrawerContent>
@@ -65,30 +50,23 @@ function CloudInfrastructureSection() {
                         </DrawerTitle>
                       </div>
                       <DrawerDescription className="text-white/90 text-lg">
-                        Seamless cloud migration and management across AWS,
-                        Azure, and GCP
+                        Seamless cloud migration and management across AWS, Azure, and GCP
                       </DrawerDescription>
                     </div>
 
                     {/* Content */}
                     <div className="flex-1 p-6 space-y-6 overflow-y-auto rounded-br-2xl scrollbar-left">
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                          Overview
-                        </h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Overview</h3>
                         <p className="text-gray-600 leading-relaxed">
-                          Transform your business with expert cloud migration
-                          and management services. We help you leverage the
-                          power of AWS, Azure, and Google Cloud Platform to
-                          achieve scalability, cost-efficiency, and enhanced
-                          performance.
+                          Transform your business with expert cloud migration and management services. We help you
+                          leverage the power of AWS, Azure, and Google Cloud Platform to achieve scalability,
+                          cost-efficiency, and enhanced performance.
                         </p>
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                          Key Features
-                        </h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div className="flex items-center gap-2 text-gray-600">
                             <Zap className="h-4 w-4 text-[#009BB1]" />
@@ -110,17 +88,9 @@ function CloudInfrastructureSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                          Cloud Platforms
-                        </h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Cloud Platforms</h3>
                         <div className="flex flex-wrap gap-2">
-                          {[
-                            "AWS",
-                            "Microsoft Azure",
-                            "Google Cloud",
-                            "Multi-Cloud",
-                            "Hybrid Cloud",
-                          ].map((platform) => (
+                          {["AWS", "Microsoft Azure", "Google Cloud", "Multi-Cloud", "Hybrid Cloud"].map((platform) => (
                             <span
                               key={platform}
                               className="px-3 py-1 bg-gradient-to-r from-[#009BB1]/10 to-[#B2519A]/10 text-gray-700 rounded-full text-sm font-medium"
@@ -132,9 +102,7 @@ function CloudInfrastructureSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                          Timeline
-                        </h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Timeline</h3>
                         <div className="flex items-center gap-2 text-gray-600">
                           <Clock className="h-4 w-4 text-[#009BB1]" />
                           <span>2-6 weeks migration</span>
@@ -153,11 +121,11 @@ function CloudInfrastructureSection() {
                 <DrawerTrigger asChild>
                   <Button
                     className="absolute 
-  top-[215%] left-[35%]   // default (mobile)
+  top-[258%] left-[25%]   // default (mobile)
   sm:top-[193%] sm:left-[36%]   // small screens
-  md:top-[229%] md:left-[43%]   // medium screens (new)
-  lg:top-[65%] lg:left-[146%]   // large screens
-  shadow-none w-23 h-23 sm:w-30 sm:h-30  "
+  md:top-[209%] md:left-[28%]   // medium screens (new)
+  lg:top-[85%] lg:left-[132%]   // large screens
+  shadow-none w-15 h-15 sm:w-30 sm:h-30 "
                   ></Button>
                 </DrawerTrigger>
                 <DrawerContent>
@@ -181,30 +149,23 @@ function CloudInfrastructureSection() {
                         </DrawerTitle>
                       </div>
                       <DrawerDescription className="text-white/90 text-lg">
-                        Robust IT infrastructure designed for performance and
-                        scalability
+                        Robust IT infrastructure designed for performance and scalability
                       </DrawerDescription>
                     </div>
 
                     {/* Content */}
                     <div className="flex-1 p-6 space-y-6 overflow-y-auto rounded-br-2xl">
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                          Overview
-                        </h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Overview</h3>
                         <p className="text-gray-600 leading-relaxed">
-                          Build a solid foundation for your business with
-                          optimized IT infrastructure. From server setup to
-                          network configuration, we ensure your systems are
-                          reliable, secure, and ready to scale with your
-                          business needs.
+                          Build a solid foundation for your business with optimized IT infrastructure. From server setup
+                          to network configuration, we ensure your systems are reliable, secure, and ready to scale with
+                          your business needs.
                         </p>
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                          Key Features
-                        </h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div className="flex items-center gap-2 text-gray-600">
                             <Server className="h-4 w-4 text-[#B2519A]" />
@@ -226,9 +187,7 @@ function CloudInfrastructureSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                          Services
-                        </h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Services</h3>
                         <div className="flex flex-wrap gap-2">
                           {[
                             "Server Setup",
@@ -248,9 +207,7 @@ function CloudInfrastructureSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                          Timeline
-                        </h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Timeline</h3>
                         <div className="flex items-center gap-2 text-gray-600">
                           <Clock className="h-4 w-4 text-[#B2519A]" />
                           <span>1-3 weeks setup</span>
@@ -269,11 +226,11 @@ function CloudInfrastructureSection() {
                 <DrawerTrigger asChild>
                   <Button
                     className="absolute 
-  top-[215%] left-[65%]   // default (mobile)
+  top-[258%] left-[47%]   // default (mobile)
   sm:top-[197%] sm:left-[68%]   // small screens
-  md:top-[229%] md:left-[75%]   // medium screens (new)
-  lg:top-[65%] lg:left-[175%]   // large screens
-  shadow-none w-23 h-23 sm:w-30 sm:h-30 "
+  md:top-[209%] md:left-[52%]   // medium screens
+  lg:top-[85%] lg:left-[155%]   // large screens
+  shadow-none w-15 h-15 sm:w-30 sm:h-30 "
                   ></Button>
                 </DrawerTrigger>
                 <DrawerContent>
@@ -297,30 +254,23 @@ function CloudInfrastructureSection() {
                         </DrawerTitle>
                       </div>
                       <DrawerDescription className="text-white/90 text-lg">
-                        Advanced AI-driven security solutions that protect and
-                        monitor your network
+                        Advanced AI-driven security solutions that protect and monitor your network
                       </DrawerDescription>
                     </div>
 
                     {/* Content */}
                     <div className="flex-1 p-6 space-y-6 overflow-y-auto rounded-br-2xl">
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                          Overview
-                        </h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Overview</h3>
                         <p className="text-gray-600 leading-relaxed">
-                          Protect your digital assets with cutting-edge
-                          AI-powered security solutions. Our intelligent
-                          monitoring systems detect threats in real-time and
-                          provide proactive protection against cyber attacks and
-                          security breaches.
+                          Protect your digital assets with cutting-edge AI-powered security solutions. Our intelligent
+                          monitoring systems detect threats in real-time and provide proactive protection against cyber
+                          attacks and security breaches.
                         </p>
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                          Key Features
-                        </h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div className="flex items-center gap-2 text-gray-600">
                             <Shield className="h-4 w-4 text-[#009BB1]" />
@@ -342,9 +292,7 @@ function CloudInfrastructureSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                          Security Solutions
-                        </h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Security Solutions</h3>
                         <div className="flex flex-wrap gap-2">
                           {[
                             "Firewall Management",
@@ -364,9 +312,7 @@ function CloudInfrastructureSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                          Response Time
-                        </h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Response Time</h3>
                         <div className="flex items-center gap-2 text-gray-600">
                           <Clock className="h-4 w-4 text-[#009BB1]" />
                           <span>Instant threat response</span>
@@ -380,17 +326,122 @@ function CloudInfrastructureSection() {
                   </div>
                 </DrawerContent>
               </Drawer>
+
+              <Drawer direction="left">
+                <DrawerTrigger asChild>
+                  <Button
+                    className="absolute 
+  top-[258%] left-[73%]   // default (mobile)
+  sm:top-[210%] sm:left-[25%]   // small screens
+  md:top-[209%] md:left-[78%]   // medium screens
+  lg:top-[85%] lg:left-[182%]   // large screens
+  shadow-none w-15 h-15 sm:w-30 sm:h-30 "
+                  ></Button>
+                </DrawerTrigger>
+                <DrawerContent>
+                  <div className="h-full flex flex-col rounded-br-2xl">
+                    {/* Gradient Header */}
+                    <div className="bg-gradient-to-r from-[#009BB1] via-[#7A5FA0] to-[#B2519A] p-6 text-white relative rounded-tr-2xl">
+                      <DrawerClose asChild>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="absolute top-4 right-4 h-8 w-8 rounded-full hover:bg-white/20 text-white"
+                        >
+                          <X className="h-4 w-4" />
+                          <span className="sr-only">Close</span>
+                        </Button>
+                      </DrawerClose>
+                      <div className="flex items-center gap-3 mb-2">
+                        <HardDrive className="h-8 w-8" />
+                        <DrawerTitle className="text-2xl font-bold text-white">
+                          Disaster Recovery Automation
+                        </DrawerTitle>
+                      </div>
+                      <DrawerDescription className="text-white/90 text-lg">
+                        Automated backup management, disaster recovery, and business continuity solutions
+                      </DrawerDescription>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 p-6 space-y-6 overflow-y-auto rounded-br-2xl">
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Overview</h3>
+                        <p className="text-gray-600 leading-relaxed">
+                          Ensure business continuity with comprehensive disaster recovery automation. Our intelligent
+                          backup management systems and automated recovery processes protect your critical data and
+                          minimize downtime during unexpected events.
+                        </p>
+                      </div>
+
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          <div className="flex items-center gap-2 text-gray-600">
+                            <Database className="h-4 w-4 text-[#7A5FA0]" />
+                            <span>Automated Backups</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-gray-600">
+                            <Zap className="h-4 w-4 text-[#7A5FA0]" />
+                            <span>Instant Recovery</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-gray-600">
+                            <Shield className="h-4 w-4 text-[#7A5FA0]" />
+                            <span>Business Continuity</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-gray-600">
+                            <Monitor className="h-4 w-4 text-[#7A5FA0]" />
+                            <span>Change Automation</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Services</h3>
+                        <div className="flex flex-wrap gap-2">
+                          {[
+                            "Backup Management",
+                            "Disaster Recovery",
+                            "Business Continuity",
+                            "Change Automation",
+                            "Data Protection",
+                          ].map((service) => (
+                            <span
+                              key={service}
+                              className="px-3 py-1 bg-gradient-to-r from-[#7A5FA0]/10 to-[#009BB1]/10 text-gray-700 rounded-full text-sm font-medium"
+                            >
+                              {service}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Recovery Time</h3>
+                        <div className="flex items-center gap-2 text-gray-600">
+                          <Clock className="h-4 w-4 text-[#7A5FA0]" />
+                          <span>15-minute recovery objective</span>
+                        </div>
+                      </div>
+
+                      <Button className="w-full bg-gradient-to-r from-[#7A5FA0] to-[#009BB1] hover:from-[#5A4580] hover:to-[#007A8C] text-white font-semibold py-3 rounded-lg transition-all duration-300">
+                        Setup Disaster Recovery
+                      </Button>
+                    </div>
+                  </div>
+                </DrawerContent>
+              </Drawer>
             </div>
             <div className="space-y-6">
-              <h1 className="text-5xl font-bold text-gray-900">
-                Cloud & IT Infrastructure Support
-              </h1>
-              <h2 className="text-2xl font-semibold text-gray-700">
-                (Intelligent & Secure)
-              </h2>
+              <h1 className="text-5xl font-bold text-gray-900">Cloud & IT Infrastructure Support</h1>
+              <h2 className="text-2xl font-semibold text-gray-700">(Intelligent & Secure)</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Reliable cloud solutions, IT infrastructure, and AI-powered
-                monitoring that ensure performance, security, and scalability.
+                Reliable cloud solutions, IT infrastructure, and AI-powered monitoring that ensure performance,
+                security, and scalability. <br />
+                From seamless cloud migration to robust infrastructure setup and intelligent security monitoring, we
+                provide comprehensive solutions for your digital transformation. <br />
+                Our expert team leverages cutting-edge AI technology to deliver enterprise-grade infrastructure that
+                grows with your business.
               </p>
               <div className="flex flex-wrap gap-4 items-center">
                 <img
@@ -404,7 +455,7 @@ function CloudInfrastructureSection() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 
-export default CloudInfrastructureSection;
+export default CloudInfrastructureSection
