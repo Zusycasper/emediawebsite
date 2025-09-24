@@ -79,47 +79,50 @@ function Navbar() {
                     </DropdownMenuTrigger>
 
                     <DropdownMenuContent className="mt-0.5 w-49 bg-white/50 shadow-lg rounded-md font-sans text-base">
-                      <DropdownMenuItem>
+                      <DropdownMenuItem className="hover:bg-teal-50 hover:shadow-lg mb-0.5" >
                         <Link
                           to="/digital_marketing"
-                          className="hover:text-[#009BB1] w-full block"
+                          className=" w-full block"
                         >
                           Digital Marketing
                         </Link>
                       </DropdownMenuItem>
-                      <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-55  align-center" />
-                      <DropdownMenuItem>
+                                            {/* <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-55  align-center" /> */}
+
+                      <DropdownMenuItem className="hover:bg-teal-50 hover:shadow-lg mb-0.5">
                         <Link
                           to="/web_development"
-                          className="hover:text-[#009BB1] w-full block"
+                          className=" w-full block"
                         >
                           Web & App Development
                         </Link>
                       </DropdownMenuItem>
-                      <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-55  align-center" />
+                                            {/* <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-55  align-center" /> */}
 
-                      <DropdownMenuItem>
+
+                      <DropdownMenuItem className="hover:bg-teal-50 hover:shadow-lg mb-0.5">
                         <Link
                           to="/social_media_management "
-                          className="hover:text-[#009BB1] w-full block"
+                          className=" w-full block"
                         >
                           Social Media Management
                         </Link>
                       </DropdownMenuItem>
-                      <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-55  align-center" />
-                      <DropdownMenuItem>
+                                            {/* <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-55  align-center" /> */}
+
+                      <DropdownMenuItem className="hover:bg-teal-50 hover:shadow-lg mb-0.5">
                         <Link
                           to="/cloud_infrastructure_support"
-                          className="hover:text-[#009BB1] w-full block"
+                          className=" w-full block"
                         >
                           Cloud & IT Infrastructure
                         </Link>
                       </DropdownMenuItem>
-                      <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-55  align-center" />
-                      <DropdownMenuItem>
+                      {/* <DropdownMenuSeparator className="bg-[#111111] opacity-20 w-55  align-center" /> */}
+                      <DropdownMenuItem className="hover:bg-teal-50 hover:shadow-lg mb-0.5">
                         <Link
                           to="/creative_design"
-                          className="hover:text-[#009BB1] w-full block"
+                          className=" w-full block"
                         >
                           Creative Design
                         </Link>
