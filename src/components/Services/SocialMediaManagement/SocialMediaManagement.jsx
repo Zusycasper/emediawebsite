@@ -202,139 +202,6 @@ function SocialMediaSection() {
                           </div>
                           <div>
                             <DrawerTitle className="text-2xl font-bold text-white">
-                              Content Creation & Scheduling
-                            </DrawerTitle>
-                            <DrawerDescription className="text-white/90 text-base">
-                              Engaging content creation and automated scheduling
-                              across platforms
-                            </DrawerDescription>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Content */}
-                      <div className="flex-1 overflow-y-auto p-6 space-y-6">
-                        {/* Overview */}
-                        <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                            Service Overview
-                          </h3>
-                          <p className="text-gray-600 leading-relaxed">
-                            Our content creation and scheduling services ensure
-                            your social media presence is consistent, engaging,
-                            and optimized for each platform. We create
-                            compelling visuals, copy, and videos while managing
-                            your posting schedule for maximum impact.
-                          </p>
-                        </div>
-
-                        {/* Key Features */}
-                        <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                            Key Features
-                          </h3>
-                          <div className="grid gap-3">
-                            {[
-                              {
-                                icon: PenTool,
-                                text: "Visual & Video Content Creation",
-                              },
-                              { icon: Calendar, text: "Automated Scheduling" },
-                              {
-                                icon: MessageSquare,
-                                text: "Copywriting & Captions",
-                              },
-                              {
-                                icon: Eye,
-                                text: "Brand Consistency Management",
-                              },
-                            ].map((feature, index) => (
-                              <div
-                                key={index}
-                                className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg"
-                              >
-                                <feature.icon className="h-5 w-5 text-[#009BB1]" />
-                                <span className="text-gray-700">
-                                  {feature.text}
-                                </span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Technologies */}
-                        <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                            Creation Tools
-                          </h3>
-                          <div className="flex flex-wrap gap-2">
-                            {[
-                              "Canva",
-                              "Adobe Creative Suite",
-                              "Figma",
-                              "Buffer",
-                              "Later",
-                              "Hootsuite",
-                            ].map((tech) => (
-                              <span
-                                key={tech}
-                                className="px-3 py-1 bg-gradient-to-r from-[#009BB1]/10 to-[#B2519A]/10 text-gray-700 rounded-full text-sm border border-gray-200"
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Timeline */}
-                        <div>
-                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
-                            Timeline
-                          </h3>
-                          <div className="flex items-center gap-2 text-gray-600">
-                            <Calendar className="h-4 w-4" />
-                            <span>
-                              Content ready within 3-5 days, ongoing scheduling
-                            </span>
-                          </div>
-                        </div>
-
-                        {/* CTA */}
-                        <div className="pt-4">
-                          <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
-                            <Zap className="h-4 w-4 mr-2" />
-                            Start Content Creation
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-                  </DrawerContent>
-                </Drawer>
-
-                <Drawer direction="right">
-                  <DrawerTrigger asChild>
-                    <Button className="absolute top-[20%] left-[70%]  w-20 h-20 sm:w-30 sm:h-30 shadow-none "></Button>
-                  </DrawerTrigger>
-                  <DrawerContent className="h-full w-full sm:w-[540px]">
-                    <div className="h-full flex flex-col">
-                      {/* Gradient Header */}
-                      <div className="bg-gradient-to-r from-[#009BB1] to-[#B2519A] p-6 text-white rounded-tl-2xl">
-                        <DrawerClose asChild>
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            className="absolute top-4 right-4 h-8 w-8 rounded-full hover:bg-white/20 text-white"
-                          >
-                            <X className="h-4 w-4" />
-                            <span className="sr-only">Close</span>
-                          </Button>
-                        </DrawerClose>
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="p-2 bg-white/20 rounded-lg">
-                            <Brain className="h-6 w-6" />
-                          </div>
-                          <div>
-                            <DrawerTitle className="text-2xl font-bold text-white">
                               Trend & Sentiment Analysis with AI
                             </DrawerTitle>
                             <DrawerDescription className="text-white/90 text-base">
@@ -445,7 +312,7 @@ function SocialMediaSection() {
 
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
-                    <Button className="absolute top-[20%] left-[27%] z-20  w-20 h-20 sm:w-30 sm:h-30 shadow-none "></Button>
+                    <Button className="absolute top-[20%] left-[70%]  w-20 h-20 sm:w-30 sm:h-30 shadow-none "></Button>
                   </DrawerTrigger>
                   <DrawerContent className="h-full w-full sm:w-[540px]">
                     <div className="h-full flex flex-col">
@@ -463,7 +330,7 @@ function SocialMediaSection() {
                         </DrawerClose>
                         <div className="flex items-center gap-3 mb-4">
                           <div className="p-2 bg-white/20 rounded-lg">
-                            <Target className="h-6 w-6" />
+                            <Brain className="h-6 w-6" />
                           </div>
                           <div>
                             <DrawerTitle className="text-2xl font-bold text-white">
@@ -573,6 +440,139 @@ function SocialMediaSection() {
                           <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
                             <Zap className="h-4 w-4 mr-2" />
                             Launch Ad Campaign
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </DrawerContent>
+                </Drawer>
+
+                <Drawer direction="right">
+                  <DrawerTrigger asChild>
+                    <Button className="absolute top-[20%] left-[27%] z-20  w-20 h-20 sm:w-30 sm:h-30 shadow-none "></Button>
+                  </DrawerTrigger>
+                  <DrawerContent className="h-full w-full sm:w-[540px]">
+                    <div className="h-full flex flex-col">
+                      {/* Gradient Header */}
+                      <div className="bg-gradient-to-r from-[#009BB1] to-[#B2519A] p-6 text-white rounded-tl-2xl">
+                        <DrawerClose asChild>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="absolute top-4 right-4 h-8 w-8 rounded-full hover:bg-white/20 text-white"
+                          >
+                            <X className="h-4 w-4" />
+                            <span className="sr-only">Close</span>
+                          </Button>
+                        </DrawerClose>
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="p-2 bg-white/20 rounded-lg">
+                            <Target className="h-6 w-6" />
+                          </div>
+                          <div>
+                            <DrawerTitle className="text-2xl font-bold text-white">
+                              Content Creation & Scheduling
+                            </DrawerTitle>
+                            <DrawerDescription className="text-white/90 text-base">
+                              Engaging content creation and automated scheduling
+                              across platforms
+                            </DrawerDescription>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className="flex-1 overflow-y-auto p-6 space-y-6">
+                        {/* Overview */}
+                        <div>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Service Overview
+                          </h3>
+                          <p className="text-gray-600 leading-relaxed">
+                            Our content creation and scheduling services ensure
+                            your social media presence is consistent, engaging,
+                            and optimized for each platform. We create
+                            compelling visuals, copy, and videos while managing
+                            your posting schedule for maximum impact.
+                          </p>
+                        </div>
+
+                        {/* Key Features */}
+                        <div>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Key Features
+                          </h3>
+                          <div className="grid gap-3">
+                            {[
+                              {
+                                icon: PenTool,
+                                text: "Visual & Video Content Creation",
+                              },
+                              { icon: Calendar, text: "Automated Scheduling" },
+                              {
+                                icon: MessageSquare,
+                                text: "Copywriting & Captions",
+                              },
+                              {
+                                icon: Eye,
+                                text: "Brand Consistency Management",
+                              },
+                            ].map((feature, index) => (
+                              <div
+                                key={index}
+                                className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg"
+                              >
+                                <feature.icon className="h-5 w-5 text-[#009BB1]" />
+                                <span className="text-gray-700">
+                                  {feature.text}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Technologies */}
+                        <div>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Creation Tools
+                          </h3>
+                          <div className="flex flex-wrap gap-2">
+                            {[
+                              "Canva",
+                              "Adobe Creative Suite",
+                              "Figma",
+                              "Buffer",
+                              "Later",
+                              "Hootsuite",
+                            ].map((tech) => (
+                              <span
+                                key={tech}
+                                className="px-3 py-1 bg-gradient-to-r from-[#009BB1]/10 to-[#B2519A]/10 text-gray-700 rounded-full text-sm border border-gray-200"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Timeline */}
+                        <div>
+                          <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                            Timeline
+                          </h3>
+                          <div className="flex items-center gap-2 text-gray-600">
+                            <Calendar className="h-4 w-4" />
+                            <span>
+                              Content ready within 3-5 days, ongoing scheduling
+                            </span>
+                          </div>
+                        </div>
+
+                        {/* CTA */}
+                        <div className="pt-4">
+                          <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
+                            <Zap className="h-4 w-4 mr-2" />
+                            Start Content Creation
                           </Button>
                         </div>
                       </div>
