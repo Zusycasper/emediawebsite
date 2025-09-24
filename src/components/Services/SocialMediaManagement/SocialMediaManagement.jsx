@@ -168,10 +168,15 @@ function SocialMediaSection() {
 
                         {/* CTA */}
                         <div className="pt-4">
+                          <Link to="/contact" onClick={(handleClick) => {
+                    window.scrollTo(0, 0);
+                    handleClick();
+                  }} >
                           <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
                             <Zap className="h-4 w-4 mr-2" />
                             Start Strategy Planning
                           </Button>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -300,10 +305,15 @@ function SocialMediaSection() {
 
                         {/* CTA */}
                         <div className="pt-4">
+                          <Link to="/contact" onClick={(handleClick) => {
+                    window.scrollTo(0, 0);
+                    handleClick();
+                  }} >
                           <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
                             <Zap className="h-4 w-4 mr-2" />
                             Start AI Analysis
                           </Button>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -437,10 +447,15 @@ function SocialMediaSection() {
 
                         {/* CTA */}
                         <div className="pt-4">
+                          <Link to="/contact" onClick={(handleClick) => {
+                    window.scrollTo(0, 0);
+                    handleClick();
+                  }} >
                           <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
                             <Zap className="h-4 w-4 mr-2" />
                             Launch Ad Campaign
                           </Button>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -570,10 +585,15 @@ function SocialMediaSection() {
 
                         {/* CTA */}
                         <div className="pt-4">
+                          <Link to="/contact" onClick={(handleClick) => {
+                    window.scrollTo(0, 0);
+                    handleClick();
+                  }} >
                           <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
                             <Zap className="h-4 w-4 mr-2" />
                             Start Content Creation
                           </Button>
+                          </Link>
                         </div>
                       </div>
                     </div>

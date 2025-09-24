@@ -1,5 +1,5 @@
-"use client"
-import { Button } from "@/components/ui/button"
+"use client";
+import { Button } from "@/components/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -7,8 +7,20 @@ import {
   DrawerContent,
   DrawerTitle,
   DrawerDescription,
-} from "@/components/ui/drawer"
-import { X, Smartphone, ShoppingCart, Shield, Palette, Clock, Users, Zap, Target, Code, Monitor } from "lucide-react"
+} from "@/components/ui/drawer";
+import {
+  X,
+  Smartphone,
+  ShoppingCart,
+  Shield,
+  Palette,
+  Clock,
+  Users,
+  Zap,
+  Target,
+  Code,
+  Monitor,
+} from "lucide-react";
 
 function WebDevelopmentSection() {
   return (
@@ -17,7 +29,11 @@ function WebDevelopmentSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <img src="/media/WebDevSub.png " alt="Web Development" className="w-full rounded-2xl" />
+              <img
+                src="/media/WebDevSub.png "
+                alt="Web Development"
+                className="w-full rounded-2xl"
+              />
               <Drawer direction="left">
                 <DrawerTrigger asChild>
                   <Button
@@ -57,15 +73,21 @@ function WebDevelopmentSection() {
                     {/* Content */}
                     <div className="flex-1 p-6 space-y-6 overflow-y-auto rounded-br-2xl scrollbar-left">
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Overview</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Overview
+                        </h3>
                         <p className="text-gray-600 leading-relaxed">
-                          Build powerful web applications and native mobile apps for iOS and Android. Our development
-                          team creates scalable, user-friendly solutions that work seamlessly across all platforms.
+                          Build powerful web applications and native mobile apps
+                          for iOS and Android. Our development team creates
+                          scalable, user-friendly solutions that work seamlessly
+                          across all platforms.
                         </p>
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Key Features
+                        </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div className="flex items-center gap-2 text-gray-600">
                             <Code className="h-4 w-4 text-[#009BB1]" />
@@ -87,9 +109,18 @@ function WebDevelopmentSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Technologies</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Technologies
+                        </h3>
                         <div className="flex flex-wrap gap-2">
-                          {["React Native", "Flutter", "Next.js", "React", "Swift", "Kotlin"].map((tech) => (
+                          {[
+                            "React Native",
+                            "Flutter",
+                            "Next.js",
+                            "React",
+                            "Swift",
+                            "Kotlin",
+                          ].map((tech) => (
                             <span
                               key={tech}
                               className="px-3 py-1 bg-gradient-to-r from-[#009BB1]/10 to-[#B2519A]/10 text-gray-700 rounded-full text-sm font-medium"
@@ -101,16 +132,25 @@ function WebDevelopmentSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Timeline</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Timeline
+                        </h3>
                         <div className="flex items-center gap-2 text-gray-600">
                           <Clock className="h-4 w-4 text-[#009BB1]" />
                           <span>8-16 weeks depending on complexity</span>
                         </div>
                       </div>
-
-                      <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#007A8C] hover:to-[#8E4178] text-white font-semibold py-3 rounded-lg transition-all duration-300">
-                        Start Your App Project
-                      </Button>
+                      <Link
+                        to="/contact"
+                        onClick={(handleClick) => {
+                          window.scrollTo(0, 0);
+                          handleClick();
+                        }}
+                      >
+                        <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#007A8C] hover:to-[#8E4178] text-white font-semibold py-3 rounded-lg transition-all duration-300">
+                          Start Your App Project
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </DrawerContent>
@@ -143,7 +183,9 @@ function WebDevelopmentSection() {
                       </DrawerClose>
                       <div className="flex items-center gap-3 mb-2">
                         <ShoppingCart className="h-8 w-8" />
-                        <DrawerTitle className="text-2xl font-bold text-white">E-commerce Solutions</DrawerTitle>
+                        <DrawerTitle className="text-2xl font-bold text-white">
+                          E-commerce Solutions
+                        </DrawerTitle>
                       </div>
                       <DrawerDescription className="text-white/90 text-lg">
                         Complete online store development and optimization
@@ -153,15 +195,21 @@ function WebDevelopmentSection() {
                     {/* Content */}
                     <div className="flex-1 p-6 space-y-6 overflow-y-auto rounded-br-2xl">
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Overview</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Overview
+                        </h3>
                         <p className="text-gray-600 leading-relaxed">
-                          Launch and scale your online business with our comprehensive e-commerce solutions. From custom
-                          storefronts to payment integration, we build everything you need to sell online.
+                          Launch and scale your online business with our
+                          comprehensive e-commerce solutions. From custom
+                          storefronts to payment integration, we build
+                          everything you need to sell online.
                         </p>
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Key Features
+                        </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div className="flex items-center gap-2 text-gray-600">
                             <ShoppingCart className="h-4 w-4 text-[#B2519A]" />
@@ -183,9 +231,17 @@ function WebDevelopmentSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Platforms</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Platforms
+                        </h3>
                         <div className="flex flex-wrap gap-2">
-                          {["Shopify", "WooCommerce", "Custom Solutions", "Magento", "BigCommerce"].map((platform) => (
+                          {[
+                            "Shopify",
+                            "WooCommerce",
+                            "Custom Solutions",
+                            "Magento",
+                            "BigCommerce",
+                          ].map((platform) => (
                             <span
                               key={platform}
                               className="px-3 py-1 bg-gradient-to-r from-[#B2519A]/10 to-[#009BB1]/10 text-gray-700 rounded-full text-sm font-medium"
@@ -197,16 +253,25 @@ function WebDevelopmentSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Timeline</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Timeline
+                        </h3>
                         <div className="flex items-center gap-2 text-gray-600">
                           <Clock className="h-4 w-4 text-[#B2519A]" />
                           <span>6-12 weeks for full store setup</span>
                         </div>
                       </div>
-
-                      <Button className="w-full bg-gradient-to-r from-[#B2519A] to-[#009BB1] hover:from-[#8E4178] hover:to-[#007A8C] text-white font-semibold py-3 rounded-lg transition-all duration-300">
-                        Launch Your Store
-                      </Button>
+                      <Link
+                        to="/contact"
+                        onClick={(handleClick) => {
+                          window.scrollTo(0, 0);
+                          handleClick();
+                        }}
+                      >
+                        <Button className="w-full bg-gradient-to-r from-[#B2519A] to-[#009BB1] hover:from-[#8E4178] hover:to-[#007A8C] text-white font-semibold py-3 rounded-lg transition-all duration-300">
+                          Launch Your Store
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </DrawerContent>
@@ -251,15 +316,20 @@ function WebDevelopmentSection() {
                     {/* Content */}
                     <div className="flex-1 p-6 space-y-6 overflow-y-auto rounded-br-2xl">
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Overview</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Overview
+                        </h3>
                         <p className="text-gray-600 leading-relaxed">
-                          Ensure your applications perform optimally and stay secure with our AI-powered analytics,
-                          automated testing, and advanced security monitoring solutions.
+                          Ensure your applications perform optimally and stay
+                          secure with our AI-powered analytics, automated
+                          testing, and advanced security monitoring solutions.
                         </p>
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Key Features
+                        </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div className="flex items-center gap-2 text-gray-600">
                             <Shield className="h-4 w-4 text-[#7A5FA0]" />
@@ -281,7 +351,9 @@ function WebDevelopmentSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Services</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Services
+                        </h3>
                         <div className="flex flex-wrap gap-2">
                           {[
                             "Vulnerability Scanning",
@@ -301,16 +373,25 @@ function WebDevelopmentSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Timeline</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Timeline
+                        </h3>
                         <div className="flex items-center gap-2 text-gray-600">
                           <Clock className="h-4 w-4 text-[#7A5FA0]" />
                           <span>2-4 weeks setup, ongoing monitoring</span>
                         </div>
                       </div>
-
-                      <Button className="w-full bg-gradient-to-r from-[#7A5FA0] to-[#B2519A] hover:from-[#5A4580] hover:to-[#8E4178] text-white font-semibold py-3 rounded-lg transition-all duration-300">
-                        Secure Your Applications
-                      </Button>
+                      <Link
+                        to="/contact"
+                        onClick={(handleClick) => {
+                          window.scrollTo(0, 0);
+                          handleClick();
+                        }}
+                      >
+                        <Button className="w-full bg-gradient-to-r from-[#7A5FA0] to-[#B2519A] hover:from-[#5A4580] hover:to-[#8E4178] text-white font-semibold py-3 rounded-lg transition-all duration-300">
+                          Secure Your Applications
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </DrawerContent>
@@ -355,15 +436,21 @@ function WebDevelopmentSection() {
                     {/* Content */}
                     <div className="flex-1 p-6 space-y-6 overflow-y-auto rounded-br-2xl">
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Overview</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Overview
+                        </h3>
                         <p className="text-gray-600 leading-relaxed">
-                          Create intuitive, engaging user experiences that convert visitors into customers. Our design
-                          team focuses on usability, accessibility, and conversion optimization across all platforms.
+                          Create intuitive, engaging user experiences that
+                          convert visitors into customers. Our design team
+                          focuses on usability, accessibility, and conversion
+                          optimization across all platforms.
                         </p>
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Key Features</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Key Features
+                        </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div className="flex items-center gap-2 text-gray-600">
                             <Palette className="h-4 w-4 text-[#009BB1]" />
@@ -385,54 +472,78 @@ function WebDevelopmentSection() {
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Design Services</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Design Services
+                        </h3>
                         <div className="flex flex-wrap gap-2">
-                          {["Wireframing", "Prototyping", "Visual Design", "Usability Testing", "A/B Testing"].map(
-                            (service) => (
-                              <span
-                                key={service}
-                                className="px-3 py-1 bg-gradient-to-r from-[#009BB1]/10 via-[#7A5FA0]/10 to-[#B2519A]/10 text-gray-700 rounded-full text-sm font-medium"
-                              >
-                                {service}
-                              </span>
-                            ),
-                          )}
+                          {[
+                            "Wireframing",
+                            "Prototyping",
+                            "Visual Design",
+                            "Usability Testing",
+                            "A/B Testing",
+                          ].map((service) => (
+                            <span
+                              key={service}
+                              className="px-3 py-1 bg-gradient-to-r from-[#009BB1]/10 via-[#7A5FA0]/10 to-[#B2519A]/10 text-gray-700 rounded-full text-sm font-medium"
+                            >
+                              {service}
+                            </span>
+                          ))}
                         </div>
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-semibold mb-3 text-gray-900">Timeline</h3>
+                        <h3 className="text-lg font-semibold mb-3 text-gray-900">
+                          Timeline
+                        </h3>
                         <div className="flex items-center gap-2 text-gray-600">
                           <Clock className="h-4 w-4 text-[#009BB1]" />
                           <span>4-8 weeks for complete design system</span>
                         </div>
                       </div>
-
-                      <Button className="w-full bg-gradient-to-r from-[#009BB1] via-[#7A5FA0] to-[#B2519A] hover:from-[#007A8C] hover:via-[#5A4580] hover:to-[#8E4178] text-white font-semibold py-3 rounded-lg transition-all duration-300">
-                        Design Better Experiences
-                      </Button>
+                      <Link
+                        to="/contact"
+                        onClick={(handleClick) => {
+                          window.scrollTo(0, 0);
+                          handleClick();
+                        }}
+                      >
+                        <Button className="w-full bg-gradient-to-r from-[#009BB1] via-[#7A5FA0] to-[#B2519A] hover:from-[#007A8C] hover:via-[#5A4580] hover:to-[#8E4178] text-white font-semibold py-3 rounded-lg transition-all duration-300">
+                          Design Better Experiences
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </DrawerContent>
               </Drawer>
             </div>
             <div className="space-y-6">
-              <h1 className="text-5xl font-bold text-gray-900">Web Development Services</h1>
-              <h2 className="text-2xl font-semibold text-gray-700">(Modern & Scalable)</h2>
+              <h1 className="text-5xl font-bold text-gray-900">
+                Web Development Services
+              </h1>
+              <h2 className="text-2xl font-semibold text-gray-700">
+                (Modern & Scalable)
+              </h2>
 
               <p className="text-gray-600 text-lg leading-relaxed">
-                From responsive websites to mobile apps, we build digital solutions that drive your business forward
-                with cutting-edge technology and user-centered design.
+                From responsive websites to mobile apps, we build digital
+                solutions that drive your business forward with cutting-edge
+                technology and user-centered design.
               </p>
               <div className="flex flex-wrap gap-4 items-center">
-                <img src="/media/services/web.png" alt="Web Development Services" className="w-full h-full pr-4" />
+                <img
+                  src="/media/services/web.png"
+                  alt="Web Development Services"
+                  className="w-full h-full pr-4"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
 
-export default WebDevelopmentSection
+export default WebDevelopmentSection;

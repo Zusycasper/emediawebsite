@@ -9,6 +9,7 @@ import {
   DrawerDescription,
 } from "@/components/ui/drawerWeb"
 import { X, Cloud, Server, Shield, Clock, Users, Zap, Database, Monitor, HardDrive } from "lucide-react"
+import { Link } from "react-router-dom"
 
 function CloudInfrastructureSection() {
   return (
@@ -108,10 +109,14 @@ function CloudInfrastructureSection() {
                           <span>2-6 weeks migration</span>
                         </div>
                       </div>
-
+                      <Link to="/contact" onClick={(handleClick) => {
+                    window.scrollTo(0, 0);
+                    handleClick();
+                  }} >
                       <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#007A8C] hover:to-[#8E4178] text-white font-semibold py-3 rounded-lg transition-all duration-300">
                         Start Cloud Migration
                       </Button>
+                      </Link>
                     </div>
                   </div>
                 </DrawerContent>
@@ -213,10 +218,14 @@ function CloudInfrastructureSection() {
                           <span>1-3 weeks setup</span>
                         </div>
                       </div>
-
+<Link to="/contact" onClick={(handleClick) => {
+                    window.scrollTo(0, 0);
+                    handleClick();
+                  }} >
                       <Button className="w-full bg-gradient-to-r from-[#B2519A] to-[#009BB1] hover:from-[#8E4178] hover:to-[#007A8C] text-white font-semibold py-3 rounded-lg transition-all duration-300">
                         Optimize Infrastructure
                       </Button>
+                      </Link>
                     </div>
                   </div>
                 </DrawerContent>
@@ -318,10 +327,14 @@ function CloudInfrastructureSection() {
                           <span>Instant threat response</span>
                         </div>
                       </div>
-
+<Link to="/contact" onClick={(handleClick) => {
+                    window.scrollTo(0, 0);
+                    handleClick();
+                  }} >
                       <Button className="w-full bg-gradient-to-r from-[#009BB1] via-[#7A5FA0] to-[#B2519A] hover:from-[#007A8C] hover:via-[#5A4580] hover:to-[#8E4178] text-white font-semibold py-3 rounded-lg transition-all duration-300">
                         Secure Your Network
                       </Button>
+                      </Link>
                     </div>
                   </div>
                 </DrawerContent>
@@ -423,10 +436,14 @@ function CloudInfrastructureSection() {
                           <span>15-minute recovery objective</span>
                         </div>
                       </div>
-
+<Link to="/contact" onClick={(handleClick) => {
+                    window.scrollTo(0, 0);
+                    handleClick();
+                  }} >
                       <Button className="w-full bg-gradient-to-r from-[#7A5FA0] to-[#009BB1] hover:from-[#5A4580] hover:to-[#007A8C] text-white font-semibold py-3 rounded-lg transition-all duration-300">
                         Setup Disaster Recovery
                       </Button>
+                      </Link>
                     </div>
                   </div>
                 </DrawerContent>
