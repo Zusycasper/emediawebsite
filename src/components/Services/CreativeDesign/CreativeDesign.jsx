@@ -1,6 +1,6 @@
 "use client"
+import { useGoToContact } from "@/hooks/useGoToContact";
 import { Link } from "react-router-dom";
-
 import { Button } from "@/components/ui/button"
 import {
   Drawer,
@@ -28,6 +28,8 @@ import {
 } from "lucide-react"
 
 function CreativeDesign() {
+  const goToContactWithService = useGoToContact();
+  const serviceValue = "Creative Design (Human + AI)";
   return (
     <div className="relative SocialMediaSection">
       <section className="py-20 bg-white ">
@@ -143,15 +145,12 @@ function CreativeDesign() {
 
                         {/* CTA */}
                         <div className="pt-4">
-                          <Link to="/contact" onClick={(handleClick) => {
-                    window.scrollTo(0, 0);
-                    handleClick();
-                  }} >
-                          <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
+                          <Button
+                          onClick={() => goToContactWithService(serviceValue)}
+                           className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
                             <Zap className="h-4 w-4 mr-2" />
                             Start Brand Design
                           </Button>
-                          </Link>
                         </div>
                       </div>
                     </div>
@@ -258,15 +257,12 @@ function CreativeDesign() {
 
                         {/* CTA */}
                         <div className="pt-4">
-                          <Link to="/contact" onClick={(handleClick) => {
-                    window.scrollTo(0, 0);
-                    handleClick();
-                  }} >
-                          <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
+                          
+                          <Button onClick={() => goToContactWithService(serviceValue)}
+  className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
                             <Zap className="h-4 w-4 mr-2" />
                             Start Graphics Design
                           </Button>
-                          </Link>
                         </div>
                       </div>
                     </div>
@@ -372,15 +368,12 @@ function CreativeDesign() {
 
                         {/* CTA */}
                         <div className="pt-4">
-                          <Link to="/contact" onClick={(handleClick) => {
-                    window.scrollTo(0, 0);
-                    handleClick();
-                  }} >
-                          <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
+                          
+                          <Button onClick={() => goToContactWithService(serviceValue)}
+   className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
                             <Zap className="h-4 w-4 mr-2" />
                             Start Animation Project
                           </Button>
-                          </Link>
                         </div>
                       </div>
                     </div>
@@ -488,15 +481,12 @@ function CreativeDesign() {
 
                         {/* CTA */}
                         <div className="pt-4">
-                          <Link to="/contact" onClick={(handleClick) => {
-                    window.scrollTo(0, 0);
-                    handleClick();
-                  }} >
-                          <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
+                          
+                          <Button onClick={() => goToContactWithService(serviceValue)}
+                          className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
                             <Zap className="h-4 w-4 mr-2" />
                             Start AI Design Project
                           </Button>
-                          </Link>
                         </div>
                       </div>
                     </div>
