@@ -602,7 +602,7 @@ function SocialMediaSection() {
               <img
                 src="/media/SocialMediaMarketingSub.png"
                 alt="Social Media Management Service"
-                className="rounded-2xl h-[396px] w-full object-cover"
+                className="rounded-2xl sm:h-[396px] sm:w-full sm:object-cover object-cover h-[280px] w-full"
               />
             </div>
           </div>

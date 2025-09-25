@@ -32,11 +32,11 @@ function WebDevelopmentSection() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
+            <div className="relative order-2 lg:order-1">
               <img
                 src="/media/WebDevSub.png "
                 alt="Web Development"
-                className="w-full rounded-2xl"
+                className="w-full rounded-2xl "
               />
               <Drawer direction="left">
                 <DrawerTrigger asChild>
@@ -506,7 +506,7 @@ function WebDevelopmentSection() {
                 </DrawerContent>
               </Drawer>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-6 order-1 lg:order-2">
               <h1 className="text-5xl font-bold text-gray-900">
                 Web Development Services
               </h1>

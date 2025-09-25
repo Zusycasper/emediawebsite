@@ -33,11 +33,11 @@ export default function CloudInfrastructureSection() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
+            <div className="relative order-2 lg:order-1">
               <img
                 src="/media/CloudInfrastructureSub.png"
                 alt="Cloud Infrastructure"
-                className="rounded-2xl h-[396px] w-full object-cover"
+                className="rounded-2xl sm:h-[396px] sm:w-full sm:object-cover object-cover h-[280px] w-full"
               />
 
               {/* Drawer 1 */}
@@ -505,7 +505,7 @@ export default function CloudInfrastructureSection() {
               </Drawer>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 order-1 lg:order-2">
               <h1 className="text-5xl font-bold text-gray-900">
                 Cloud & IT Infrastructure Support
               </h1>
