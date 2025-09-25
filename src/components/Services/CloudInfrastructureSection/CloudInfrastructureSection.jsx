@@ -1,7 +1,6 @@
 "use client";
-
+import { useGoToContact } from "@/hooks/useGoToContact";
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   Drawer,
@@ -25,14 +24,9 @@ import {
 } from "lucide-react";
 
 export default function CloudInfrastructureSection() {
-  const navigate = useNavigate();
+  const goToContactWithService = useGoToContact();
   const serviceValue =
     "Cloud & IT Infrastructure Support (Intelligent & Secure)";
-
-  const goToContactWithService = (service) => {
-    // navigate to /contact with the service query param
-    navigate(`/contact?service=${encodeURIComponent(service)}`);
-  };
 
   return (
     <div>
@@ -155,10 +149,7 @@ export default function CloudInfrastructureSection() {
 
                       <Button
                         type="button"
-                        onClick={() => {
-                          goToContactWithService(serviceValue);
-                          window.scrollTo(0, 0);
-                        }}
+                        onClick={() => goToContactWithService(serviceValue)}
                         className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#007A8C] hover:to-[#8E4178] text-white font-semibold py-3 rounded-lg transition-all duration-300"
                       >
                         Start Cloud Migration
