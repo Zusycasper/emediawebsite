@@ -1,4 +1,5 @@
 "use client";
+import { useGoToContact } from "@/hooks/useGoToContact";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
@@ -24,6 +25,8 @@ import {
 } from "lucide-react";
 
 function WebDevelopmentSection() {
+  const goToContactWithService = useGoToContact();
+  const serviceValue = "Web & App Development (Future-Ready)";
   return (
     <div>
       <section className="py-20 bg-gray-50">
@@ -141,17 +144,13 @@ function WebDevelopmentSection() {
                           <span>8-16 weeks depending on complexity</span>
                         </div>
                       </div>
-                      <Link
-                        to="/contact"
-                        onClick={(handleClick) => {
-                          window.scrollTo(0, 0);
-                          handleClick();
-                        }}
+
+                      <Button
+                        onClick={() => goToContactWithService(serviceValue)}
+                        className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#007A8C] hover:to-[#8E4178] text-white font-semibold py-3 rounded-lg transition-all duration-300"
                       >
-                        <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#007A8C] hover:to-[#8E4178] text-white font-semibold py-3 rounded-lg transition-all duration-300">
-                          Start Your App Project
-                        </Button>
-                      </Link>
+                        Start Your App Project
+                      </Button>
                     </div>
                   </div>
                 </DrawerContent>
@@ -262,17 +261,13 @@ function WebDevelopmentSection() {
                           <span>6-12 weeks for full store setup</span>
                         </div>
                       </div>
-                      <Link
-                        to="/contact"
-                        onClick={(handleClick) => {
-                          window.scrollTo(0, 0);
-                          handleClick();
-                        }}
+
+                      <Button
+                        onClick={() => goToContactWithService(serviceValue)}
+                        className="w-full bg-gradient-to-r from-[#B2519A] to-[#009BB1] hover:from-[#8E4178] hover:to-[#007A8C] text-white font-semibold py-3 rounded-lg transition-all duration-300"
                       >
-                        <Button className="w-full bg-gradient-to-r from-[#B2519A] to-[#009BB1] hover:from-[#8E4178] hover:to-[#007A8C] text-white font-semibold py-3 rounded-lg transition-all duration-300">
-                          Launch Your Store
-                        </Button>
-                      </Link>
+                        Launch Your Store
+                      </Button>
                     </div>
                   </div>
                 </DrawerContent>
@@ -382,17 +377,13 @@ function WebDevelopmentSection() {
                           <span>2-4 weeks setup, ongoing monitoring</span>
                         </div>
                       </div>
-                      <Link
-                        to="/contact"
-                        onClick={(handleClick) => {
-                          window.scrollTo(0, 0);
-                          handleClick();
-                        }}
+
+                      <Button
+                        onClick={() => goToContactWithService(serviceValue)}
+                        className="w-full bg-gradient-to-r from-[#7A5FA0] to-[#B2519A] hover:from-[#5A4580] hover:to-[#8E4178] text-white font-semibold py-3 rounded-lg transition-all duration-300"
                       >
-                        <Button className="w-full bg-gradient-to-r from-[#7A5FA0] to-[#B2519A] hover:from-[#5A4580] hover:to-[#8E4178] text-white font-semibold py-3 rounded-lg transition-all duration-300">
-                          Secure Your Applications
-                        </Button>
-                      </Link>
+                        Secure Your Applications
+                      </Button>
                     </div>
                   </div>
                 </DrawerContent>
@@ -503,17 +494,13 @@ function WebDevelopmentSection() {
                           <span>4-8 weeks for complete design system</span>
                         </div>
                       </div>
-                      <Link
-                        to="/contact"
-                        onClick={(handleClick) => {
-                          window.scrollTo(0, 0);
-                          handleClick();
-                        }}
+
+                      <Button
+                        onClick={() => goToContactWithService(serviceValue)}
+                        className="w-full bg-gradient-to-r from-[#009BB1] via-[#7A5FA0] to-[#B2519A] hover:from-[#007A8C] hover:via-[#5A4580] hover:to-[#8E4178] text-white font-semibold py-3 rounded-lg transition-all duration-300"
                       >
-                        <Button className="w-full bg-gradient-to-r from-[#009BB1] via-[#7A5FA0] to-[#B2519A] hover:from-[#007A8C] hover:via-[#5A4580] hover:to-[#8E4178] text-white font-semibold py-3 rounded-lg transition-all duration-300">
-                          Design Better Experiences
-                        </Button>
-                      </Link>
+                        Design Better Experiences
+                      </Button>
                     </div>
                   </div>
                 </DrawerContent>
