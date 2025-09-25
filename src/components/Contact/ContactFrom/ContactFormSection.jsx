@@ -26,6 +26,8 @@ export default function ContactFormSection() {
   const params = new URLSearchParams(location.search);
   const preselectedService = params.get("service") || "";
 
+  console.log("Prefill service from URL:", preselectedService);
+
   const initialValues = {
     user_name: "",
     email: "",
@@ -33,6 +35,8 @@ export default function ContactFormSection() {
     services: preselectedService,
     message: "",
   };
+
+  console.log("Prefill service from URL:", preselectedService);
 
   const [formValue, setFormValue] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
