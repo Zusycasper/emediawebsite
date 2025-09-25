@@ -1,4 +1,5 @@
 "use client";
+import { useGoToContact } from "@/hooks/useGoToContact";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
@@ -24,6 +25,8 @@ import {
 } from "lucide-react";
 
 function DigitalMarketingSection() {
+  const goToContactWithService = useGoToContact();
+  const serviceValue = "Digital Marketing (AI-Enhanced)";
   return (
     <div className="relative DigitalMerketingSection">
       <section className="py-20 bg-white ">
@@ -174,18 +177,13 @@ function DigitalMarketingSection() {
 
                         {/* CTA */}
                         <div className="pt-4">
-                          <Link
-                            to="/contact"
-                            onClick={(handleClick) => {
-                              window.scrollTo(0, 0);
-                              handleClick();
-                            }}
+                          <Button
+                            onClick={() => goToContactWithService(serviceValue)}
+                            className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300"
                           >
-                            <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
-                              <Zap className="h-4 w-4 mr-2" />
-                              Start SEO Optimization
-                            </Button>
-                          </Link>
+                            <Zap className="h-4 w-4 mr-2" />
+                            Start SEO Optimization
+                          </Button>
                         </div>
                       </div>
                     </div>
@@ -312,18 +310,13 @@ function DigitalMarketingSection() {
 
                         {/* CTA */}
                         <div className="pt-4">
-                          <Link
-                            to="/contact"
-                            onClick={(handleClick) => {
-                              window.scrollTo(0, 0);
-                              handleClick();
-                            }}
+                          <Button
+                            onClick={() => goToContactWithService(serviceValue)}
+                            className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300"
                           >
-                            <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
-                              <Zap className="h-4 w-4 mr-2" />
-                              Start Email Campaign
-                            </Button>
-                          </Link>
+                            <Zap className="h-4 w-4 mr-2" />
+                            Start Email Campaign
+                          </Button>
                         </div>
                       </div>
                     </div>
@@ -453,18 +446,13 @@ function DigitalMarketingSection() {
 
                         {/* CTA */}
                         <div className="pt-4">
-                          <Link
-                            to="/contact"
-                            onClick={(handleClick) => {
-                              window.scrollTo(0, 0);
-                              handleClick();
-                            }}
+                          <Button
+                            onClick={() => goToContactWithService(serviceValue)}
+                            className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300"
                           >
-                            <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
-                              <Zap className="h-4 w-4 mr-2" />
-                              Automate Marketing
-                            </Button>
-                          </Link>
+                            <Zap className="h-4 w-4 mr-2" />
+                            Automate Marketing
+                          </Button>
                         </div>
                       </div>
                     </div>
@@ -596,18 +584,13 @@ function DigitalMarketingSection() {
 
                         {/* CTA */}
                         <div className="pt-4">
-                          <Link
-                            to="/contact"
-                            onClick={(handleClick) => {
-                              window.scrollTo(0, 0);
-                              handleClick();
-                            }}
+                          <Button
+                            onClick={() => goToContactWithService(serviceValue)}
+                            className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300"
                           >
-                            <Button className="w-full bg-gradient-to-r from-[#009BB1] to-[#B2519A] hover:from-[#008A9B] hover:to-[#A1478A] text-white font-semibold py-3 rounded-lg transition-all duration-300">
-                              <Zap className="h-4 w-4 mr-2" />
-                              Get Analytics Setup
-                            </Button>
-                          </Link>
+                            <Zap className="h-4 w-4 mr-2" />
+                            Get Analytics Setup
+                          </Button>
                         </div>
                       </div>
                     </div>
