@@ -46,7 +46,7 @@ export default function WhyMediaBiz() {
             <p className="text-gray-600 text-lg leading-relaxed">
               You don’t just need visibility you need strategy that cuts through
               the noise, creativity that sparks attention, and technology that
-              drives results. <br/>
+              drives results. <br/><br/>
               In today's crowded digital space, visibility alone
               isn't enough you need strategy, creativity, and consistency to
               stand out. E-Media Biz brings all three.

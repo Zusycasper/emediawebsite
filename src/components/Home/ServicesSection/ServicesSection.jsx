@@ -8,34 +8,103 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const services = [
   {
-    title: "Email Marketing",
-    image: "/media/services/Email.png",
-    link: "/digital_marketing",
+    title: "Search Engine Optimization",
+    image: "/media/subservices/Search-engine-optimization.png",
+    link: "/services#digital_marketing",
   },
   {
-    title: "Website Design",
-    image: "/media/services/WebDesign.png",
-    link: "/web_development",
+    title: "Email Marketing Campaigns",
+    image: "/media/subservices/Email-marketing-camplaigns.png",
+    link: "/services#digital_marketing",
   },
   {
-    title: "SEO",
-    image: "/media/services/SEO.png",
-    link: "/digital_marketing",
+    title: "AI-driven Marketing Automation",
+    image: "/media/subservices/Ai-driven-marketing-automation.png",
+    link: "/services#digital_marketing",
   },
   {
-    title: "Social Media Marketing",
-    image: "/media/services/SMM.png",
-    link: "/digital_marketing",
+    title: "Performance Analytics & Reporting",
+    image: "/media/subservices/Performanace-analytics-&-reporting.png",
+    link: "/services#digital_marketing",
   },
   {
-    title: "Application Development",
-    image: "/media/services/AppDev.png",
-    link: "/web_development",
+    title: "Social Media Strategy & Planning",
+    image: "/media/subservices/Social-media-strategy-&-planning.png",
+    link: "/services#social_media",
   },
   {
-    title: "Maintenance & Security",
-    image: "/media/services/M&S.png",
-    link: "/web_development",
+    title: "Content Creation & Scheduling",
+    image: "/media/subservices/Content-creation-&-scheduling.png",
+    link: "/services#social_media",
+  },
+    {
+    title: "Trend & Sentiment Analysis with AI",
+    image: "/media/subservices/Trend-&-sentiment-analysis-with-AI.png",
+    link: "/services#social_media",
+  },
+    {
+    title: "Social Ads Management",
+    image: "/media/subservices/Social-ads-management.png",
+    link: "/services#social_media",
+  },
+    {
+    title: "Web & Mobile App Development",
+    image: "/media/subservices/Web-&-mobile-app-development.png",
+    link: "/services#web_development",
+  },  {
+    title: "E-commerce Solutions",
+    image: "/media/subservices/E-commerce-solutions.png",
+    link: "/services#web_development",
+  },
+    {
+    title: "AI-Powered Web & App Analytics, testing & security",
+    image: "/media/subservices/Ai-powered-wed-&-app-analytics-testing-&-security.png",
+    link: "/services#web_development",
+  },
+    {
+    title: "UI/UX for Web & Mobile & Optimisation",
+    image: "/media/subservices/UIUX-for-web-&-mobile-&-optimization.png",
+    link: "/services#web_development",
+  },
+    {
+    title: "Cloud infra. & mngt. ",
+    image: "/media/subservices/cloud-infrastructure-&-management.png",
+    link: "/services#cloud_infrastructure",
+  },
+    {
+    title: "IT Infrastructure Setup & Optimization",
+    image: "/media/subservices/IT-infrastructure-setup-&-optimization.png",
+    link: "/services#cloud_infrastructure",
+  },
+    {
+    title: "AI powered Network Security & Monitoring",
+    image: "/media/subservices/AI-powered-network-security-&-monitoring.png",
+    link: "/services#cloud_infrastructure",
+  },
+    {
+    title: "Automation, Disaster Recovery & Business Continuity",
+    image: "/media/subservices/Automation-disaster-recovery-&-business-continuity.png",
+    link: "/services#cloud_infrastructure",
+  },
+    {
+    title: "Brand Identity & Logo Design",
+    image: "/media/subservices/Brand-identity-&-logo-design.png",
+    link: "/services#creative_design",
+  },
+    {
+    title: "Marketing & Social Media Graphics",
+    image: "/media/subservices/Marketing-&-social-media-graphics.png",
+    link: "/services#creative_design",
+  },
+    {
+    title: "Motion Graphics & Animation",
+    image: "/media/subservices/Motion-graphics-&-animation.png",
+    link: "/services#creative_design",
+  },
+    {
+    title: "AI-Assisted Design & Prototyping",
+    image: "/media/subservices/AI-assisted-design-&-prototyping.png",
+    link: "/services#creative_design",
   },
 ]
 

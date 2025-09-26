@@ -94,8 +94,11 @@ function Navbar() {
                 {/* Services Dropdown */}
                 <div className="relative group flex items-center">
                   <DropdownMenu>
-                    <DropdownMenuTrigger className="flex items-center text-gray-900 hover:text-[#009BB1] px-3 py-2 font-medium">
+                     <Link to="/services">
                       SERVICES
+                     </Link>
+                    <DropdownMenuTrigger className="flex items-center text-gray-900 hover:text-[#009BB1] px-3 py-2 font-medium">
+
                       <ChevronDown className="ml-1 w-4 h-4" />
                     </DropdownMenuTrigger>
 

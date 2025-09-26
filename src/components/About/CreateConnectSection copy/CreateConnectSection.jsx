@@ -24,7 +24,7 @@ function CreateConnectSection() {
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed">
                 <b>
-                  At E-MediaBiz, our mission is simple: help brands thrive
+                  At e-MediaBiz, our mission is simple: help brands thrive
                   online and deliver real, measurable results. Not just vanity
                   numbers, we mean growth that matters.
                 </b>
