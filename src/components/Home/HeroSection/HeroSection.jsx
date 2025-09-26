@@ -21,12 +21,18 @@ function HeroSection() {
               <h1 className="text-4xl md:text-5xl font-extrabold text-[#009BB1] mb-4 text-left">e-MediaBiz</h1>
               <div className="flex flex-row gap-2 mt-6 items-center">
                 <Link to="/services">
-                  <button className="bg-[#009BB1] hover:bg-[#B2519A] text-white rounded-md text-sm md:text-lg font-medium h-12 md:h-14 px-6 align-items-vertical-center justify-evenly">
+                  <button onClick={(handleClick) => {
+                          window.scrollTo(0, 0);
+                          handleClick();
+                        }} className="bg-[#009BB1] hover:bg-[#B2519A] text-white rounded-md text-sm md:text-lg font-medium h-12 md:h-14 px-6 align-items-vertical-center justify-evenly">
                     Services
                   </button>
                 </Link>
                 <Link to="/contact">
-                  <button className="border-2 border-[#009BB1] text-[#009BB1] hover:border-[#B2519A] hover:text-[#B2519A] rounded-md text-sm md:text-lg font-medium h-12 md:h-14 px-6 transition-colors duration-200 align-items-vertical-center justify-evenly">
+                  <button onClick={(handleClick) => {
+                          window.scrollTo(0, 0);
+                          handleClick();
+                        }} className="border-2 border-[#009BB1] text-[#009BB1] hover:border-[#B2519A] hover:text-[#B2519A] rounded-md text-sm md:text-lg font-medium h-12 md:h-14 px-6 transition-colors duration-200 align-items-vertical-center justify-evenly">
                     Let's Build
                   </button>
                 </Link>

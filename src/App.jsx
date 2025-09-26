@@ -1,4 +1,5 @@
 import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollTTop/ScrollToTop";
 import Home from './pages/Home/Home';
 import AboutUs from './pages/AboutUs/AboutUs';
 import Services from './pages/Services/Services';
@@ -14,7 +15,7 @@ import CreativeDesign from "./pages/CreativeDesign/CreativeDesign";
 function App() {
   return (
     <Router>
-  {/* <Navbar /> */}
+      <ScrollToTop/>
 <Routes>
   <Route path="/" element={<Preloader />} />
   <Route path="/home" element={<Home />} />
