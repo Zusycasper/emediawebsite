@@ -1,4 +1,5 @@
 import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 import ScrollToTop from "./components/ScrollTTop/ScrollToTop";
 import Home from './pages/Home/Home';
 import AboutUs from './pages/AboutUs/AboutUs';
@@ -13,6 +14,20 @@ import CloudITInfrastructureSupport from "./pages/CloudITInfrastructureSupport/C
 import CreativeDesign from "./pages/CreativeDesign/CreativeDesign";
 
 function App() {
+  useEffect(() => {
+  const body = document.body;
+  const observer = new MutationObserver(() => {
+    if (body.hasAttribute("data-scroll-locked")) {
+      body.style.overflow = "auto";
+      body.style.pointerEvents = "auto";
+      body.style.position = "static";
+      body.style.paddingRight = "0px";
+    }
+  });
+  observer.observe(body, { attributes: true });
+  return () => observer.disconnect();
+}, []);
+
   return (
     <Router>
       <ScrollToTop/>
