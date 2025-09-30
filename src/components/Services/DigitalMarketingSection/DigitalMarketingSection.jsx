@@ -57,7 +57,7 @@ function DigitalMarketingSection() {
                   <DrawerTrigger asChild>
                     <Button className="absolute top-[12%] left-[7%] shadow-none w-20 h-20 sm:w-30 sm:h-30 "></Button>
                   </DrawerTrigger>
-                  <DrawerContent className="h-full w-full sm:w-[540px]">
+                  <DrawerContent className="h-full max-h-screen w-full md:w-[540px] overflow-y-auto">
                     <div className="h-full flex flex-col">
                       {/* Gradient Header */}
                       <div className="bg-gradient-to-r from-[#009BB1] to-[#B2519A] p-6 text-white rounded-tl-2xl">
@@ -194,7 +194,7 @@ function DigitalMarketingSection() {
                   <DrawerTrigger asChild>
                     <Button className="absolute top-[17%] left-[28%] shadow-none w-20 h-20 sm:w-30 sm:h-30 "></Button>
                   </DrawerTrigger>
-                  <DrawerContent className="h-full w-full sm:w-[540px]">
+                  <DrawerContent className="h-full max-h-screen w-full md:w-[540px] overflow-y-auto">
                     <div className="h-full flex flex-col">
                       {/* Gradient Header */}
                       <div className="bg-gradient-to-r from-[#009BB1] to-[#B2519A] p-6 text-white rounded-tl-2xl">
@@ -327,7 +327,7 @@ function DigitalMarketingSection() {
                   <DrawerTrigger asChild>
                     <Button className="absolute top-[18%] left-[49%] shadow-none w-20 h-20 sm:w-30 sm:h-30 "></Button>
                   </DrawerTrigger>
-                  <DrawerContent className="h-full w-full sm:w-[540px]">
+                  <DrawerContent className="h-full max-h-screen w-full md:w-[540px] overflow-y-auto">
                     <div className="h-full flex flex-col">
                       {/* Gradient Header */}
                       <div className="bg-gradient-to-r from-[#009BB1] to-[#B2519A] p-6 text-white rounded-tl-2xl">

@@ -56,7 +56,7 @@ function SocialMediaSection() {
                   <DrawerTrigger asChild>
                     <Button className="absolute top-[15%] left-[4%] shadow-none w-20 h-20 sm:w-30 sm:h-30 "></Button>
                   </DrawerTrigger>
-                  <DrawerContent className="h-full w-full sm:w-[540px]">
+                  <DrawerContent className="h-full max-h-screen w-full md:w-[540px]">
                     <div className="h-full flex flex-col">
                       {/* Gradient Header */}
                       <div className="bg-gradient-to-r from-[#009BB1] to-[#B2519A] p-6 text-white rounded-tl-2xl">
@@ -189,7 +189,7 @@ function SocialMediaSection() {
                   <DrawerTrigger asChild>
                     <Button className="absolute top-[17%] left-[45%] shadow-none w-20 h-20 sm:w-30 sm:h-30 "></Button>
                   </DrawerTrigger>
-                  <DrawerContent className="h-full w-full sm:w-[540px]">
+                  <DrawerContent className="h-full max-h-screen w-full md:w-[540px]">
                     <div className="h-full flex flex-col">
                       {/* Gradient Header */}
                       <div className="bg-gradient-to-r from-[#009BB1] to-[#B2519A] p-6 text-white rounded-tl-2xl">
@@ -324,7 +324,7 @@ function SocialMediaSection() {
                   <DrawerTrigger asChild>
                     <Button className="absolute top-[20%] left-[70%]  w-20 h-20 sm:w-30 sm:h-30 shadow-none "></Button>
                   </DrawerTrigger>
-                  <DrawerContent className="h-full w-full sm:w-[540px]">
+                  <DrawerContent className="h-full max-h-screen w-full md:w-[540px]">
                     <div className="h-full flex flex-col">
                       {/* Gradient Header */}
                       <div className="bg-gradient-to-r from-[#009BB1] to-[#B2519A] p-6 text-white rounded-tl-2xl">
@@ -464,7 +464,7 @@ function SocialMediaSection() {
                   <DrawerTrigger asChild>
                     <Button className="absolute top-[20%] left-[27%] z-20  w-20 h-20 sm:w-30 sm:h-30 shadow-none "></Button>
                   </DrawerTrigger>
-                  <DrawerContent className="h-full w-full sm:w-[540px]">
+                  <DrawerContent className="h-full max-h-screen w-full md:w-[540px]">
                     <div className="h-full flex flex-col">
                       {/* Gradient Header */}
                       <div className="bg-gradient-to-r from-[#009BB1] to-[#B2519A] p-6 text-white rounded-tl-2xl">

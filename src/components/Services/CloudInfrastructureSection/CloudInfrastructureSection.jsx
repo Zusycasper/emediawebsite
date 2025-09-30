@@ -44,13 +44,13 @@ export default function CloudInfrastructureSection() {
               <Drawer direction="left">
                 <DrawerTrigger asChild>
                   <Button
-                    className="absolute top-[258%] left-[5%] sm:top-[187%] sm:left-[10%] md:top-[206%] md:left-[7%] lg:top-[85%] lg:left-[111%] shadow-none w-15 h-15 sm:w-30 sm:h-30"
+                    className="absolute top-[258%] left-[5%] sm:top-[187%] sm:left-[10%] md:top-[-57%] md:left-[7%] lg:top-[85%] lg:left-[111%] shadow-none w-15 h-15 sm:w-30 sm:h-30"
                     aria-label="Open Cloud migration drawer"
                   />
                 </DrawerTrigger>
 
                 <DrawerContent>
-                  <div className="h-full flex flex-col rounded-br-2xl">
+                  <div className="h-full max-h-screen w-full md:w-full overflow-y-auto">
                     {/* Header */}
                     <div className="bg-gradient-to-r from-[#009BB1] via-[#7A5FA0] to-[#B2519A] p-6 text-white relative rounded-tr-2xl">
                       <DrawerClose asChild>
@@ -163,7 +163,7 @@ export default function CloudInfrastructureSection() {
               <Drawer direction="left">
                 <DrawerTrigger asChild>
                   <Button
-                    className="absolute top-[258%] left-[25%] sm:top-[193%] sm:left-[36%] md:top-[209%] md:left-[28%] lg:top-[85%] lg:left-[132%] shadow-none w-15 h-15 sm:w-30 sm:h-30"
+                    className="absolute top-[258%] left-[25%] sm:top-[193%] sm:left-[36%] md:top-[-57%] md:left-[28%] lg:top-[85%] lg:left-[132%] shadow-none w-15 h-15 sm:w-30 sm:h-30"
                     aria-label="Open IT infrastructure drawer"
                   />
                 </DrawerTrigger>
@@ -278,7 +278,7 @@ export default function CloudInfrastructureSection() {
               <Drawer direction="left">
                 <DrawerTrigger asChild>
                   <Button
-                    className="absolute top-[258%] left-[47%] sm:top-[197%] sm:left-[68%] md:top-[209%] md:left-[52%] lg:top-[85%] lg:left-[155%] shadow-none w-15 h-15 sm:w-30 sm:h-30"
+                    className="absolute top-[258%] left-[47%] sm:top-[197%] sm:left-[68%] md:top-[-57%] md:left-[52%] lg:top-[85%] lg:left-[155%] shadow-none w-15 h-15 sm:w-30 sm:h-30"
                     aria-label="Open security drawer"
                   />
                 </DrawerTrigger>
@@ -393,7 +393,7 @@ export default function CloudInfrastructureSection() {
               <Drawer direction="left">
                 <DrawerTrigger asChild>
                   <Button
-                    className="absolute top-[258%] left-[73%] sm:top-[210%] sm:left-[25%] md:top-[209%] md:left-[78%] lg:top-[85%] lg:left-[182%] shadow-none w-15 h-15 sm:w-30 sm:h-30"
+                    className="absolute top-[258%] left-[73%] sm:top-[210%] sm:left-[25%] md:top-[-57%] md:left-[78%] lg:top-[85%] lg:left-[182%] shadow-none w-15 h-15 sm:w-30 sm:h-30"
                     aria-label="Open disaster recovery drawer"
                   />
                 </DrawerTrigger>
