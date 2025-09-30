@@ -15,17 +15,26 @@ import Navigationbar from '../../components/Navigationbar/Navigationbar';
 function Services() {
     const { hash } = useLocation();
 
-  useEffect(() => {
-    if (hash) {
-      const id = hash.replace("#", "");
+useEffect(() => {
+  if (hash) {
+    const id = hash.replace("#", "");
+
+    const scrollToElement = () => {
       const el = document.getElementById(id);
       if (el) {
-        const yOffset = -87;
+        const yOffset = -87; // navbar height
         const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
+      } else {
+        // retry after a short delay if element not yet mounted
+        setTimeout(scrollToElement, 50);
       }
-    }
-  }, [hash]);
+    };
+
+    scrollToElement();
+  }
+}, [hash]);
+
   return (
     <div className="min-h-screen bg-white">
       {/* <Navbar /> */}
