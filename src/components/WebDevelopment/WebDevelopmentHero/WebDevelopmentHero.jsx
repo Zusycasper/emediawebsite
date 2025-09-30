@@ -14,7 +14,7 @@ function WebDevelopmentHero() {
                 Web Development
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed">
-                EMediaBiz is your partner in driving online growth. From Web
+                eMediaBiz is your partner in driving online growth. From Web
                 Design and Mobile & Web Application Development to Maintenance &
                 Support, and beyond, we craft marketing solutions designed
                 around your business goals. Let us find the right mix to get you
