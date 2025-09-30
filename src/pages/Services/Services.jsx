@@ -30,15 +30,15 @@ function Services() {
     <div className="min-h-screen bg-white">
       {/* <Navbar /> */}
       <Navigationbar />
-      <Card id="digital_marketing">
+      <Card className="border-0" id="digital_marketing">
       <DigitalMarketingSection /></Card>
-      <Card id="web_development">
+      <Card className="border-0" id="web_development">
       <WebDevelopmentSection /></Card>
-      <Card id="social_media">
+      <Card className="border-0" id="social_media">
       <SocialMediaSection/></Card>
-      <Card id="cloud_infrastructure">
+      <Card className="border-0" id="cloud_infrastructure">
       <CloudInfrastructureSection/></Card>
-      <Card id="creative_design">
+      <Card className="border-0" id="creative_design">
       <CreativeDesign/></Card>
       <LetsTalk />
       <Footer/>
