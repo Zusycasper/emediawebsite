@@ -42,7 +42,7 @@ export default function WhyMediaBiz() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Section */}
           <div className="space-y-6">
-            <h2 className="text-4xl font-bold text-gray-900">Why E-mediabiz</h2>
+            <h2 className="text-4xl font-bold text-gray-900">Why e-mediabiz</h2>
             <p className="text-gray-600 text-lg leading-relaxed">
               You don’t just need visibility you need strategy that cuts through
               the noise, creativity that sparks attention, and technology that
