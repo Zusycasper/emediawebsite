@@ -11,7 +11,7 @@ function DrivenbyResultsSection() {
             {/* Left text section */}
             <div className="space-y-6">
               <h2 className="text-4xl font-bold text-gray-900">
-                The E-MediaBiz Way
+                The e-MediaBiz Way
 
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed">

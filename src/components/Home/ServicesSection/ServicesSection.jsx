@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Link } from "react-router-dom"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const services = [
   {
@@ -37,106 +37,113 @@ const services = [
     image: "/media/subservices/Content-creation-&-scheduling.png",
     link: "/services#social_media",
   },
-    {
+  {
     title: "Trend & Sentiment Analysis with AI",
     image: "/media/subservices/Trend-&-sentiment-analysis-with-AI.png",
     link: "/services#social_media",
   },
-    {
+  {
     title: "Social Ads Management",
     image: "/media/subservices/Social-ads-management.png",
     link: "/services#social_media",
   },
-    {
+  {
     title: "Web & Mobile App Development",
     image: "/media/subservices/Web-&-mobile-app-development.png",
     link: "/services#web_development",
-  },  {
+  },
+  {
     title: "E-commerce Solutions",
     image: "/media/subservices/E-commerce-solutions.png",
     link: "/services#web_development",
   },
-    {
+  {
     title: "AI-Powered Web & App Analytics, testing & security",
-    image: "/media/subservices/Ai-powered-wed-&-app-analytics-testing-&-security.png",
+    image:
+      "/media/subservices/Ai-powered-wed-&-app-analytics-testing-&-security.png",
     link: "/services#web_development",
   },
-    {
+  {
     title: "UI/UX for Web & Mobile & Optimisation",
     image: "/media/subservices/UIUX-for-web-&-mobile-&-optimization.png",
     link: "/services#web_development",
   },
-    {
+  {
     title: "Cloud infra. & mngt. ",
     image: "/media/subservices/cloud-infrastructure-&-management.png",
     link: "/services#cloud_infrastructure",
   },
-    {
+  {
     title: "IT Infrastructure Setup & Optimization",
     image: "/media/subservices/IT-infrastructure-setup-&-optimization.png",
     link: "/services#cloud_infrastructure",
   },
-    {
+  {
     title: "AI powered Network Security & Monitoring",
     image: "/media/subservices/AI-powered-network-security-&-monitoring.png",
     link: "/services#cloud_infrastructure",
   },
-    {
+  {
     title: "Automation, Disaster Recovery & Business Continuity",
-    image: "/media/subservices/Automation-disaster-recovery-&-business-continuity.png",
+    image:
+      "/media/subservices/Automation-disaster-recovery-&-business-continuity.png",
     link: "/services#cloud_infrastructure",
   },
-    {
+  {
     title: "Brand Identity & Logo Design",
     image: "/media/subservices/Brand-identity-&-logo-design.png",
     link: "/services#creative_design",
   },
-    {
+  {
     title: "Marketing & Social Media Graphics",
     image: "/media/subservices/Marketing-&-social-media-graphics.png",
     link: "/services#creative_design",
   },
-    {
+  {
     title: "Motion Graphics & Animation",
     image: "/media/subservices/Motion-graphics-&-animation.png",
     link: "/services#creative_design",
   },
-    {
+  {
     title: "AI-Assisted Design & Prototyping",
     image: "/media/subservices/AI-assisted-design-&-prototyping.png",
     link: "/services#creative_design",
   },
-]
+];
 
 export default function ServicesSection() {
-  const [currentIndex, setCurrentIndex] = useState(1) // Start with second item as center
+  const [currentIndex, setCurrentIndex] = useState(1); // Start with second item as center
 
   const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : services.length - 1))
-  }
+    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : services.length - 1));
+  };
 
   const goToNext = () => {
-    setCurrentIndex((prev) => (prev < services.length - 1 ? prev + 1 : 0))
-  }
+    setCurrentIndex((prev) => (prev < services.length - 1 ? prev + 1 : 0));
+  };
 
   const getVisibleItems = () => {
-    const leftIndex = currentIndex === 0 ? services.length - 1 : currentIndex - 1
-    const centerIndex = currentIndex
-    const rightIndex = currentIndex === services.length - 1 ? 0 : currentIndex + 1
+    const leftIndex =
+      currentIndex === 0 ? services.length - 1 : currentIndex - 1;
+    const centerIndex = currentIndex;
+    const rightIndex =
+      currentIndex === services.length - 1 ? 0 : currentIndex + 1;
 
     return {
       left: services[leftIndex],
       center: services[centerIndex],
       right: services[rightIndex],
-    }
-  }
+    };
+  };
 
-  const visibleItems = getVisibleItems()
+  const visibleItems = getVisibleItems();
 
   return (
     <section className="py-12 md:py-7 bg-gradient-to-br from-gray-900 to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-4xl font-extrabold text-white text-center mb-8 md:mb-8">Our Services</h2>
+        <h2 className="text-2xl md:text-4xl font-extrabold text-white text-center mb-8 md:mb-8">
+          Our Services
+        </h2>
 
         <div className="relative">
           <Card className="bg-white p-4 md:p-2 rounded-2xl shadow-sm h-[320px] md:h-[420px]">
@@ -178,7 +185,11 @@ export default function ServicesSection() {
                           className="max-w-full max-h-full object-contain rounded-lg"
                         />
                       </div>
-                      <h3 className="text-lg sm:text-xl font-bold text-gray-800">{visibleItems.center.title}</h3>
+
+                      {/* Hide title on small screens */}
+                      <h3 className="hidden sm:block text-lg sm:text-xl font-bold text-gray-800">
+                        {visibleItems.center.title}
+                      </h3>
                     </div>
                   </Link>
                 </div>
@@ -227,5 +238,5 @@ export default function ServicesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -13,7 +13,7 @@ function DigitalMarketingHero() {
                 Digital Marketing
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed">
-                EMediaBiz is your partner in driving online growth. From SEO and
+                eMediaBiz is your partner in driving online growth. From SEO and
                 content creation to targeted PPC campaigns, social media
                 strategies, and beyond, we craft marketing solutions designed
                 around your business goals. Let us find the right mix to get you

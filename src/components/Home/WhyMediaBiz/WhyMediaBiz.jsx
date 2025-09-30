@@ -49,7 +49,7 @@ export default function WhyMediaBiz() {
               drives results. <br/><br/>
               In today's crowded digital space, visibility alone
               isn't enough you need strategy, creativity, and consistency to
-              stand out. E-Media Biz brings all three.
+              stand out. e-Media Biz brings all three.
               We help you attract the
               right audience, engage them with compelling content, and convert
               them into loyal customers. 
