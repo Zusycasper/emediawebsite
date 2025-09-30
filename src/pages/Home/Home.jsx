@@ -6,11 +6,13 @@ import WhyMediaBiz from '../../components/Home/WhyMediaBiz/WhyMediaBiz'
 import LetsTalk from '../../components/Home/LetsTalk/LetsTalk'
 import ServicesSection from '../../components/Home/ServicesSection/ServicesSection'
 import Footer from '../../components/Footer/Footer'
+import Navigationbar from '../../components/Navigationbar/Navigationbar'
 
 function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
+      {/* <Navbar /> */}
+      <Navigationbar />
       <HeroSection />
       {/* <WhatAreWeSection /> */}
       <ServicesSection />

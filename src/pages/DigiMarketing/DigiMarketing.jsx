@@ -5,11 +5,13 @@ import DigitalMarketingHero from '../../components/DigiMarketing/DigitalMarketin
 import InfiniteScrollingBanner from '../../components/DigiMarketing/InfiniteScrollingBanner/InfiniteScrollingBanner'
 import PortfolioSection from '../../components/DigiMarketing/PortfolioSection/PortfolioSection'
 import Footer from '../../components/Footer/Footer'
+import Navigationbar from '../../components/Navigationbar/Navigationbar'
 
 function DigiMarketing() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
+      {/* <Navbar /> */}
+      <Navigationbar />
       <DigitalMarketingHero />
       <InfiniteScrollingBanner />
       <PortfolioSection />

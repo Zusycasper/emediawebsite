@@ -124,28 +124,41 @@ function Navbar() {
               ABOUT US
             </Link>
 
-            <DropdownMenu open={servicesOpen} onOpenChange={handleServicesOpenChange}>
-              <DropdownMenuTrigger asChild>
-                <button
-                  className="flex items-center text-gray-900 hover:text-[#009BB1] px-3 py-2 font-medium"
-                >
-                  SERVICES <ChevronDown className="ml-1 w-4 h-4" />
-                </button>
-              </DropdownMenuTrigger>
+            <DropdownMenu open={servicesOpen}>
+  <div
+    onMouseEnter={() => setServicesOpen(true)}
+    onMouseLeave={() => setServicesOpen(false)}
+  >
+    <DropdownMenuTrigger asChild>
+      <button
+        className="flex items-center text-gray-900 hover:text-[#009BB1] px-3 py-2 font-medium"
+      >
+        SERVICES <ChevronDown className="ml-1 w-4 h-4" />
+      </button>
+    </DropdownMenuTrigger>
 
-              <DropdownMenuContent
-                className="mt-0.5 w-56 bg-white/95 shadow-lg rounded-md font-sans text-base will-change-transform"
-                disablescrolllock="true"
-              >
-                {services.map((service) => (
-                  <DropdownMenuItem key={service.id} className="hover:bg-teal-50 hover:shadow-lg mb-0.5">
-                    <HashLink smooth to={`/services#${service.id}`} onClick={handleSubserviceClick}>
-                      {service.label}
-                    </HashLink>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+    <DropdownMenuContent
+      className="mt-0.5 w-56 bg-white/95 shadow-lg rounded-md font-sans text-base will-change-transform"
+      disablescrolllock="true"
+    >
+      {services.map((service) => (
+        <DropdownMenuItem
+          key={service.id}
+          className="hover:bg-teal-50 hover:shadow-lg mb-0.5"
+        >
+          <HashLink
+            smooth
+            to={`/services#${service.id}`}
+            onClick={handleSubserviceClick}
+          >
+            {service.label}
+          </HashLink>
+        </DropdownMenuItem>
+      ))}
+    </DropdownMenuContent>
+  </div>
+</DropdownMenu>
+
           </div>
 
           <div className="hidden md:flex">

@@ -6,11 +6,13 @@ import DrivenbyResultsSection from '../../components/About/DrivenbyResultsSectio
 import WeBelieveSection from '../../components/About/WeBelieveSection/WeBelieveSection'
 import LetsTalk from '../../components/Home/LetsTalk/LetsTalk'
 import Footer from '../../components/Footer/Footer'
+import Navigationbar from '../../components/Navigationbar/Navigationbar'
 
 function AboutUs() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
+      {/* <Navbar /> */}
+      <Navigationbar />
       <CreateConnectSection />
       <WeAreSection />
       <DrivenbyResultsSection />

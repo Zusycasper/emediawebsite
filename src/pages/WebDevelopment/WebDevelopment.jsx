@@ -5,11 +5,13 @@ import InfiniteScrollingBanner from '../../components/WebDevelopment/InfiniteScr
 import PortfolioSection from '../../components/WebDevelopment/PortfolioSection/PortfolioSection'
 import LetsTalk from '../../components/Home/LetsTalk/LetsTalk'
 import Footer from '../../components/Footer/Footer'
+import Navigationbar from '../../components/Navigationbar/Navigationbar'
 
 function WebDevelopment() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
+      {/* <Navbar /> */}
+      <Navigationbar /> 
       <WebDevelopmentHero />
       <InfiniteScrollingBanner />
       <PortfolioSection />
