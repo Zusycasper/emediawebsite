@@ -130,7 +130,7 @@ function Footer() {
                   <li>Privacy Policy</li>
                   <li>
                     <a
-                      href="/sitemap.xml"
+                      href="public/sitemap.xml"
                       className="text-blue-600 hover:underline"
                     >
                       Sitemap
