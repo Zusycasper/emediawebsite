@@ -36,6 +36,7 @@ function WebDevelopmentSection() {
               <img
                 src="/media/WebDevSub.png "
                 alt="Web Development"
+                loading="lazy"
                 className="w-full rounded-2xl "
               />
               <Drawer direction="left">
@@ -523,6 +524,7 @@ function WebDevelopmentSection() {
                 <img
                   src="/media/services/web.png"
                   alt="Web Development Services"
+                  loading="lazy"
                   className="w-full h-full pr-4"
                 />
               </div>

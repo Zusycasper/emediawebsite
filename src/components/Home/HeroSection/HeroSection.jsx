@@ -54,7 +54,7 @@ function HeroSection() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
-              <img src="/media/whatAreWe.png" alt="Professional Team" className="relative z-10 w-full rounded-2xl" />
+              <img src="/media/whatAreWe.png" alt="Professional Team" loading="lazy" className="relative z-10 w-full rounded-2xl" />
             </div>
             <div className="space-y-6 order-1 lg:order-2">
               <h2 className="text-4xl font-bold text-gray-900">Who We Are</h2>

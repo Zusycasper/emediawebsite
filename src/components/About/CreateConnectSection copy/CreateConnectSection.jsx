@@ -71,6 +71,7 @@ function CreateConnectSection() {
               <img
                 src="/media/about/connect.png"
                 alt="Create Connect Convert"
+                loading="lazy"
                 className="w-full h-full object-cover rounded-lg"
               />
             </div>

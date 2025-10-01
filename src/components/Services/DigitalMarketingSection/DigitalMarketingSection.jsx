@@ -49,6 +49,7 @@ function DigitalMarketingSection() {
                 <img
                   src="/media/services/digital.png"
                   alt="Digital Marketing Services"
+                  loading="lazy"
                   className="w-full h-full pr-6"
                 />
 
@@ -603,6 +604,7 @@ function DigitalMarketingSection() {
               <img
                 src="/media/DigiMarkSub.png"
                 alt="Digital Marketing Service"
+                loading="lazy"
                 className="w-full rounded-2xl"
               />
             </div>

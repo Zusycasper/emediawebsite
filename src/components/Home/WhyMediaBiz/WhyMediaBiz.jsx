@@ -68,6 +68,7 @@ export default function WhyMediaBiz() {
                 <img
                   src={visibleItems.center}
                   alt={`Why E-Mediabiz ${currentIndex + 1}`}
+                  loading="lazy"
                   className="w-full h-auto object-contain rounded-lg"
                 />
               </div>
@@ -102,6 +103,7 @@ export default function WhyMediaBiz() {
                   alt={`Why E-Mediabiz ${
                     currentIndex === 0 ? images.length : currentIndex
                   }`}
+                  loading="lazy"                  
                   className="w-full h-auto object-contain rounded-lg"
                 />
               </div>
@@ -111,6 +113,7 @@ export default function WhyMediaBiz() {
                 <img
                   src={visibleItems.center}
                   alt={`Why E-Mediabiz ${currentIndex + 1}`}
+                  loading="lazy"
                   className="w-full h-auto object-contain rounded-lg"
                 />
               </div>
@@ -123,6 +126,7 @@ export default function WhyMediaBiz() {
                 <img
                   src={visibleItems.right}
                   alt={`Why E-Mediabiz ${(currentIndex + 2) % images.length}`}
+                  loading="lazy"
                   className="w-full h-auto object-contain rounded-lg"
                 />
               </div>

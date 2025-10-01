@@ -8,22 +8,27 @@ import { useState } from "react";
 const portfolioItems = [
   {
     image: "/media/portfolio/web/a.jpg",
+    loading: "eager",
     title: "Analytics Dashboard Project",
   },
   {
     image: "/media/portfolio/web/b.jpg",
+    loading: "lazy",
     title: "Social Media Campaign",
   },
   {
     image: "/media/portfolio/web/c.jpg",
+    loading: "lazy",
     title: "SEO Optimization",
   },
   {
     image: "/media/portfolio/web/d.jpg",
+    loading: "lazy",
     title: "Email Marketing Design",
   },
   {
     image: "/media/portfolio/web/e.jpg",
+    loading: "lazy",
     title: "Website Redesign",
   },
 ];
@@ -67,6 +72,7 @@ function PortfolioSection() {
                     src={
                       portfolioItems[currentSlide].image || "/placeholder.svg"
                     }
+                    loading={portfolioItems[currentSlide].loading || "lazy"}
                     alt={portfolioItems[currentSlide].title}
                     className="w-full h-96 object-cover"
                   />

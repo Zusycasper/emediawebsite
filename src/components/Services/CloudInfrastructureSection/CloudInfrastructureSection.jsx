@@ -37,6 +37,7 @@ export default function CloudInfrastructureSection() {
               <img
                 src="/media/CloudInfrastructureSub.png"
                 alt="Cloud Infrastructure"
+                loading="lazy"
                 className="rounded-2xl sm:h-[396px] sm:w-full sm:object-cover object-cover h-[280px] w-full"
               />
 
@@ -527,6 +528,7 @@ export default function CloudInfrastructureSection() {
                 <img
                   src="/media/services/cloud.png"
                   alt="Cloud Infrastructure Services"
+                  loading="lazy"
                   className="w-full h-full pr-4"
                 />
               </div>

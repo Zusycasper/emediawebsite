@@ -49,6 +49,7 @@ function SocialMediaSection() {
                 <img
                   src="/media/services/social.png"
                   alt="Social Media Management Services"
+                  loading="lazy"
                   className="w-full h-full pr-6"
                 />
 
@@ -602,6 +603,7 @@ function SocialMediaSection() {
               <img
                 src="/media/SocialMediaMarketingSub.png"
                 alt="Social Media Management Service"
+                loading="lazy"
                 className="rounded-2xl sm:h-[396px] sm:w-full sm:object-cover object-cover h-[280px] w-full"
               />
             </div>

@@ -62,6 +62,7 @@ export default function WeBelieveSection() {
                     <img
                       src={visibleItems.center.image || "/placeholder.svg"}
                       alt={`${visibleItems.center.title} illustration`}
+                      loading="lazy"
                       className="w-full h-full object-contain rounded-lg"
                     />
                   </div>
@@ -85,6 +86,7 @@ export default function WeBelieveSection() {
                     <img
                       src={visibleItems.center.image || "/placeholder.svg"}
                       alt={`${visibleItems.center.title} illustration`}
+                      loading="lazy"
                       className="w-full h-auto object-contain rounded-lg"
                     />
                   </div>

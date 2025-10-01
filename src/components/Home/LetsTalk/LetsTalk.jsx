@@ -32,7 +32,7 @@ function LetsTalk() {
           </div>
 
           <div className="relative hidden lg:block">
-            <img src="/media/letsTalk.png" alt="Team Photo emediabiz" className="w-full h-[320px] rounded-2xl" />
+            <img src="/media/letsTalk.png" alt="Team Photo emediabiz" loading="lazy" className="w-full h-[320px] rounded-2xl"  />
           </div>
         </div>
       </div>

@@ -10,103 +10,140 @@ const services = [
   {
     title: "Search Engine Optimization",
     image: "/media/subservices/Search-engine-optimization.png",
+    loading: "eager",
     link: "/services#digital_marketing",
   },
   {
     title: "Email Marketing Campaigns",
     image: "/media/subservices/Email-marketing-camplaigns.png",
+    loading: "lazy",
     link: "/services#digital_marketing",
   },
   {
     title: "AI-driven Marketing Automation",
     image: "/media/subservices/Ai-driven-marketing-automation.png",
+        loading: "lazy",
     link: "/services#digital_marketing",
   },
   {
     title: "Performance Analytics & Reporting",
     image: "/media/subservices/Performanace-analytics-&-reporting.png",
+        loading: "lazy",
+
     link: "/services#digital_marketing",
   },
   {
     title: "Social Media Strategy & Planning",
     image: "/media/subservices/Social-media-strategy-&-planning.png",
+        loading: "lazy",
+
     link: "/services#social_media",
   },
   {
     title: "Content Creation & Scheduling",
     image: "/media/subservices/Content-creation-&-scheduling.png",
+        loading: "lazy",
+
     link: "/services#social_media",
   },
   {
     title: "Trend & Sentiment Analysis with AI",
     image: "/media/subservices/Trend-&-sentiment-analysis-with-AI.png",
+        loading: "lazy",
+
     link: "/services#social_media",
   },
   {
     title: "Social Ads Management",
     image: "/media/subservices/Social-ads-management.png",
+        loading: "lazy",
+
     link: "/services#social_media",
   },
   {
     title: "Web & Mobile App Development",
     image: "/media/subservices/Web-&-mobile-app-development.png",
+        loading: "lazy",
+
     link: "/services#web_development",
   },
   {
     title: "E-commerce Solutions",
     image: "/media/subservices/E-commerce-solutions.png",
+        loading: "lazy",
+
     link: "/services#web_development",
   },
   {
     title: "AI-Powered Web & App Analytics, testing & security",
     image:
       "/media/subservices/Ai-powered-wed-&-app-analytics-testing-&-security.png",
+          loading: "lazy",
+
     link: "/services#web_development",
   },
   {
     title: "UI/UX for Web & Mobile & Optimisation",
     image: "/media/subservices/UIUX-for-web-&-mobile-&-optimization.png",
+        loading: "lazy",
+
     link: "/services#web_development",
   },
   {
     title: "Cloud infra. & mngt. ",
     image: "/media/subservices/cloud-infrastructure-&-management.png",
+        loading: "lazy",
+
     link: "/services#cloud_infrastructure",
   },
   {
     title: "IT Infrastructure Setup & Optimization",
     image: "/media/subservices/IT-infrastructure-setup-&-optimization.png",
+        loading: "lazy",
+
     link: "/services#cloud_infrastructure",
   },
   {
     title: "AI powered Network Security & Monitoring",
     image: "/media/subservices/AI-powered-network-security-&-monitoring.png",
+        loading: "lazy",
+
     link: "/services#cloud_infrastructure",
   },
   {
     title: "Automation, Disaster Recovery & Business Continuity",
     image:
       "/media/subservices/Automation-disaster-recovery-&-business-continuity.png",
+          loading: "lazy",
+
     link: "/services#cloud_infrastructure",
   },
   {
     title: "Brand Identity & Logo Design",
     image: "/media/subservices/Brand-identity-&-logo-design.png",
+        loading: "lazy",
+
     link: "/services#creative_design",
   },
   {
     title: "Marketing & Social Media Graphics",
     image: "/media/subservices/Marketing-&-social-media-graphics.png",
+        loading: "lazy",
+
     link: "/services#creative_design",
   },
   {
     title: "Motion Graphics & Animation",
     image: "/media/subservices/Motion-graphics-&-animation.png",
+        loading: "lazy",
+
     link: "/services#creative_design",
   },
   {
     title: "AI-Assisted Design & Prototyping",
     image: "/media/subservices/AI-assisted-design-&-prototyping.png",
+        loading: "lazy",
+
     link: "/services#creative_design",
   },
 ];
