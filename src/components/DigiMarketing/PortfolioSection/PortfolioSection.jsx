@@ -85,7 +85,7 @@ function PortfolioSection() {
         </div>
       </section>
 
-       {/* <style jsx>{`
+       {/* <style>{`
         @keyframes marquee {
           0% {
             transform: translateX(0%);

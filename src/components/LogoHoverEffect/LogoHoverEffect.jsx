@@ -57,7 +57,7 @@ function LogoHoverEffect({ className }) {
         MediaBiz
       </span>
 
-      <style jsx>{`
+      <style>{`
         @keyframes flower1Pop {
           0%, 50%, 100% { transform: scale(1); }
           25% { transform: scale(1.15); }

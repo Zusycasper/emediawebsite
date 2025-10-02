@@ -133,9 +133,11 @@ const services = [
 
 export default function ServicesSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+    // const location = useLocation();
+  const hash = location.hash; 
   const handleCenterClick = (link) => {
-    navigate(link); // navigate to /services#creative_design
+    navigate(link); 
   };
 
   const goToPrevious = () => {
@@ -163,11 +165,21 @@ export default function ServicesSection() {
   const visibleItems = getVisibleItems();
 
   useEffect(() => {
-    const preloadLeft = new Image();
-    preloadLeft.src = visibleItems.left.image;
-    const preloadRight = new Image();
-    preloadRight.src = visibleItems.right.image;
-  }, [currentIndex]);
+    if (hash) {
+      const id = hash.replace("#", "");
+      const scrollToElement = () => {
+        const el = document.getElementById(id);
+        if (el) {
+          const yOffset = -87; // navbar height
+          const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        } else {
+          setTimeout(scrollToElement, 50);
+        }
+      };
+      scrollToElement();
+    }
+  }, [hash]);
 
   return (
     <section
@@ -208,8 +220,9 @@ export default function ServicesSection() {
                         <img
                           src={visibleItems.center.image || "/placeholder.svg"}
                           alt={visibleItems.center.title}
-                          onClick={() => handleCenterClick(visibleItems.center.link)}
-
+                          onClick={() =>
+                            handleCenterClick(visibleItems.center.link)
+                          }
                           className="max-w-full max-h-full object-contain rounded-lg"
                         />
                       </div>
@@ -237,8 +250,9 @@ export default function ServicesSection() {
                       <img
                         src={visibleItems.center.image || "/placeholder.svg"}
                         alt={visibleItems.center.title}
-                        onClick={() => handleCenterClick(visibleItems.center.link)}
-
+                        onClick={() =>
+                          handleCenterClick(visibleItems.center.link)
+                        }
                         className="max-w-full max-h-full object-contain rounded-lg"
                       />
                     </div>
@@ -271,10 +285,11 @@ export default function ServicesSection() {
                   <div className="text-center w-[392px] cursor-pointer flex flex-col justify-center items-center h-full">
                     <div className="relative w-[392px] h-[320px] md:h-[400px] flex items-center justify-center">
                       <img
-                        src={visibleItems.center.image || "/placeholder.svg"}
+                        src={visibleItems.center.image}
                         alt={visibleItems.center.title}
-                                    onClick={() => handleCenterClick(visibleItems.center.link)}
-
+                        onClick={() =>
+                          handleCenterClick(visibleItems.center.link)
+                        }
                         className="max-w-full max-h-full object-contain rounded-lg"
                       />
                     </div>
