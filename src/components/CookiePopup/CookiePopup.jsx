@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import CookieSettingsModal from "./CookieSettingsModal";
 import "./CookiePopup.css";
+import { getOrCreateSessionUuid, sendConsentToServer } from '../../utils/consentClient';
+
 
 const CookiePopup = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -17,13 +19,52 @@ const CookiePopup = () => {
     if (!accepted) setShowPopup(true);
   }, []);
 
-  const handleAcceptAll = () => {
-    setClosing(true); // trigger CSS slideDown
-    setTimeout(() => {
-      localStorage.setItem("cookiesAccepted", "true");
-      setShowPopup(false); // remove banner after animation
-    }, 400); // match the CSS animation duration
+const handleAcceptAll = async () => {
+  setClosing(true);
+  setTimeout(async () => {
+    // build the choices object when user accepts all
+    const choices = {
+      strictlyNecessary: true,
+      performance: true,
+      functional: true,
+      targeting: true,
+      social: true
+    };
+    const sessionUuid = getOrCreateSessionUuid();
+
+    try {
+      const result = await sendConsentToServer({
+        sessionUuid,
+        userId: null, // set if user is logged in
+        choices,
+        status: 'accepted'
+      });
+      // server returns { success: true, session_uuid: '...' }
+      // now load analytics
+      loadGoogleAnalytics(); // implementation below
+      setShowPopup(false);
+    } catch (err) {
+      // still close, but log error
+      console.error('Consent save failed', err);
+      setShowPopup(false);
+    }
+  }, 400); // match CSS animation
+};
+
+function loadGoogleAnalytics() {
+  if (window.gtag) return;
+  const script = document.createElement('script');
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX';
+  script.async = true;
+  document.head.appendChild(script);
+  script.onload = () => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
   };
+}
 
   const handleRejectAll = () => {
     setClosing(true);

@@ -14,13 +14,15 @@ function FaqContent() {
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            <BreadcrumbLink className="hover:text-blue-500"
+ href="/">Home</BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator>
             <SlashIcon />
           </BreadcrumbSeparator>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/FAQ-emedia">FAQ</BreadcrumbLink>
+            <BreadcrumbLink className="hover:text-blue-500"
+ href="/FAQ-emedia">FAQ</BreadcrumbLink>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
