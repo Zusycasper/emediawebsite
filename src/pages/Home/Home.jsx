@@ -7,6 +7,7 @@ import LetsTalk from '../../components/Home/LetsTalk/LetsTalk'
 import ServicesSection from '../../components/Home/ServicesSection/ServicesSection'
 import Footer from '../../components/Footer/Footer'
 import Navigationbar from '../../components/Navigationbar/Navigationbar'
+import CookiePopup from '../../components/CookiePopup/CookiePopup'
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
       <WhyMediaBiz />
       <LetsTalk />
       <Footer/>
+      <CookiePopup/>
     </div>
   )
 }

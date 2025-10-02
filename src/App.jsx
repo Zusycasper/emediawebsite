@@ -12,6 +12,8 @@ import Preloader from "./pages/Preloder/Preloader";
 import SocialMediaManagement from "./pages/SocialMediaManagement/SocialMediaManagement";
 import CloudITInfrastructureSupport from "./pages/CloudITInfrastructureSupport/CloudITInfrastructureSupport";
 import CreativeDesign from "./pages/CreativeDesign/CreativeDesign";
+import Privacy from "./pages/Privacy/Privacy";
+import Faq from "./pages/Faq/Faq";
 
 function App() {
   useEffect(() => {
@@ -37,6 +39,8 @@ function App() {
   <Route path="/about" element={<AboutUs />} />
   <Route path="/contact" element={<ContactUs />} />
   <Route path="/services" element={<Services />} />
+  <Route path="/privacy" element={<Privacy/> } />
+  <Route path="/FAQ-emedia" element={<Faq/>} />
 </Routes>
 
   {/* <Footer /> */}
