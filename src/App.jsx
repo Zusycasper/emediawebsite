@@ -19,6 +19,7 @@ import CloudITInfrastructureSupport from "./pages/CloudITInfrastructureSupport/C
 import CreativeDesign from "./pages/CreativeDesign/CreativeDesign";
 import Privacy from "./pages/Privacy/Privacy";
 import Faq from "./pages/Faq/Faq";
+import TermsOfService from "./pages/TermsOfService/TermsOfService";
 
 // List of paths where ScrollToTop should NOT appear
 // const excludedPaths = [
@@ -56,6 +57,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/FAQ-emedia" element={<Faq />} />
+        <Route path="/Terms-of-service" element={<TermsOfService />} />
       </Routes>
     </Router>
   );

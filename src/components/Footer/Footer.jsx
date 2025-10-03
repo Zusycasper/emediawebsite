@@ -1,5 +1,6 @@
 import React from "react";
 import NewsletterForm from "../NewsletterForm/NewsletterForm";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -119,15 +120,23 @@ function Footer() {
               <div>
                 <h4 className="font-semibold mb-2">Help</h4>
                 <ul className="space-y-1 text-gray-400">
+                  <Link to="/FAQ-emedia" className="hover:underline">
                   <li>FAQ</li>
+                  </Link>
+                  <Link to="/Terms-of-service" className="hover:underline">
                   <li>Terms of service</li>
+                  </Link>
+                  <Link to="/linked-in" className="hover:underline">
                   <li>Contact us</li>
+                  </Link>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-2">Others</h4>
                 <ul className="space-y-1 text-gray-400">
+                  <Link to="/privacy" className="hover:underline">
                   <li>Privacy Policy</li>
+                  </Link>
                   <li>
                     <a
                       href="public/sitemap.xml"
