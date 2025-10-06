@@ -10,7 +10,8 @@ function Footer() {
           {/* Left Column */}
           <div className="space-y-6">
             <p className="text-gray-300 leading-relaxed">
-              Stay in the loop, follow us for the latest updates, tips, and exclusive offers
+              Stay in the loop, follow us for the latest updates, tips, and
+              exclusive offers
             </p>
 
             <div className="h-24">
@@ -121,13 +122,13 @@ function Footer() {
                 <h4 className="font-semibold mb-2">Help</h4>
                 <ul className="space-y-1 text-gray-400">
                   <Link to="/FAQ-emedia" className="hover:underline">
-                  <li>FAQ</li>
+                    <li>FAQ</li>
                   </Link>
                   <Link to="/Terms-of-service" className="hover:underline">
-                  <li>Terms of service</li>
+                    <li>Terms of service</li>
                   </Link>
                   <Link to="/linked-in" className="hover:underline">
-                  <li>Contact us</li>
+                    <li>Contact us</li>
                   </Link>
                 </ul>
               </div>
@@ -135,7 +136,7 @@ function Footer() {
                 <h4 className="font-semibold mb-2">Others</h4>
                 <ul className="space-y-1 text-gray-400">
                   <Link to="/privacy" className="hover:underline">
-                  <li>Privacy Policy</li>
+                    <li>Privacy Policy</li>
                   </Link>
                   <li>
                     <a
@@ -143,6 +144,18 @@ function Footer() {
                       className="text-blue-600 hover:underline"
                     >
                       Sitemap
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-blue-600 hover:underline cursor-pointer"
+                      onClick={() => /*  */ {
+                        // Dispatch a custom event to open the cookie manager
+                        const event = new Event("openCookieManager");
+                        window.dispatchEvent(event);
+                      }}
+                    >
+                      Manage Cookies
                     </a>
                   </li>
                 </ul>

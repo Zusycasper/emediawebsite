@@ -1,43 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./CookiePopup.css";
+import { getOrCreateSessionUuid, sendConsentToServer } from "../../utils/consentClient";
 
-// helper function to ensure we have a persistent UUID
-function getOrCreateSessionUuid() {
-  let uuid = localStorage.getItem("sessionUuid");
-  if (!uuid) {
-    uuid = crypto.randomUUID(); // modern browsers
-    localStorage.setItem("sessionUuid", uuid);
-  }
-  return uuid;
-}
-
-// send consent to backend
-async function sendConsentToServer(consent) {
-  const response = await fetch("/api/consent.php", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(consent),
-  });
-  return await response.json();
-}
-
-// conditional script loader
-function loadGoogleAnalytics() {
-  if (window.gtag) return;
-  const script = document.createElement("script");
-  script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"; // replace with your GA ID
-  script.async = true;
-  document.head.appendChild(script);
-  script.onload = () => {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){window.dataLayer.push(arguments);}
-    window.gtag = gtag;
-    gtag("js", new Date());
-    gtag("config", "G-XXXXXXX");
-  };
-}
-
-const CookieSettingsModal = ({ onClose }) => {
+const CookieSettingsModal = ({ onClose, onConfirm }) => {
   const [cookies, setCookies] = useState({
     strictlyNecessary: true,
     performance: false,
@@ -46,35 +11,53 @@ const CookieSettingsModal = ({ onClose }) => {
     social: false,
   });
 
-  const toggleCookie = (key) => {
-    setCookies((prev) => ({ ...prev, [key]: !prev[key] }));
-  };
+  // Load previous choices
+  useEffect(() => {
+    const saved = localStorage.getItem("cookiesAccepted");
+    if (saved && saved !== "true" && saved !== "false") {
+      try {
+        setCookies(JSON.parse(saved));
+      } catch {}
+    }
+  }, []);
+
+  const toggleCookie = (key) => setCookies(prev => ({ ...prev, [key]: !prev[key] }));
 
   const confirmChoices = async () => {
-    // Save locally
     localStorage.setItem("cookiesAccepted", JSON.stringify(cookies));
-
-    // Send to backend
     const sessionUuid = getOrCreateSessionUuid();
+
     try {
       await sendConsentToServer({
         sessionUuid,
-        userId: null, // or logged-in user id if available
+        userId: null,
         choices: cookies,
-        status: "custom", // means not full accept/reject, but custom
+        status: Object.values(cookies).every(Boolean) ? "accepted" : "custom",
       });
 
-      // Conditionally load scripts
-      if (cookies.performance) {
-        loadGoogleAnalytics();
-      }
-
+      if (cookies.performance) loadGoogleAnalytics();
     } catch (err) {
       console.error("Consent save failed", err);
     }
 
-    onClose();
+    onClose();      // closes modal
+    if (onConfirm) onConfirm(); // closes banner/drawer
   };
+
+  function loadGoogleAnalytics() {
+    if (window.gtag) return;
+    const script = document.createElement("script");
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-F55WZFHG20";
+    script.async = true;
+    document.head.appendChild(script);
+    script.onload = () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag("js", new Date());
+      gtag("config", "G-F55WZFHG20");
+    };
+  }
 
   return (
     <div className="cookie-settings-modal">
@@ -87,45 +70,26 @@ const CookieSettingsModal = ({ onClose }) => {
         When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies...
       </p>
 
-      <div className="cookie-category">
-        <h3 className="text-gray-600">Strictly Necessary Cookies</h3>
-        <label className="toggle">
-          <input type="checkbox" checked={cookies.strictlyNecessary} disabled />
-          <span className="slider"></span>
-        </label>
-      </div>
-
-      <div className="cookie-category">
-        <h3 className="text-gray-600">Performance Cookies</h3>
-        <label className="toggle">
-          <input type="checkbox" checked={cookies.performance} onChange={() => toggleCookie("performance")} />
-          <span className="slider"></span>
-        </label>
-      </div>
-
-      <div className="cookie-category">
-        <h3 className="text-gray-600">Functional Cookies</h3>
-        <label className="toggle">
-          <input type="checkbox" checked={cookies.functional} onChange={() => toggleCookie("functional")} />
-          <span className="slider"></span>
-        </label>
-      </div>
-
-      <div className="cookie-category">
-        <h3 className="text-gray-600">Targeting Cookies</h3>
-        <label className="toggle">
-          <input type="checkbox" checked={cookies.targeting} onChange={() => toggleCookie("targeting")} />
-          <span className="slider"></span>
-        </label>
-      </div>
-
-      <div className="cookie-category">
-        <h3 className="text-gray-600">Social Media Cookies</h3>
-        <label className="toggle">
-          <input type="checkbox" checked={cookies.social} onChange={() => toggleCookie("social")} />
-          <span className="slider"></span>
-        </label>
-      </div>
+      {["strictlyNecessary", "performance", "functional", "targeting", "social"].map(key => (
+        <div key={key} className="cookie-category">
+          <h3 className="text-gray-600">
+            {key === "strictlyNecessary" ? "Strictly Necessary Cookies" :
+             key === "performance" ? "Performance Cookies" :
+             key === "functional" ? "Functional Cookies" :
+             key === "targeting" ? "Targeting Cookies" :
+             "Social Media Cookies"}
+          </h3>
+          <label className="toggle">
+            <input
+              type="checkbox"
+              checked={cookies[key]}
+              disabled={key === "strictlyNecessary"}
+              onChange={() => toggleCookie(key)}
+            />
+            <span className="slider"></span>
+          </label>
+        </div>
+      ))}
 
       <button className="confirm-btn" onClick={confirmChoices}>Confirm My Choices</button>
     </div>
