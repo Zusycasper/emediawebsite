@@ -7,6 +7,7 @@ import WeBelieveSection from '../../components/About/WeBelieveSection/WeBelieveS
 import LetsTalk from '../../components/Home/LetsTalk/LetsTalk'
 import Footer from '../../components/Footer/Footer'
 import Navigationbar from '../../components/Navigationbar/Navigationbar'
+import InfiniteScrollingClientBanner from '../Home/InfiniteScrollingClientBanner'
 
 function AboutUs() {
   return (
@@ -15,6 +16,7 @@ function AboutUs() {
       <Navigationbar />
       <CreateConnectSection />
       <WeAreSection />
+      <InfiniteScrollingClientBanner />
       <DrivenbyResultsSection />
       {/* <WeBelieveSection /> */}
       <LetsTalk />

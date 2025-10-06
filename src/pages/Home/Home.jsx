@@ -8,6 +8,7 @@ import ServicesSection from '../../components/Home/ServicesSection/ServicesSecti
 import Footer from '../../components/Footer/Footer'
 import Navigationbar from '../../components/Navigationbar/Navigationbar'
 import CookiePopup from '../../components/CookiePopup/CookiePopup'
+import InfiniteScrollingClientBanner from './InfiniteScrollingClientBanner'
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <HeroSection />
       {/* <WhatAreWeSection /> */}
       <ServicesSection />
+      <InfiniteScrollingClientBanner />
       <WhyMediaBiz />
       <LetsTalk />
       <Footer/>
