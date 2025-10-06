@@ -20,6 +20,7 @@ import CreativeDesign from "./pages/CreativeDesign/CreativeDesign";
 import Privacy from "./pages/Privacy/Privacy";
 import Faq from "./pages/Faq/Faq";
 import TermsOfService from "./pages/TermsOfService/TermsOfService";
+import AnalyticsTracker from "./AnalyticsTracker";
 
 // List of paths where ScrollToTop should NOT appear
 // const excludedPaths = [
@@ -48,6 +49,7 @@ function App() {
 
   return (
     <Router>
+      <AnalyticsTracker />
       <ConditionalScrollToTop />
       <Routes>
         <Route path="/" element={<Preloader />} />
