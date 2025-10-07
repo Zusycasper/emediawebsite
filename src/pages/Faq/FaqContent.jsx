@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SlashIcon } from "lucide-react";
+import { SlashIcon, Search } from "lucide-react";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -171,6 +171,7 @@ const faqData = [
 function FaqContent() {
   const [activeIndex, setActiveIndex] = useState(null);
   const [filter, setFilter] = useState("all");
+  const [search, setSearch] = useState("");
 
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -184,97 +185,116 @@ function FaqContent() {
     { key: "support", label: "Project Support" },
   ];
 
+  const filteredFaq = faqData.filter(
+    (item) =>
+      (filter === "all" || item.category === filter) &&
+      item.question.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
-    <div className="min-h-screen bg-white">
-      {/* Breadcrumb */}
-      <Breadcrumb className="px-6 py-4">
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink className="hover:text-blue-500" href="/home">
-              Home
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator>
-            <SlashIcon />
-          </BreadcrumbSeparator>
-          <BreadcrumbItem>
-            <BreadcrumbLink className="hover:text-teal-500" href="/FAQ-emedia">
-              FAQ
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
+    <div className="min-h-screen bg-white flex">
+      {/* Sidebar */}
+      <aside className="w-64 border-r border-gray-200 hidden md:flex flex-col sticky top-0 h-screen overflow-y-auto p-6">
+        <h2 className="font-semibold text-gray-800 mb-4">FAQ Topics</h2>
 
-      {/* FAQ Section */}
-      <section className="faq-section py-10">
-        <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold mb-2 text-teal-500">Frequently Asked Questions</h1>
-          <p className="text-gray-600 mb-6">
-            Answers about E-Media Biz services (UK-based, 11+ years in the
-            industry)
-          </p>
+        {/* Search Bar */}
+        <div className="flex items-center border border-gray-300 rounded-md px-3 py-2 mb-4 shadow-sm">
+          <Search className="h-4 w-4 text-gray-400 mr-2" />
+          <input
+            type="text"
+            placeholder="Search questions..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full outline-none text-sm"
+          />
+        </div>
 
-          {/* Categories */}
-          <div className="faq-categories flex flex-wrap gap-3 mb-8">
-            {categories.map((cat) => (
+        {/* Category Links */}
+        <ul className="space-y-2 text-sm">
+          {categories.map((cat) => (
+            <li key={cat.key}>
               <button
-                key={cat.key}
                 onClick={() => setFilter(cat.key)}
-                className={`px-4 py-2 rounded-md border ${
+                className={`block w-full text-left ${
                   filter === cat.key
-                    ? "bg-teal-500 text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-teal-50"
+                    ? "text-teal-500 font-medium"
+                    : "text-gray-700 hover:text-teal-500"
                 }`}
               >
                 {cat.label}
               </button>
-            ))}
-          </div>
+            </li>
+          ))}
+        </ul>
+      </aside>
 
-          {/* Accordion */}
-          <div className="faq-accordion space-y-4">
-            {faqData
-              .filter((item) => filter === "all" || item.category === filter)
-              .map((item, index) => (
-                <div key={index} className="faq-item border border-teal-500 rounded-md shadow-sm">
-                  <button
-                    onClick={() => toggleFAQ(index)}
-                    className="faq-question flex justify-between items-center w-full text-left p-4 font-medium"
-                  >
-                    <span>{item.question}</span>
-                    <span className="icon text-xl">
-                      {activeIndex === index ? "−" : "+"}
-                    </span>
-                  </button>
-                  {activeIndex === index && (
-                    <div className="faq-answer p-4 text-gray-700">
-                      {item.answer}
-                    </div>
-                  )}
-                </div>
-              ))}
-          </div>
+      {/* Main Content */}
+      <main className="flex-1 p-6 max-w-4xl mx-auto">
+        {/* Breadcrumb */}
+        <Breadcrumb className="mb-6">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink className="hover:text-blue-500" href="/home">
+                Home
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator>
+              <SlashIcon />
+            </BreadcrumbSeparator>
+            <BreadcrumbItem>
+              <BreadcrumbLink className="hover:text-teal-500" href="/FAQ-emedia">
+                FAQ
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
 
-          {/* Footer */}
-          <div className="faq-footer mt-10 text-center">
-            <p>Ready to start your project or need more details?</p>
-            <div className="flex gap-4 justify-center mt-4">
-              {/* <a
-                href="/get-quote"
-                className="px-5 py-2 bg-teal-500 text-white rounded-lg hover:bg-blue-600"
+        <h1 className="text-3xl font-bold mb-2 text-teal-600">Frequently Asked Questions</h1>
+        <p className="text-gray-600 mb-8">
+          Answers about E-Media Biz services (UK-based, 11+ years in the industry)
+        </p>
+
+        {/* All FAQ Content */}
+        <div className="space-y-4">
+          {filteredFaq.map((item, index) => (
+            <div
+              key={index}
+              className="faq-item border border-teal-500 rounded-md shadow-sm"
+              id={item.question.replace(/\s+/g, "-").toLowerCase()}
+            >
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="faq-question flex justify-between items-center w-full text-left p-4 font-medium"
               >
-                Get a Free Quote
-              </a> */}
-              <a
-                href="/contact"
-                className="px-5 py-2 bg-teal-500 text-gray-800 rounded-lg hover:bg-[#B2519A] "
-              >
-                Contact Our Team
-              </a>
+                <span>{item.question}</span>
+                <span className="icon text-xl">
+                  {activeIndex === index ? "−" : "+"}
+                </span>
+              </button>
+              {activeIndex === index && (
+                <div className="faq-answer p-4 text-gray-700">{item.answer}</div>
+              )}
             </div>
+          ))}
+
+          {filteredFaq.length === 0 && (
+            <p className="text-gray-500 italic">No matching results found.</p>
+          )}
+        </div>
+
+        {/* Footer */}
+        <div className="faq-footer mt-10 text-center">
+          <p>Ready to start your project or need more details?</p>
+          <div className="flex gap-4 justify-center mt-4">
+            <a
+              href="/contact"
+              className="px-5 py-2 bg-teal-500 text-gray-800 rounded-lg hover:bg-[#B2519A]"
+            >
+              Contact Our Team
+            </a>
           </div>
         </div>
-      </section>
+      </main>
     </div>
   );
 }

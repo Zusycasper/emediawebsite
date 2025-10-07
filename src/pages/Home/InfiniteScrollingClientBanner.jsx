@@ -1,63 +1,47 @@
-import React from 'react'
+import React from "react";
 
-function InfiniteScrollingClientBanner() {
+const clientImages = [
+  { src: "/media/clients/pk.png", className: "h-25" },
+  { src: "/media/clients/ColvinandCoPartner.png", className: "h-25" },
+
+  { src: "/media/clients/SHI.png", className: "h-14" },
+  { src: "/media/clients/solit.png", className: "h-18" },
+  { src: "/media/clients/themes.jpg", className: "h-14" },
+  { src: "/media/clients/bb.png", className: "h-25" },
+  { src: "/media/clients/fairway.png", className: "h-25" },
+  { src: "/media/clients/loomerose.png", className: "h-12" },
+  { src: "/media/clients/pinidiya.png", className: "h-25" },
+  { src: "/media/clients/devil.jpg", className: "h-16" },
+];
+
+function InfiniteScrollingClientBanner({ speedSeconds = 160 }) {
+  const trackStyle = { animationDuration: `${speedSeconds}s` };
   return (
     <div>
-        <section className="py-8 bg-gradient-to-r from-teal-500 to-pink-500 overflow-hidden">
-  <div className="flex animate-marquee whitespace-nowrap w-[1700px] md:w-[2000px] lg:w-[2500px] space-x-8">
-    {/** First copy */}
-    <div className="flex items-center space-x-12">
-      <img src="/media/clients/pk.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/SHI.png" alt="Client Logo" className="w-auto h-16" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/solit.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/themes.jpg" alt="Client Logo" className="w-auto h-14" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/botwisth.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/ColvinandCoPartner.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/devlish.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/fairway.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/loomerose.png" alt="Client Logo" className="w-auto h-12" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/pinidiya.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
+      <section className="py-8 bg-gradient-to-r from-teal-500 to-pink-500 overflow-hidden">
+        <div
+          className="flex animate-marquee whitespace-nowrap w-max space-x-8"
+          style={trackStyle}
+        >
+          {/* Duplicate images for seamless loop */}
+          {[...Array(10)].map((_, i) => (
+            <div key={i} className="flex items-center space-x-12">
+              {clientImages.map((img, idx) => (
+                <React.Fragment key={idx}>
+                  <img
+                    src={img.src}
+                    alt="Client Logo"
+                    className={`w-auto ${img.className}`}
+                  />
+                  <span className="text-4xl">•</span>
+                </React.Fragment>
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
-
-    {/** Second copy (same logos for seamless looping) */}
-    {/* <div className="flex items-center space-x-16">
-      <img src="/media/clients/pk.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/SHI.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/solit.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/themes.jpg" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/botwisth.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/ColvinandCoPartner.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/devlish.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/fairway.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/loomerose.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-      <img src="/media/clients/pinidiya.png" alt="Client Logo" className="w-auto h-25" />
-      <span className="text-4xl">•</span>
-    </div> */}
-  </div>
-</section>
-
-
-    </div>
-  )
+  );
 }
 
-export default InfiniteScrollingClientBanner
+export default InfiniteScrollingClientBanner;

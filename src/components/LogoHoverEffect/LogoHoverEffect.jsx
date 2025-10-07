@@ -9,15 +9,15 @@ function LogoHoverEffect({ className }) {
           height="80"
           viewBox="0 0 80 80"
           fill="none"
-          className="absolute top-0 left-0 w-full h-full group-hover:animate-[flower1Pop_2s_ease-in-out_infinite]"
+          className="absolute top-[-2px] left-[-2px] w-full h-full group-hover:animate-[flower1Pop_2s_ease-in-out_infinite]"
           style={{
             transformOrigin: "40px 40px",
           }}
         >
           <image
-            href="/media/logo_header_only2.svg"
-            width="80"
-            height="80"
+            href="/media/e-logo-color-02.png"
+            width="84"
+            height="84"
             preserveAspectRatio="xMidYMid meet"
             opacity={"40%"}
           />
@@ -29,15 +29,15 @@ function LogoHoverEffect({ className }) {
           height="80"
           viewBox="0 0 80 80"
           fill="none"
-          className="absolute top-0 left-0 w-full h-full group-hover:animate-[flower2Pop_2s_ease-in-out_infinite]"
+          className="absolute top-[-2px] left-[-2px] w-full h-full group-hover:animate-[flower2Pop_2s_ease-in-out_infinite]"
           style={{
             transformOrigin: "40px 40px",
           }}
         >
           <image
-            href="/media/logo_header_only1.svg"
-            width="80"
-            height="80"
+            href="/media/e-logo-color-02.png"
+            width="84"
+            height="84"
             preserveAspectRatio="xMidYMid meet"
             opacity={"50%"}
           />
@@ -45,7 +45,7 @@ function LogoHoverEffect({ className }) {
 
         {/* Third flower SVG - stays still */}
         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" className="absolute top-0 left-0 w-full h-full">
-          <image href="/media/logo_full_svg.svg" width="80" height="80" preserveAspectRatio="xMidYMid meet" />
+          <image href="/media/e-logo.png" width="80" height="80" preserveAspectRatio="xMidYMid meet" />
         </svg>
       </div>
 
