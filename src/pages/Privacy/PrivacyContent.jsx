@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { SlashIcon, Search } from "lucide-react";
+import { SlashIcon, Search, Space } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 
@@ -29,7 +29,10 @@ const sections = [
       >
         info@e-mediabiz.com
       </a>
-      | 🏢 Address: [Insert business address]. You may also lodge complaints with
+       | 🏢 Address: 30 The Gossamers
+ Watford 
+Hertsfordshire 
+WD25 9AJ. <br/>You may also lodge complaints with
       the ICO or your local data authority.
     </>
   ),

@@ -162,7 +162,10 @@ const termsData = [
           <li>
             <a href={`mailto:info@e-mediabiz.com`} className="hover:text-blue-500">📧 Email: info@e-mediabiz.com</a>
           </li>
-          <li>🏢 Address: [Insert business address]</li>
+          <li>🏢 Address: 30 The Gossamers
+ Watford 
+Hertsfordshire 
+WD25 9AJ</li>
         </ul>
       </>
     ),
