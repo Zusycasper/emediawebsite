@@ -17,8 +17,23 @@ const sections = [
   { id: "security", title: "10. Data Security", content: "We apply organisational and technical measures to protect data against loss, misuse, or unauthorised access." },
   { id: "children", title: "11. Children’s Privacy", content: "Our Services are not directed at individuals under 18, and we do not knowingly collect children's data." },
   { id: "changes", title: "12. Changes to this Policy", content: "We may update this Privacy Policy, with changes posted here and reflected in the 'Last Updated' date." },
-  { id: "contact", title: "13. Contact Us", content: "📧 Email: [Insert email address] | 🏢 Address: [Insert business address]. You may also lodge complaints with the ICO or your local data authority." },
-];
+{
+  id: "contact",
+  title: "13. Contact Us",
+  content: (
+    <>
+      📧 Email:
+      <a
+        href="mailto:info@e-mediabiz.com"
+        className="text-blue-600 hover:underline"
+      >
+        info@e-mediabiz.com
+      </a>
+      | 🏢 Address: [Insert business address]. You may also lodge complaints with
+      the ICO or your local data authority.
+    </>
+  ),
+}];
 
 export default function PrivacyContent() {
   const [query, setQuery] = useState("");
@@ -99,7 +114,7 @@ export default function PrivacyContent() {
 
         <h1 className="text-3xl font-bold mb-2 text-teal-500">Privacy Policy</h1>
         <p className="text-sm text-gray-600 mb-6">(for test.e-mediabiz.com – UK/EU compliant)</p>
-        <p className="text-gray-500 mb-8"><em>Last Updated: [Insert Date]</em></p>
+        <p className="text-gray-500 mb-8"><em>Last Updated: [10.03.2025]</em></p>
 
         <div className="space-y-8 prose max-w-none text-gray-700">
           {filteredSections.map(section => (
