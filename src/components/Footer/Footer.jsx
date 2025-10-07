@@ -140,17 +140,16 @@ function Footer() {
                   </Link>
                   <li>
                     <a
-                      href="public/sitemap.xml"
-                      className="text-blue-600 hover:underline"
+                      href="/sitemap.xml"
+                      className="text-gray-400 hover:underline"
                     >
                       Sitemap
                     </a>
                   </li>
                   <li>
                     <a
-                      className="text-blue-600 hover:underline cursor-pointer"
+                      className="text-gray-400 hover:underline cursor-pointer"
                       onClick={() => /*  */ {
-                        // Dispatch a custom event to open the cookie manager
                         const event = new Event("openCookieManager");
                         window.dispatchEvent(event);
                       }}
