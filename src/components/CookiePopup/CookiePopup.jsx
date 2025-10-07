@@ -4,12 +4,49 @@ import "./CookiePopup.css";
 import { getOrCreateSessionUuid, sendConsentToServer } from "../../utils/consentClient";
 
 const CookiePopup = () => {
-  const [showPopup, setShowPopup] = useState(false); // banner
-  const [showSettings, setShowSettings] = useState(false); // modal
+  const [showPopup, setShowPopup] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
   const [closing, setClosing] = useState(false);
 
+  // New: log user visit on load
   useEffect(() => {
-    // DEV: reset cookiesAccepted on localhost for testing
+    const sessionUuid = getOrCreateSessionUuid();
+
+    // Log page visit to backend (log_visit.php)
+    fetch("https://yourdomain.com/api/log_visit.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        sessionUuid,
+        pageUrl: window.location.href,
+        referrer: document.referrer || null,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success && data.logId) {
+          // Save the log ID to localStorage for session end update
+          localStorage.setItem("visitLogId", data.logId); // corresponds to visitor_logs.id
+        }
+      })
+      .catch((err) => console.error("Visit log failed:", err));
+
+    // When the user leaves the page, mark session end
+    const handleBeforeUnload = () => {
+      const logId = localStorage.getItem("visitLogId");
+      if (logId) {
+        navigator.sendBeacon(
+          "https://yourdomain.com/api/update_session_end.php",
+          JSON.stringify({ logId: parseInt(logId, 10) }) // use visitor_logs.id
+        );
+      }
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, []);
+
+  useEffect(() => {
     if (window.location.hostname === "localhost") {
       localStorage.removeItem("cookiesAccepted");
     }
@@ -17,10 +54,9 @@ const CookiePopup = () => {
     const accepted = localStorage.getItem("cookiesAccepted");
     if (!accepted) setShowPopup(true);
 
-    // Listen for "Manage Cookies" click event
     const handleOpenCookies = () => {
       const accepted = localStorage.getItem("cookiesAccepted");
-      if (!accepted) setShowPopup(true); // show banner if first time
+      if (!accepted) setShowPopup(true);
       setShowSettings(true);
     };
 
@@ -45,7 +81,7 @@ const CookiePopup = () => {
           sessionUuid,
           userId: null,
           choices,
-          status: "accepted",
+          status: "accepted", // matches ENUM('accepted','rejected','custom') in cookie_consents
         });
         loadGoogleAnalytics();
         localStorage.setItem("cookiesAccepted", "true");
@@ -76,7 +112,7 @@ const CookiePopup = () => {
           sessionUuid,
           userId: null,
           choices,
-          status: "rejected",
+          status: "rejected", // matches ENUM in cookie_consents
         });
         localStorage.setItem("cookiesAccepted", "false");
         setShowSettings(false);
@@ -111,10 +147,8 @@ const CookiePopup = () => {
 
   return (
     <>
-      {/* Overlay */}
       {(showPopup || showSettings) && <div className="cookie-overlay"></div>}
 
-      {/* Banner */}
       {showPopup && (
         <div className={`cookie-banner ${closing ? "slideDown" : ""}`}>
           <p>
@@ -138,7 +172,6 @@ const CookiePopup = () => {
         </div>
       )}
 
-      {/* Settings Modal */}
       {showSettings && (
         <CookieSettingsModal
           onClose={closeSettings}

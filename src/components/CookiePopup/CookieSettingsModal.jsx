@@ -17,7 +17,9 @@ const CookieSettingsModal = ({ onClose, onConfirm }) => {
     if (saved && saved !== "true" && saved !== "false") {
       try {
         setCookies(JSON.parse(saved));
-      } catch {}
+      } catch {
+        // Ignore JSON parse errors, fallback to default cookies
+      }
     }
   }, []);
 
