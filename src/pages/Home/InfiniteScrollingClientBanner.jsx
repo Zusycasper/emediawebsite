@@ -2,8 +2,7 @@ import React from "react";
 
 const clientImages = [
   { src: "/media/clients/pk.png", className: "h-25" },
-  { src: "/media/clients/ColvinandCoPartner.png", className: "h-25" },
-
+  { src: "/media/clients/colvin.png", className: "h-25" },
   { src: "/media/clients/SHI.png", className: "h-14" },
   { src: "/media/clients/solit.png", className: "h-18" },
   { src: "/media/clients/themes.jpg", className: "h-14" },
@@ -12,6 +11,8 @@ const clientImages = [
   { src: "/media/clients/loomerose.png", className: "h-12" },
   { src: "/media/clients/pinidiya.png", className: "h-25" },
   { src: "/media/clients/devil.jpg", className: "h-16" },
+  { src: "/media/clients/vinny.png", className: "h-22" },
+
 ];
 
 function InfiniteScrollingClientBanner({ speedSeconds = 160 }) {

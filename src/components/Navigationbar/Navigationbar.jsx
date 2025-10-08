@@ -106,7 +106,7 @@ function Navbar() {
               <div className="hidden lg:block w-100 h-20 mr-2">
                 <LogoHoverEffect />
               </div>
-              <div className="block lg:hidden w-50 h-20 mr-2 flex items-center space-x-2">
+              <div className="block lg:hidden w-50 h-20 mr-2 items-center space-x-2">
                 <img
                   src="/media/e-logo.png"
                   alt="EMediabiz Logo"
