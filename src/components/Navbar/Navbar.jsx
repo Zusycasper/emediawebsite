@@ -29,7 +29,7 @@ function Navbar() {
   const [isHovered, setIsHovered] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
-  const [isPending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
   const location = useLocation();
 
   useEffect(() => {
@@ -88,9 +88,7 @@ function Navbar() {
     });
   }, []);
 
-  const handleServicesOpenChange = useCallback((open) => {
-    startTransition(() => setServicesOpen(open));
-  }, []);
+  // Removed unused handleServicesOpenChange function
 
   return (
     <div className="mb-20">
@@ -112,7 +110,7 @@ function Navbar() {
                 <LogoHoverEffect />
               </div>
               <div className="block lg:hidden w-50 h-20 mr-2">
-                <img src="/media/logo_final.png" alt="EMediabiz Logo" className="w-full h-full" />
+                <img src="/media/e-logo.png" alt="EMediabiz Logo" className="w-full h-full" />
               </div>
             </div>
           </Link>
