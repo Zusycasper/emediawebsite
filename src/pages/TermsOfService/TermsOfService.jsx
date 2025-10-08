@@ -8,6 +8,8 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import Footer from "../../components/Footer/Footer";
+import Navigationbar from '../../components/Navigationbar/Navigationbar'
+
 
 const termsData = [
   {
@@ -188,6 +190,7 @@ function TermsOfService() {
 
   return (
     <>
+    <Navigationbar/>
     <div className="min-h-screen bg-white flex">
       {/* Sidebar */}
       <aside className="w-64 border-r border-gray-200 hidden md:flex flex-col sticky top-0 h-screen overflow-y-auto p-6">

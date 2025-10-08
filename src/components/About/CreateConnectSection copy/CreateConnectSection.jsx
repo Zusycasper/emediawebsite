@@ -28,19 +28,11 @@ function CreateConnectSection() {
                   online and deliver real, measurable results. Not just vanity
                   numbers, we mean growth that matters.
                 </b>
-                <br /><br />
-                For over 14 years, we’ve been helping small businesses across
-                the <b>UK</b> and
-                <b> Sri Lanka</b> with their IT needs providing smart,
-                reliable, and scalable tech support that fuels growth. But we’re
-                more than that. We’re a global collective of designers,
-                developers, strategists, and tech innovators based in the <b>UK</b> and
-                <b> Sri Lanka</b>. 
-                <br/> <br/> We live and breathe digital crafting bold ideas,
-                striking visuals, and intelligent, seamless solutions that bring
-                brands to life. We push boundaries, fight for great concepts,
-                and deliver work that not only looks amazing but performs
-                flawlessly and drives real results.
+                <br />
+                <br />
+                We cut through the noise and skip the jargon, blending
+                AI-powered insights, smart strategies, and creative execution to
+                help you:
                 <div className="grid gap-2 pt-2">
                   {[
                     {

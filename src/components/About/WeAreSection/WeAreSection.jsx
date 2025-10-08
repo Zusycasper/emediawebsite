@@ -20,15 +20,18 @@ function WeAreSection() {
                 We're specialists, not "do-it-all" generalists
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                We’re not just another agency, we’re a collective of designers,
-                developers, strategists, and tech innovators who live and
-                breathe digital and tech experiences. 
-                <br/>
-                Based in <b>UK </b> and <b>Sri Lanka </b>,
-                we bring brands to life with bold ideas, striking visuals,
-                intelligent solutions, and seamless technology. We push
-                boundaries, fight for great concepts, and craft work that looks
-                amazing, performs flawlessly, and drives results.
+               For over 14 years, we’ve been helping small businesses across
+                the <b>UK</b> and
+                <b> Sri Lanka</b> with their IT needs providing smart,
+                reliable, and scalable tech support that fuels growth. But we’re
+                more than that. We’re a global collective of designers,
+                developers, strategists, and tech innovators based in the <b>UK</b> and
+                <b> Sri Lanka</b>. 
+                <br/> <br/> We live and breathe digital crafting bold ideas,
+                striking visuals, and intelligent, seamless solutions that bring
+                brands to life. We push boundaries, fight for great concepts,
+                and deliver work that not only looks amazing but performs
+                flawlessly and drives real results.
               </p>
             </div>
           </div>

@@ -11,7 +11,9 @@ const clientImages = [
   { src: "/media/clients/loomerose.png", className: "h-12" },
   { src: "/media/clients/pinidiya.png", className: "h-25" },
   { src: "/media/clients/devil.jpg", className: "h-16" },
-  { src: "/media/clients/vinny.png", className: "h-22" },
+  { src: "/media/clients/vinny.png", className: "h-24" },
+  { src: "/media/clients/raindbow.png", className: "h-22" },
+
 
 ];
 
