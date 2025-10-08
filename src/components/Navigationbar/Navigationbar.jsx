@@ -102,22 +102,25 @@ function Navbar() {
               className={`transition-transform duration-300 ${
                 isScrolled ? "scale-75" : "scale-100"
               }`}
+              style={{ minWidth: 0 }}
             >
-              <div className="hidden lg:block w-100 h-20 mr-2">
+              <div className="hidden lg:flex items-center w-auto h-20 mr-2 min-w-0 flex-nowrap">
                 <LogoHoverEffect />
               </div>
-              <div className="block lg:hidden w-50 h-20 mr-2 items-center space-x-2">
+              <div className="flex lg:hidden items-center w-auto h-20 mr-2 min-w-0 flex-nowrap overflow-hidden gap-2">
                 <img
                   src="/media/e-logo.png"
                   alt="EMediabiz Logo"
-                  className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+                  className="w-16 h-16 sm:w-16 sm:h-16 object-contain flex-shrink-0"
+                  style={{ minWidth: 0, minHeight: 0 }}
                 />
                 <span
-                  className="text-2xl text-gray-800"
+                  className="text-2xl text-gray-800 whitespace-nowrap overflow-hidden text-ellipsis"
                   style={{
                     fontFamily: "Quicksand",
                     fontSize: "30px",
                     fontWeight: "normal",
+                    minWidth: 0,
                   }}
                 >
                   MediaBiz
@@ -125,8 +128,6 @@ function Navbar() {
               </div>
             </div>
           </Link>
-
-          {/* Desktop nav (only lg and up) */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               to="/home"
