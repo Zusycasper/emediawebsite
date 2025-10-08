@@ -7,6 +7,7 @@ import {
   BreadcrumbLink,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import Footer from "../../components/Footer/Footer";
 
 const termsData = [
   {
@@ -186,6 +187,7 @@ function TermsOfService() {
   );
 
   return (
+    <>
     <div className="min-h-screen bg-white flex">
       {/* Sidebar */}
       <aside className="w-64 border-r border-gray-200 hidden md:flex flex-col sticky top-0 h-screen overflow-y-auto p-6">
@@ -262,6 +264,8 @@ function TermsOfService() {
         </div>
       </main>
     </div>
+    <Footer/>
+    </>
   );
 }
 

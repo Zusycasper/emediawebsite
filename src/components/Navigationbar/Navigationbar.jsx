@@ -21,7 +21,7 @@ function Navbar() {
   const [isHovered, setIsHovered] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
-  const [isPending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
   const location = useLocation();
 
   useEffect(() => {
@@ -46,7 +46,9 @@ function Navbar() {
 
     if (window.innerWidth >= 768) {
       if ("requestIdleCallback" in window) {
-        requestIdleCallback(() => window.scrollTo({ top: 0, behavior: "smooth" }));
+        requestIdleCallback(() =>
+          window.scrollTo({ top: 0, behavior: "smooth" })
+        );
       } else {
         setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 150);
       }
@@ -84,9 +86,10 @@ function Navbar() {
     <div className="mb-20">
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-300 shadow-sm font-sans text-base backdrop-blur-md
-          ${isScrolled
-            ? "h-16 bg-[linear-gradient(to_right,#FFFFFF_20%,#C2E7EC_70%,#ECD4E6_90%)] shadow-md"
-            : "h-[87px] bg-[linear-gradient(to_right,#FFFFFF_20%,#C2E7EC_50%,#ECD4E6_90%)]"
+          ${
+            isScrolled
+              ? "h-16 bg-[linear-gradient(to_right,#FFFFFF_20%,#C2E7EC_70%,#ECD4E6_90%)] shadow-md"
+              : "h-[87px] bg-[linear-gradient(to_right,#FFFFFF_20%,#C2E7EC_50%,#ECD4E6_90%)]"
           }
           ${isHovered ? "bg-opacity-95" : "bg-opacity-80"}`}
         onMouseEnter={onMouseEnter}
@@ -95,22 +98,46 @@ function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center">
           {/* Logo */}
           <Link to="/home" className="flex items-center">
-            <div className={`transition-transform duration-300 ${isScrolled ? "scale-75" : "scale-100"}`}>
+            <div
+              className={`transition-transform duration-300 ${
+                isScrolled ? "scale-75" : "scale-100"
+              }`}
+            >
               <div className="hidden lg:block w-100 h-20 mr-2">
                 <LogoHoverEffect />
               </div>
-              <div className="block lg:hidden w-50 h-20 mr-2">
-                <img src="/media/logo_final.png" alt="EMediabiz Logo" className="w-full h-full" />
+              <div className="block lg:hidden w-50 h-20 mr-2 flex items-center space-x-2">
+                <img
+                  src="/media/e-logo.png"
+                  alt="EMediabiz Logo"
+                  className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+                />
+                <span
+                  className="text-2xl text-gray-800"
+                  style={{
+                    fontFamily: "Quicksand",
+                    fontSize: "30px",
+                    fontWeight: "normal",
+                  }}
+                >
+                  MediaBiz
+                </span>
               </div>
             </div>
           </Link>
 
           {/* Desktop nav (only lg and up) */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link to="/home" className="text-gray-900 hover:text-[#009BB1] px-3 py-2 font-medium">
+            <Link
+              to="/home"
+              className="text-gray-900 hover:text-[#009BB1] px-3 py-2 font-medium"
+            >
               HOME
             </Link>
-            <Link to="/about" className="text-gray-900 hover:text-[#009BB1] px-3 py-2 font-medium">
+            <Link
+              to="/about"
+              className="text-gray-900 hover:text-[#009BB1] px-3 py-2 font-medium"
+            >
               ABOUT US
             </Link>
 
@@ -133,7 +160,10 @@ function Navbar() {
                       scroll={(el) => {
                         setTimeout(() => {
                           const yOffset = -87;
-                          const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                          const y =
+                            el.getBoundingClientRect().top +
+                            window.pageYOffset +
+                            yOffset;
                           window.scrollTo({ top: y, behavior: "smooth" });
                         }, 50);
                       }}
@@ -162,7 +192,11 @@ function Navbar() {
               aria-label="Toggle mobile menu"
               aria-expanded={isMobileMenuOpen}
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -229,10 +263,7 @@ function Navbar() {
                 </div>
               </div>
 
-              <Link
-                to="/contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
+              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                 <Button className="bg-[#009BB1] hover:bg-[#B2519A] text-white px-6 py-2 font-medium w-full mt-2">
                   Contact Us
                 </Button>
