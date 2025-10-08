@@ -9,38 +9,70 @@ import {
 } from "@/components/ui/breadcrumb";
 
 const faqData = [
-  // Services
+  // Services (updated)
   {
     category: "services",
     question: "What services does E-Media Biz provide?",
     answer: (
       <>
-        <p>
-          E-Media Biz, based in the UK with over 11 years of experience, offers
-          a complete suite of digital media and business solutions:
-        </p>
-        <ul className="list-disc list-inside mt-2 space-y-1">
-          <li>
-            <strong>Digital Media Production:</strong> Video production,
-            animation, branding, and graphic design
-          </li>
-          <li>
-            <strong>Web Development:</strong> Websites, e-commerce platforms,
-            custom applications
-          </li>
-          <li>
-            <strong>Digital Marketing:</strong> SEO, social media campaigns,
-            pay-per-click (PPC), email marketing
-          </li>
-          <li>
-            <strong>Business Solutions:</strong> CRM implementation,
-            automation, consulting
-          </li>
-          <li>
-            <strong>Content Creation:</strong> Blog writing, video scripts,
-            social media content
-          </li>
-        </ul>
+        <p className="mb-3">E-Media Biz (UK) — 11 years in IT. We provide end-to-end IT and digital services that combine human expertise with AI-assisted tools.</p>
+
+        <div className="space-y-4">
+          <div>
+            <h3 className="font-semibold">Digital Marketing (AI-Enhanced)</h3>
+            <p className="mt-1">AI-powered insights to optimize campaigns, target the right audience, and deliver measurable growth.</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>Search Engine Optimization (SEO)</li>
+              <li>Email Marketing Campaigns</li>
+              <li>AI-driven Marketing Automation</li>
+              <li>Performance Analytics & Reporting</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">Social Media Management (Smart & Automated)</h3>
+            <p className="mt-1">AI helps us track trends, analyze engagement, and create strategies that keep your brand relevant.</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>Social Media Strategy & Planning</li>
+              <li>Content Creation & Scheduling</li>
+              <li>Trend & Sentiment Analysis with AI</li>
+              <li>Social Ads Management</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">Web & App Development (Future-Ready)</h3>
+            <p className="mt-1">Custom websites and mobile apps with AI-driven features, personalization, and automation.</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>Web & Mobile App Development (iOS & Android)</li>
+              <li>E-commerce Solutions</li>
+              <li>AI-Powered Web & App Analytics, testing & security</li>
+              <li>UI/UX for Web & Mobile & Optimization</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">Cloud & IT Infrastructure Support (Intelligent & Secure)</h3>
+            <p className="mt-1">Reliable cloud solutions, IT infrastructure, and AI-powered monitoring that ensure performance, security, and scalability.</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>Cloud infra & management (AWS, Azure, GCP)</li>
+              <li>IT Infrastructure Setup & Optimization</li>
+              <li>AI-powered Network Security & Monitoring</li>
+              <li>Automation, Disaster Recovery & Business Continuity</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">Creative Design (Human + AI)</h3>
+            <p className="mt-1">Branding, UI/UX, and visuals crafted with human creativity and AI-assisted tools for impact and efficiency.</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>Brand Identity & Logo Design</li>
+              <li>Marketing & Social Media Graphics</li>
+              <li>Motion Graphics & Animation</li>
+              <li>AI-Assisted Design & Prototyping</li>
+            </ul>
+          </div>
+        </div>
       </>
     ),
   },
@@ -49,10 +81,7 @@ const faqData = [
     question: "Do you offer custom service packages?",
     answer: (
       <p>
-        Yes. We understand every business has unique goals. Our team builds
-        fully tailored service packages designed to fit your objectives and
-        budget. <a href="/consultation">Book a free consultation</a> to explore
-        your options.
+        Yes. We build tailored packages that combine the services you need. Whether it's a single campaign, a full-stack product delivery, or ongoing managed services, we'll propose a plan aligned to your goals and budget. <a href="/consultation">Book a free consultation</a> to get a custom proposal.
       </p>
     ),
   },
@@ -61,9 +90,7 @@ const faqData = [
     question: "Which industries do you work with?",
     answer: (
       <p>
-        Over the past 11+ years, we’ve worked with businesses in e-commerce,
-        healthcare, education, technology, hospitality, and professional
-        services. Our adaptable approach ensures results across diverse sectors.
+        We work across e-commerce, healthcare, education, technology, hospitality, and professional services. Our solutions are sector-agnostic and focus on measurable outcomes.
       </p>
     ),
   },
@@ -78,8 +105,7 @@ const faqData = [
           <strong>Consultation:</strong> We discuss your goals
         </li>
         <li>
-          <strong>Proposal:</strong> You receive a detailed timeline and
-          pricing
+          <strong>Proposal:</strong> You receive a detailed timeline and pricing
         </li>
         <li>
           <strong>Agreement:</strong> Approve and sign off
@@ -122,8 +148,7 @@ const faqData = [
             <strong>Hourly rate:</strong> For ongoing or open-ended tasks
           </li>
           <li>
-            <strong>Monthly retainers:</strong> For continuous marketing or
-            support
+            <strong>Monthly retainers:</strong> For continuous marketing or support
           </li>
           <li>
             <strong>Enterprise plans:</strong> For large-scale, complex projects
@@ -159,8 +184,7 @@ const faqData = [
           <strong>Pro Support:</strong> Ongoing updates and dedicated contact
         </li>
         <li>
-          <strong>Enterprise Support:</strong> 24/7 monitoring, priority
-          response
+          <strong>Enterprise Support:</strong> 24/7 monitoring, priority response
         </li>
         <li>Training & documentation for in-house teams</li>
       </ul>
@@ -250,9 +274,7 @@ function FaqContent() {
         </Breadcrumb>
 
         <h1 className="text-3xl font-bold mb-2 text-teal-600">Frequently Asked Questions</h1>
-        <p className="text-gray-600 mb-8">
-          Answers about E-Media Biz services (UK-based, 11+ years in the industry)
-        </p>
+        <p className="text-gray-600 mb-8">Answers about E-Media Biz services (UK-based, 11 years in IT)</p>
 
         {/* All FAQ Content */}
         <div className="space-y-4">

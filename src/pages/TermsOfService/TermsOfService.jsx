@@ -160,7 +160,8 @@ const termsData = [
         <p>If you have any questions about these Terms, please contact us at:</p>
         <ul className="list-none mt-2">
           <li>
-            <a href={`mailto:info@e-mediabiz.com`} className="hover:text-blue-500">📧 Email: info@e-mediabiz.com</a>
+            📧 Email: 
+            <a href={`mailto:info@e-mediabiz.com`} className="hover:text-blue-500 hover:underline">info@e-mediabiz.com</a>
           </li>
           <li>🏢 Address: 30 The Gossamers
  Watford 
@@ -223,15 +224,15 @@ function TermsOfService() {
         <Breadcrumb className="mb-6">
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink className="hover:text-blue-500" href="/home">
+              <BreadcrumbLink className="text-[12px] hover:text-blue-500" href="/home">
                 Home
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator>
-              <SlashIcon />
+              /
             </BreadcrumbSeparator>
             <BreadcrumbItem>
-              <BreadcrumbLink className="hover:text-blue-500" href="/terms">
+              <BreadcrumbLink className="text-[12px] hover:text-blue-500" href="/terms">
                 Terms of Service
               </BreadcrumbLink>
             </BreadcrumbItem>

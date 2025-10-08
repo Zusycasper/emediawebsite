@@ -11,10 +11,9 @@ function AddressBanner() {
               {/* UK */}
               <span>
                 <h3>United Kingdom (UK)</h3>
-                <h6 className='font-medium'>30 The Gossamers
+                <h6 className='font-medium'>
  Watford </h6>
-                <p className='font-light'>Hertsfordshire 
-WD25 9AJ</p>
+                {/* <p className='font-light'>Hertsfordshire </p> */}
               </span>
 
               {/* Separator */}
@@ -24,7 +23,7 @@ WD25 9AJ</p>
               <span>
                 <h3>Sri Lanka (SL)</h3>
                 <h6 className='font-medium'>Biyagama</h6>
-                <p className='font-light'>Gampaha</p>
+                {/* <p className='font-light'>Gampaha</p> */}
               </span>
 
               {/* Separator */}
