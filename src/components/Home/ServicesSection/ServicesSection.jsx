@@ -135,7 +135,7 @@ export default function ServicesSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
     // const location = useLocation();
-  const hash = location.hash; 
+  // Use window.location.hash directly for scrolling, remove dependency on location object
   const handleCenterClick = (link) => {
     navigate(link); 
   };
@@ -165,6 +165,7 @@ export default function ServicesSection() {
   const visibleItems = getVisibleItems();
 
   useEffect(() => {
+    const hash = window.location.hash;
     if (hash) {
       const id = hash.replace("#", "");
       const scrollToElement = () => {
@@ -179,7 +180,7 @@ export default function ServicesSection() {
       };
       scrollToElement();
     }
-  }, [hash]);
+  }, []);
 
   return (
     <section
