@@ -2,7 +2,7 @@ import React from 'react'
 
 function AddressBanner() {
   return (
-    <div className="md:w-auto lg:w-1/3 xl:w-1/4">
+    <div className="w-full">
       <section className="py-10 bg-gradient-to-r from-teal-500 to-pink-500 overflow-hidden w-full">
         <div className="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
