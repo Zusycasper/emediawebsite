@@ -10,7 +10,7 @@ function WeAreSection() {
               <img
                 src="/media/about/weAre.jpg"
                 alt="Business Meeting"
-                loading="lazy"
+                // loading="lazy"
                 className="w-full rounded-2xl"
               />
             </div>
