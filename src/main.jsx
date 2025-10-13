@@ -1,3 +1,9 @@
+//this prevent console.log in production
+if (!window._consoleOverridden) {
+  window._consoleOverridden = true;
+  console.log = function() {};
+}
+
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'

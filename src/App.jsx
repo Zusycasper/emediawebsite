@@ -1,3 +1,5 @@
+// Remove usage of 'process.env.NODE_ENV' as it's not defined in the browser environment.
+// If you need to disable console.log in production, use a build tool or environment variable injected at build time.
 import {
   BrowserRouter as Router,
   Routes,

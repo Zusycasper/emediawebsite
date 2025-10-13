@@ -126,7 +126,7 @@ export default function ContactFormSection() {
 
     try {
       const response = await axios.post(
-        "http://localhost/xampp/reactcrudphp/api/user.php",
+        "https://test.e-mediabiz.com/api/user.php",
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
@@ -291,7 +291,7 @@ export default function ContactFormSection() {
                 ref={recaptchaRef}
                 sitekey="6Ldzqb0rAAAAALFR9ye1HagIdtJw-M_KX1eDfRyN"
                 onChange={(token) => {
-                  console.log("captcha token set:", token);
+                  // console.log("captcha token set:", token);
                   setCaptchaToken(token);
                 }}
               />

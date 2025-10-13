@@ -13,7 +13,7 @@ const CookiePopup = () => {
     const sessionUuid = getOrCreateSessionUuid();
 
     // Log page visit to backend (log_visit.php)
-    fetch("https://yourdomain.com/api/log_visit.php", {
+    fetch("https://test.e-mediabiz.com/api/log_visit.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -36,7 +36,7 @@ const CookiePopup = () => {
       const logId = localStorage.getItem("visitLogId");
       if (logId) {
         navigator.sendBeacon(
-          "https://yourdomain.com/api/update_session_end.php",
+          "https://test.e-mediabiz.com/api/update_session_end.php",
           JSON.stringify({ logId: parseInt(logId, 10) }) // use visitor_logs.id
         );
       }
