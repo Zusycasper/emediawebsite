@@ -10,9 +10,9 @@ function AddressBanner() {
               
               {/* UK */}
               <span className="md:w-1/2 lg:w-1/3 xl:w-1/4">
-                <h3>United Kingdom (UK)</h3>
+                <h3>Watford</h3>
                 <h6 className='font-medium'>
-                  Watford
+                  UK
                 </h6>
                 {/* <p className='font-light'>Hertsfordshire </p> */}
               </span>
@@ -22,9 +22,9 @@ function AddressBanner() {
 
               {/* Sri Lanka */}
               <span className="md:w-1/2 lg:w-1/3 xl:w-1/4">
-                <h3>Sri Lanka (SL)</h3>
+                <h3>Biyagama</h3>
                 <h6 className='font-medium'>
-                  Biyagama
+                  Sri Lanka
                 </h6>
                 {/* <p className='font-light'>Gampaha</p> */}
               </span>
@@ -34,9 +34,9 @@ function AddressBanner() {
 
               {/* Dubai */}
               <span className="md:w-1/2 lg:w-1/3 xl:w-1/4">
-                <h3>UAE</h3>
+                <h3>Dubai</h3>
                 <h6 className='font-medium text-tr/ansparent'>
-                  Dubai
+                  UAE
                 </h6>
                 {/* // <p className='font-light'>Tower 3, Sheikh Zayed road, Dubai</p> */}
               </span>

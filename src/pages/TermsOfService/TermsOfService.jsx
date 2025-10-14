@@ -17,7 +17,7 @@ const termsData = [
     title: "1. Introduction",
     content: (
       <p>
-        Welcome to <a className="hover:text-blue-500 underline" href="https://test.e-mediabiz.com/">test.e-mediabiz.com</a> (the “Website”). These
+        Welcome to <a className="hover:text-blue-500 underline" href="https://e-mediabiz.com/">e-mediabiz.com</a> (the “Website”). These
         Terms of Service (“Terms”) govern your access to and use of our Website,
         services, and content (together, the “Services”). By using our Services,
         you agree to be bound by these Terms. If you do not agree, please do not
@@ -246,7 +246,7 @@ function TermsOfService() {
 
         <h1 className="text-3xl font-bold mb-2 text-teal-600">Terms of Service</h1>
         <p className="text-sm text-gray-600 mb-1">
-          (for test.e-mediabiz.com – UK/EU compliant)
+          (for e-mediabiz.com – UK/EU compliant)
         </p>
         <p className="text-gray-500 mb-8">
           <em>Last Updated: 10.03.2025</em>

@@ -24,18 +24,29 @@ function NewsletterForm() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost/xampp/reactcrudphp/api/subscribe.php", {
+      const res = await fetch("https://e-mediabiz.com/api/subscribe.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, honeypot }),
       });
 
-      const data = await res.json();
+      const text = await res.text();
+      console.log("Server returned:", text);
+
+      let data;
+      try {
+        data = JSON.parse(text);
+      } catch (err) {
+        console.error("Invalid JSON from server", err);
+        setMessage("Server error. Please try again later.");
+        setStatus("error");
+        return;
+      }
 
       if (data.success) {
-        setMessage(data.message); // "Check your email to confirm"
+        setMessage(data.message);
         setStatus("info");
-        setEmail(""); // clear input
+        setEmail("");
       } else {
         setMessage(data.message);
         setStatus("error");
@@ -74,7 +85,11 @@ function NewsletterForm() {
           className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
           required
         />
-        <Button type="submit" className="bg-gray-700 hover:bg-gray-600 text-white px-6" disabled={loading}>
+        <Button
+          type="submit"
+          className="bg-gray-700 hover:bg-gray-600 text-white px-6"
+          disabled={loading}
+        >
           {loading ? "Submitting..." : "Subscribe now"}
         </Button>
       </div>

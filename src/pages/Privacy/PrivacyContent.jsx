@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { SlashIcon, Search, Space } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import {
@@ -15,7 +15,7 @@ const sections = [
     id: "introduction",
     title: "1. Introduction",
     content:
-      "This Privacy Policy explains how test.e-mediabiz.com ('we', 'us', 'our') collects, uses, and protects your personal data when you visit our Website or use our Services. We are committed to safeguarding your privacy and complying with the UK GDPR, EU GDPR, and the Data Protection Act 2018.",
+      "This Privacy Policy explains how e-mediabiz.com ('we', 'us', 'our') collects, uses, and protects your personal data when you visit our Website or use our Services. We are committed to safeguarding your privacy and complying with the UK GDPR, EU GDPR, and the Data Protection Act 2018.",
   },
   {
     id: "data",
@@ -104,7 +104,6 @@ const sections = [
 
 export default function PrivacyContent() {
   const [query, setQuery] = useState("");
-  const sidebarRef = useRef(null);
 
   const filteredSections = sections.filter(
     (section) =>
@@ -197,7 +196,7 @@ export default function PrivacyContent() {
           Privacy Policy
         </h1>
         <p className="text-sm text-gray-600 mb-6">
-          (for test.e-mediabiz.com – UK/EU compliant)
+          (for e-mediabiz.com – UK/EU compliant)
         </p>
         <p className="text-gray-500 mb-8">
           <em>Last Updated: [10.03.2025]</em>
