@@ -127,7 +127,7 @@ function Footer() {
                   <Link to="/Terms-of-service" className="hover:underline">
                     <li>Terms of service</li>
                   </Link>
-                  <Link to="/linked-in" className="hover:underline">
+                  <Link to="https://www.linkedin.com/company/e-mediabiz" className="hover:underline">
                     <li>Contact us</li>
                   </Link>
                 </ul>
@@ -149,7 +149,7 @@ function Footer() {
                   <li>
                     <a
                       className="text-gray-400 hover:underline cursor-pointer"
-                      onClick={() => /*  */ {
+                      onClick={() => {
                         const event = new Event("openCookieManager");
                         window.dispatchEvent(event);
                       }}

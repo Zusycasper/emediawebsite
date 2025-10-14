@@ -126,7 +126,7 @@ export default function ContactFormSection() {
 
     try {
       const response = await axios.post(
-        "https://test.e-mediabiz.com/api/user.php",
+        "https://www.e-mediabiz.com/api/user.php",
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
