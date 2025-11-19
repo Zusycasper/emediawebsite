@@ -79,7 +79,7 @@ function Footer() {
               >
                 <img
                   className="h-[24px]"
-                  src="/media/footer/tiktok.png"
+                  src="/images/footer/tiktok.png"
                   alt="Tiktok Logo"
                 />
               </a>

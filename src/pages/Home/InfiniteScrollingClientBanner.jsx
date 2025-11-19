@@ -1,18 +1,18 @@
 import React from "react";
 
 const clientImages = [
-  { src: "/media/clients/pk.png", className: "h-25" },
-  { src: "/media/clients/colvin.png", className: "h-25" },
-  { src: "/media/clients/SHI.png", className: "h-14" },
-  { src: "/media/clients/solit.png", className: "h-18" },
-  { src: "/media/clients/themes.jpg", className: "h-14" },
-  { src: "/media/clients/bb.png", className: "h-25" },
-  { src: "/media/clients/fairway.png", className: "h-25" },
-  { src: "/media/clients/loomerose.png", className: "h-12" },
-  { src: "/media/clients/pinidiya.png", className: "h-25" },
-  { src: "/media/clients/devil.jpg", className: "h-16" },
-  { src: "/media/clients/vinny.png", className: "h-24" },
-  { src: "/media/clients/raindbow.png", className: "h-22" },
+  { src: "/images/clients/pk.png", className: "h-25" },
+  { src: "/images/clients/colvin.png", className: "h-25" },
+  { src: "/images/clients/SHI.png", className: "h-14" },
+  { src: "/images/clients/solit.png", className: "h-18" },
+  { src: "/images/clients/themes.jpg", className: "h-14" },
+  { src: "/images/clients/bb.png", className: "h-25" },
+  { src: "/images/clients/fairway.png", className: "h-25" },
+  { src: "/images/clients/loomerose.png", className: "h-12" },
+  { src: "/images/clients/pinidiya.png", className: "h-25" },
+  { src: "/images/clients/devil.jpg", className: "h-16" },
+  { src: "/images/clients/vinny.png", className: "h-24" },
+  { src: "/images/clients/raindbow.png", className: "h-22" },
 
 
 ];
