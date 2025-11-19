@@ -34,7 +34,7 @@ function WebDevelopmentSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <img
-                src="/media/WebDevSub.png "
+                src="/images/WebDevSub.webp"
                 alt="Web Development"
                 loading="lazy"
                 className="w-full rounded-2xl "
@@ -522,7 +522,7 @@ function WebDevelopmentSection() {
               </p>
               <div className="flex flex-wrap gap-4 items-center">
                 <img
-                  src="/media/services/web.png"
+                  src="/images/services/web.webp"
                   alt="Web Development Services"
                   loading="lazy"
                   className="w-full h-full pr-4"

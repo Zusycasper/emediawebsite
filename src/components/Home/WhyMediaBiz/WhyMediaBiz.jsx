@@ -5,9 +5,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  "/media/about/creativity.png",
-  "/media/about/stratergy.png",
-  "/media/about/consistancy.png",
+  "/images/about/creativity.webp",
+  "/images/about/stratergy.webp",
+  "/images/about/consistancy.webp",
 ];
 
 export default function WhyMediaBiz() {

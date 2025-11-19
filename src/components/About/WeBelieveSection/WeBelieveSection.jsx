@@ -5,11 +5,11 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const beliefItems = [
-  { title: "Transparency", image: "/media/whatwebelive/transparency.png" },
-  { title: "Passion", image: "/media/whatwebelive/passion.png" },
-  { title: "Innovation", image: "/media/whatwebelive/innovation.png" },
-  { title: "Integrity", image: "/media/whatwebelive/integrity.png" },
-  { title: "Excellence", image: "/media/whatwebelive/collaboration.png" },
+  { title: "Transparency", image: "/images/whatwebelive/transparency.webp" },
+  { title: "Passion", image: "/images/whatwebelive/passion.webp" },
+  { title: "Innovation", image: "/images/whatwebelive/innovation.webp" },
+  { title: "Integrity", image: "/images/whatwebelive/integrity.webp" },
+  { title: "Excellence", image: "/images/whatwebelive/collaboration.webp" },
 ]
 
 export default function WeBelieveSection() {

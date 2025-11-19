@@ -9,7 +9,7 @@ function WhatAreWeSection() {
             {/* <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-pink-500 rounded-2xl transform rotate-3"></div>
             <div className="absolute inset-0 bg-gradient-to-br from-pink-500 to-teal-500 rounded-2xl transform -rotate-3"></div> */}
             <img
-              src="/media/whatAreWe.png"
+              src="/images/whatAreWe.webp"
               alt="Professional Team"
               className="relative z-10 w-full rounded-2xl"
             />

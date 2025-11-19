@@ -35,7 +35,7 @@ export default function CloudInfrastructureSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <img
-                src="/media/CloudInfrastructureSub.png"
+                src="/images/CloudInfrastructureSub.webp"
                 alt="Cloud Infrastructure"
                 loading="lazy"
                 className="rounded-2xl sm:h-[396px] sm:w-full sm:object-cover object-cover h-[280px] w-full"
@@ -542,7 +542,7 @@ export default function CloudInfrastructureSection() {
               </p>
               <div className="flex flex-wrap gap-4 items-center">
                 <img
-                  src="/media/services/cloud.png"
+                  src="/images/services/cloud.webp"
                   alt="Cloud Infrastructure Services"
                   loading="lazy"
                   className="w-full h-full pr-4"

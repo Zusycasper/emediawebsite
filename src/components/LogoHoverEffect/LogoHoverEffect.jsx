@@ -15,7 +15,7 @@ function LogoHoverEffect({ className }) {
           }}
         >
           <image
-            href="/media/e-logo-color-02.png"
+            href="/images/e-logo-color-02.webp"
             width="84"
             height="84"
             preserveAspectRatio="xMidYMid meet"
@@ -35,7 +35,7 @@ function LogoHoverEffect({ className }) {
           }}
         >
           <image
-            href="/media/e-logo-color-02.png"
+            href="/images/e-logo-color-02.webp"
             width="84"
             height="84"
             preserveAspectRatio="xMidYMid meet"
@@ -45,7 +45,7 @@ function LogoHoverEffect({ className }) {
 
         {/* Third flower SVG - stays still */}
         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" className="absolute top-0 left-0 w-full h-full">
-          <image href="/media/e-logo.png" width="80" height="80" preserveAspectRatio="xMidYMid meet" />
+          <image href="/images/e-logo.webp" width="80" height="80" preserveAspectRatio="xMidYMid meet" />
         </svg>
       </div>
 

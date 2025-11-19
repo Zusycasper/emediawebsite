@@ -64,7 +64,7 @@ const CookieSettingsModal = ({ onClose, onConfirm }) => {
   return (
     <div className="cookie-settings-modal">
       <div className="modal-header">
-        <img src="/media/logo_final.png" alt="Company Logo" className="modal-logo p-1 h-14" />
+        <img src="/images/logo_final.webp" alt="Company Logo" className="modal-logo p-1 h-14" />
         <button className="close-btn" onClick={onClose}>×</button>
       </div>
       <h2 className="pb-2 font-bold">Privacy Preference Center</h2>

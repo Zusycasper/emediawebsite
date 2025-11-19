@@ -34,7 +34,7 @@ function DigitalMarketingHero() {
 
             <div className="relative">
               <img
-                src="/media/digiMarketing.png"
+                src="/images/digiMarketing.webp"
                 alt="Digital Mrketing Service"
                 className="w-full rounded-2xl"
               />

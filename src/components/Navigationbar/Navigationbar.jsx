@@ -109,7 +109,7 @@ function Navbar() {
               </div>
               <div className="flex lg:hidden items-center w-auto h-20 mr-2 min-w-0 flex-nowrap overflow-hidden gap-2">
                 <img
-                  src="/media/e-logo.png"
+                  src="/images/e-logo.webp"
                   alt="EMediabiz Logo"
                   className="w-16 h-16 sm:w-16 sm:h-16 object-contain flex-shrink-0"
                   style={{ minWidth: 0, minHeight: 0 }}

@@ -47,7 +47,7 @@ function DigitalMarketingSection() {
 
               <div className="flex flex-wrap gap-4 items-center relative">
                 <img
-                  src="/media/services/digital.png"
+                  src="/images/services/digital.webp"
                   alt="Digital Marketing Services"
                   loading="lazy"
                   className="w-full h-full pr-6"
@@ -602,7 +602,7 @@ function DigitalMarketingSection() {
 
             <div className="relative">
               <img
-                src="/media/DigiMarkSub.png"
+                src="/images/DigiMarkSub.webp"
                 alt="Digital Marketing Service"
                 loading="lazy"
                 className="w-full rounded-2xl"

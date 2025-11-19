@@ -35,7 +35,7 @@ function WebDevelopmentHero() {
 
             <div className="relative">
               <img
-                src="/media/WebDevSub.png"
+                src="/images/WebDevSub.webp"
                 alt="Web Development Service"
                 loading="lazy"
                 className="w-full rounded-2xl"

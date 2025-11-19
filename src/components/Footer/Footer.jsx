@@ -17,7 +17,7 @@ function Footer() {
             <div className="h-24">
               <a href="/home" onClick={() => window.scrollTo(0, 0)}>
                 <img
-                  src="media/finalized Emediabiz logo transperant.png"
+                  src="/images/finalized Emediabiz logo transperant.webp"
                   alt="EMedia Biz Logo"
                   className="h-20"
                 />

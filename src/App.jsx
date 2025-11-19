@@ -23,6 +23,7 @@ import Privacy from "./pages/Privacy/Privacy";
 import Faq from "./pages/Faq/Faq";
 import TermsOfService from "./pages/TermsOfService/TermsOfService";
 import AnalyticsTracker from "./AnalyticsTracker";
+import { Helmet } from "react-helmet";
 
 // List of paths where ScrollToTop should NOT appear
 // const excludedPaths = [
@@ -48,9 +49,46 @@ function App() {
     observer.observe(body, { attributes: true });
     return () => observer.disconnect();
   }, []);
+// emedia biz JSON-LD schema markup here
+  const schemaMarkup = {
+    "@context": "https://schema.org",
+    "@type": "Professional service",
+    "@id": "",
+    "name": "emedia biz",
+    "image": "https://www.facebook.com/photo/?fbid=122126065640969738&set=a.122103984902969738",
+    "url": "https://www.e-mediabiz.com",
+    "email": "info@e-mediabiz.com",
+    "telephone": "+447944139954",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "30 The Gossamers, Watford,Hertsfordshire",
+      "addressLocality": "United Kingdom",
+      "postalCode": "WD25 9AJ"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "https://schema.org/Monday",
+          "https://schema.org/Tuesday",
+          "https://schema.org/Wednesday",
+          "https://schema.org/Thursday",
+          "https://schema.org/Friday"
+        ],
+        "opens": "09:00:00",
+        "closes": "17:00:00"
+      }
+    ]
+  }; 
 
   return (
     <Router>
+      {/*emedia biz JSON-LD schema markup */ }
+      <Helmet>
+        <script type="application/ld+json">
+        {JSON.stringify(schemaMarkup)}
+      </script>
+      </Helmet>
       <AnalyticsTracker />
       <ConditionalScrollToTop />
       <Routes>

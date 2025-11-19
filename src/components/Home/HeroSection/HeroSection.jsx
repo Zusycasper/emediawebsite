@@ -45,7 +45,7 @@ function HeroSection() {
                   alt="Overlay GIF"
                   className="absolute top-[4%] left-[13%] w-[73.5%] h-[82%] object-cover z-0"
                 />
-                <img src="/media/hero_pc.png" alt="Hero PC" className="relative z-10 w-[1000px] max-w-full h-auto" />
+                <img src="/images/hero_pc.webp" alt="Hero PC" className="relative z-10 w-[1000px] max-w-full h-auto" />
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@ function HeroSection() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
-              <img src="/media/whatAreWe.png" alt="Professional Team" loading="lazy" className="relative z-10 w-full rounded-2xl" />
+              <img src="/images/whatAreWe.webp" alt="Professional Team" loading="lazy" className="relative z-10 w-full rounded-2xl" />
             </div>
             <div className="space-y-6 order-1 lg:order-2">
               <h2 className="text-4xl font-bold text-gray-900">Who We Are</h2>

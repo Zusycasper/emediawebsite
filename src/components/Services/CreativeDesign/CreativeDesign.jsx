@@ -45,7 +45,7 @@ function CreativeDesign() {
               </p>
 
               <div className="flex flex-wrap gap-4 items-center relative">
-                <img src="/media/services/creative.png" alt="Creative Design Services" loading="lazy" className="w-full h-full pr-6" />
+                <img src="/images/services/creative.webp" alt="Creative Design Services" loading="lazy" className="w-full h-full pr-6" />
 
                 <Drawer direction="right">
                   <DrawerTrigger asChild>
@@ -497,7 +497,7 @@ function CreativeDesign() {
 
             <div className="relative">
               <img
-                src="/media/creativeDesignSub.png"
+                src="/images/creativeDesignSub.webp"
                 alt="Creative Design Service"
                 loading="lazy"
                 className="rounded-2xl sm:h-[396px] sm:w-full sm:object-cover object-cover h-[280px] w-full"

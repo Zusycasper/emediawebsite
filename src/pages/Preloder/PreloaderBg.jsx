@@ -5,7 +5,7 @@ function PreloaderBg() {
     <div>
       <section
         className="h-screen w-screen flex items-center justify-center bg-cover bg-center relative"
-        style={{ backgroundImage: "url('/media/preloader_bg.png')" }}
+        style={{ backgroundImage: "url('/images/preloader_bg.webp')" }}
       >
         <img
           src="/media/output_fixed.webp"

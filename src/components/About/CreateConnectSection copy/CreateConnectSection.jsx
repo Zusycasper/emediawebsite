@@ -70,7 +70,7 @@ function CreateConnectSection() {
 
             <div className="relative">
               <img
-                src="/media/about/connect.png"
+                src="/images/about/connect.webp"
                 alt="Create Connect Convert"
                 // loading="lazy"
                 className="w-full h-full object-cover rounded-lg"

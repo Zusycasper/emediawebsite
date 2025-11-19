@@ -172,7 +172,7 @@ export default function ContactFormSection() {
       <Card
         className="w-full max-w-[480px] mx-auto px-6 py-8 shadow-lg"
         style={{
-          backgroundImage: `url(/media/cardBackground.png)`,
+          backgroundImage: `url(/images/cardBackground.webp)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
