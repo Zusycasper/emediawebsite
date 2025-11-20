@@ -1,23 +1,33 @@
-import React from 'react'
-import PreloaderBg from './PreloaderBg'
-import  { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import PreloaderBg from "./PreloaderBg";
 
 function Preloader() {
-      const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate("/home"); // redirect to home
-    }, 6000); // 0.6 sec
+    // Check if user already visited
+    const hasVisited = localStorage.getItem("emedia_hasVisited");
 
-    return () => clearTimeout(timer); // cleanup
+    if (hasVisited) {
+      // Skip preloader → go directly to home
+      navigate("/home");
+    } else {
+      // First-time visitor → show preloader
+      const timer = setTimeout(() => {
+        localStorage.setItem("emedia_hasVisited", "true");
+        navigate("/home");
+      }, 6000); // 6 seconds
+
+      return () => clearTimeout(timer);
+    }
   }, [navigate]);
+
   return (
     <div className="min-h-screen bg-white">
-        <PreloaderBg/>
+      <PreloaderBg />
     </div>
-  )
+  );
 }
 
-export default Preloader
+export default Preloader;

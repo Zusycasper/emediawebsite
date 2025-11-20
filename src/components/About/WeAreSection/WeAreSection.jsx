@@ -8,7 +8,7 @@ function WeAreSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <img
-                src="/media/about/weAre.jpg"
+                src="/images/about/weAre.webp"
                 alt="Business Meeting"
                 // loading="lazy"
                 className="w-full rounded-2xl"

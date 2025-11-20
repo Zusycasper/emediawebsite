@@ -5,7 +5,7 @@ function HeroSection() {
     <>
       <section className="relative w-full min-h-screen overflow-hidden">
         <img
-          src="/media/hero_bg_gif.gif"
+          src="/images/hero_bg_gif.gif"
           alt="Hero Background"
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
@@ -41,7 +41,7 @@ function HeroSection() {
             <div className="flex justify-center items-center p-4 relative mt-4 md:mt-0">
               <div className="relative">
                 <img
-                  src="/media/gifLaptop-overlay.webp"
+                  src="/images/gifLaptop-overlay.webp"
                   alt="Overlay GIF"
                   className="absolute top-[4%] left-[13%] w-[73.5%] h-[82%] object-cover z-0"
                 />

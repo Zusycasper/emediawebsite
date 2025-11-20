@@ -8,7 +8,7 @@ function PreloaderBg() {
         style={{ backgroundImage: "url('/images/preloader_bg.webp')" }}
       >
         <img
-          src="/media/output_fixed.webp"
+          src="/images/output_fixed.webp"
           alt="Loading..."
           className="relative z-10 w-80 sm:w-80 md:w-82 lg:w-180 h-auto"
         />

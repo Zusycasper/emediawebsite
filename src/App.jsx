@@ -1,5 +1,3 @@
-// Remove usage of 'process.env.NODE_ENV' as it's not defined in the browser environment.
-// If you need to disable console.log in production, use a build tool or environment variable injected at build time.
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,35 +5,21 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
+
 import ScrollToTop from "./components/ScrollTTop/ScrollToTop";
 import Home from "./pages/Home/Home";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Services from "./pages/Services/Services";
-import DigiMarketing from "./pages/DigiMarketing/DigiMarketing";
-import WebDevelopment from "./pages/WebDevelopment/WebDevelopment";
 import ContactUs from "./pages/ContactUs/ContactUs";
-import Footer from "./components/Footer/Footer";
 import Preloader from "./pages/Preloder/Preloader";
-import SocialMediaManagement from "./pages/SocialMediaManagement/SocialMediaManagement";
-import CloudITInfrastructureSupport from "./pages/CloudITInfrastructureSupport/CloudITInfrastructureSupport";
-import CreativeDesign from "./pages/CreativeDesign/CreativeDesign";
 import Privacy from "./pages/Privacy/Privacy";
 import Faq from "./pages/Faq/Faq";
 import TermsOfService from "./pages/TermsOfService/TermsOfService";
 import AnalyticsTracker from "./AnalyticsTracker";
-import { Helmet } from "react-helmet";
-
-// List of paths where ScrollToTop should NOT appear
-// const excludedPaths = [
-//   "/services",
-//   "/services#digital_marketing",
-//   "/services#web_development",
-//   "/services#social_media",
-//   "/services#cloud_infrastructure",
-//   "/services#creative_design",
-// ];
 
 function App() {
+  // Fixes scroll-lock issues
   useEffect(() => {
     const body = document.body;
     const observer = new MutationObserver(() => {
@@ -49,9 +33,9 @@ function App() {
     observer.observe(body, { attributes: true });
     return () => observer.disconnect();
   }, []);
-// emedia biz JSON-LD schema markup here
+
   const schemaMarkup = {
-    "@context": "https://schema.org",
+     "@context": "https://schema.org",
     "@type": "Professional service",
     "@id": "",
     "name": "emedia biz",
@@ -79,18 +63,19 @@ function App() {
         "closes": "17:00:00"
       }
     ]
-  }; 
+  };
 
   return (
     <Router>
-      {/*emedia biz JSON-LD schema markup */ }
       <Helmet>
         <script type="application/ld+json">
-        {JSON.stringify(schemaMarkup)}
-      </script>
+          {JSON.stringify(schemaMarkup)}
+        </script>
       </Helmet>
+
       <AnalyticsTracker />
       <ConditionalScrollToTop />
+
       <Routes>
         <Route path="/" element={<Preloader />} />
         <Route path="/home" element={<Home />} />
@@ -107,9 +92,10 @@ function App() {
 
 // ScrollToTop conditional
 function ConditionalScrollToTop() {
-  const location = useLocation(); // ✅ safe here, inside Router
+  const location = useLocation();
   const excludedPaths = ["/services"]; 
   if (excludedPaths.includes(location.pathname)) return null;
   return <ScrollToTop />;
 }
+
 export default App;
